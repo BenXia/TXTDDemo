@@ -18,7 +18,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="OMs-5A-f48">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kxQ-nD-ydo">
@@ -29,13 +29,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王大锤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEB-k1-Unk">
-                    <rect key="frame" x="133" y="148" width="54" height="21.5"/>
+                    <rect key="frame" x="133" y="152" width="54" height="21.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国建设银行有限公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed3-tf-I8S">
-                    <rect key="frame" x="90" y="177" width="140" height="17"/>
+                    <rect key="frame" x="90" y="181" width="140" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -46,9 +46,9 @@
                 <constraint firstItem="CEB-k1-Unk" firstAttribute="centerX" secondItem="OMs-5A-f48" secondAttribute="centerX" id="Ub8-St-61B"/>
                 <constraint firstItem="ed3-tf-I8S" firstAttribute="centerX" secondItem="OMs-5A-f48" secondAttribute="centerX" id="cuP-HC-VKf"/>
                 <constraint firstItem="kxQ-nD-ydo" firstAttribute="top" secondItem="OMs-5A-f48" secondAttribute="top" constant="20" id="mYP-mW-vgs"/>
-                <constraint firstItem="ed3-tf-I8S" firstAttribute="top" secondItem="CEB-k1-Unk" secondAttribute="bottom" constant="7.5" id="mjV-Tr-Lb2"/>
+                <constraint firstItem="ed3-tf-I8S" firstAttribute="top" secondItem="CEB-k1-Unk" secondAttribute="bottom" constant="8" id="mjV-Tr-Lb2"/>
                 <constraint firstItem="kxQ-nD-ydo" firstAttribute="centerX" secondItem="OMs-5A-f48" secondAttribute="centerX" id="mw3-sG-wTx"/>
-                <constraint firstItem="CEB-k1-Unk" firstAttribute="top" secondItem="kxQ-nD-ydo" secondAttribute="bottom" constant="8" id="ncC-UC-aO5"/>
+                <constraint firstItem="CEB-k1-Unk" firstAttribute="top" secondItem="kxQ-nD-ydo" secondAttribute="bottom" constant="12" id="ncC-UC-aO5"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -59,15 +59,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="oSX-ou-bpp">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="527"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="2u9-wV-MIY"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="dWf-6R-dix"/>
                         <outlet property="delegate" destination="-1" id="3oe-4C-Woo"/>
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPL-kO-cZ6">
-                    <rect key="frame" x="0.0" y="603" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="476" width="375" height="44"/>
                     <color key="backgroundColor" red="0.38431372549999998" green="0.73333333329999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="M7g-dz-MkT"/>
@@ -75,7 +78,7 @@
                     <state key="normal" title="打个招呼"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEB-sC-NRP">
-                    <rect key="frame" x="0.0" y="547" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="420" width="375" height="44"/>
                     <color key="backgroundColor" red="0.17254901959999999" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="8uQ-m3-ic0"/>
@@ -99,6 +102,11 @@
                 <constraint firstItem="nEB-sC-NRP" firstAttribute="top" secondItem="oSX-ou-bpp" secondAttribute="bottom" constant="20" id="lQ3-vm-y9K"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Ui4-gS-zhI"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="232" y="323"/>
         </view>
     </objects>
