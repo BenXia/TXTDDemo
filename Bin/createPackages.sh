@@ -7,11 +7,11 @@ if [ `echo $0 | grep -c  "/"` -gt 0 ];then
     cd ${0%/*}
 fi
 
-schemeName="Dentist"
+schemeName="TXTDDemo"
 binDir=`pwd`
 destinationDir="`pwd`/../packages"                      ###最终生成文件目录
-projectName="`pwd`/../Dentist.xcodeproj"
-workspaceName="`pwd`/../Dentist.xcworkspace"
+projectName="`pwd`/../TXTDDemo.xcodeproj"
+workspaceName="`pwd`/../TXTDDemo.xcworkspace"
 buildDir="`pwd`/../build"
 
 buildCmdReturn=0
@@ -44,34 +44,34 @@ function createPackage()
     echo "编译结果:${buildCmdReturn}"
 	
     # 生成ipa文件
-    xcrun --sdk iphoneos PackageApplication -v ${buildDir}/Build/Products/${configurationName}-iphoneos/Dentist.app -o ${destinationDir}/Dentist-${configurationName}.ipa
+    xcrun --sdk iphoneos PackageApplication -v ${buildDir}/Build/Products/${configurationName}-iphoneos/TXTDDemo.app -o ${destinationDir}/TXTDDemo-${configurationName}.ipa
 
     newFileDateName=`date "+%Y-%m-%d_%H:%M:%S"`
 	
-    if [ -d ${buildDir}/Build/Products/${configurationName}-iphoneos/Dentist.app.dSYM ]; then
-        cp -r ${buildDir}/Build/Products/${configurationName}-iphoneos/Dentist.app.dSYM ${destinationDir}/Dentist-${configurationName}.app.dSYM
+    if [ -d ${buildDir}/Build/Products/${configurationName}-iphoneos/TXTDDemo.app.dSYM ]; then
+        cp -r ${buildDir}/Build/Products/${configurationName}-iphoneos/TXTDDemo.app.dSYM ${destinationDir}/TXTDDemo-${configurationName}.app.dSYM
 		
-        #zip -r ${destinationDir}/Dentist-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.dSYM.zip ${destinationDir}/Dentist-${configurationName}.app.dSYM
-        zip -r ${destinationDir}/Dentist-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.dSYM.zip ${destinationDir}/Dentist-${configurationName}.app.dSYM
-        rm -rf ${destinationDir}/Dentist-${configurationName}.app.dSYM
+        #zip -r ${destinationDir}/TXTDDemo-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.dSYM.zip ${destinationDir}/TXTDDemo-${configurationName}.app.dSYM
+        zip -r ${destinationDir}/TXTDDemo-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.dSYM.zip ${destinationDir}/TXTDDemo-${configurationName}.app.dSYM
+        rm -rf ${destinationDir}/TXTDDemo-${configurationName}.app.dSYM
     fi
     
     #需要生成xcarchive包时打开下面代码
     #xcodebuild -workspace $workspaceName -scheme $schemeName -destination generic/platform=iOS archive -archivePath $destinationDir/$schemeName-${configurationName}.xcarchive -sdk iphoneos
 
     if [ "distribute" = ${lowercaseModeArg} ]; then
-         if [ -d "${buildDir}/Build/Products/${configurationName}-iphoneos/Dentist.app" ]; then
+         if [ -d "${buildDir}/Build/Products/${configurationName}-iphoneos/TXTDDemo.app" ]; then
              # Distribute模式生成app压缩包
-             mv ${buildDir}/Build/Products/${configurationName}-iphoneos/Dentist.app ${destinationDir}/Dentist-${versionString}-${configurationName}.app
-			 #zip -r ${destinationDir}/Dentist-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.app.zip ${destinationDir}/Dentist-${versionString}-${configurationName}.app
-	         zip -r ${destinationDir}/Dentist-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.app.zip ${destinationDir}/Dentist-${versionString}-${configurationName}.app
-	         rm -rf ${destinationDir}/Dentist-${versionString}-${configurationName}.app
+             mv ${buildDir}/Build/Products/${configurationName}-iphoneos/TXTDDemo.app ${destinationDir}/TXTDDemo-${versionString}-${configurationName}.app
+			 #zip -r ${destinationDir}/TXTDDemo-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.app.zip ${destinationDir}/TXTDDemo-${versionString}-${configurationName}.app
+	         zip -r ${destinationDir}/TXTDDemo-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.app.zip ${destinationDir}/TXTDDemo-${versionString}-${configurationName}.app
+	         rm -rf ${destinationDir}/TXTDDemo-${versionString}-${configurationName}.app
          fi
     fi
 
-    if [ -f ${destinationDir}/Dentist-${configurationName}.ipa ]; then
-        #mv ${destinationDir}/Dentist-${configurationName}.ipa ${destinationDir}/Dentist-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.ipa
-        mv ${destinationDir}/Dentist-${configurationName}.ipa ${destinationDir}/Dentist-${versionString}-${shownName}.ipa
+    if [ -f ${destinationDir}/TXTDDemo-${configurationName}.ipa ]; then
+        #mv ${destinationDir}/TXTDDemo-${configurationName}.ipa ${destinationDir}/TXTDDemo-${versionString}-${shownName}-${newFileDateName}${buildNumberSuffix}.ipa
+        mv ${destinationDir}/TXTDDemo-${configurationName}.ipa ${destinationDir}/TXTDDemo-${versionString}-${shownName}.ipa
     fi
     
     #需要生成xcarchive包时打开下面代码
@@ -161,29 +161,11 @@ function main()
 echo "请输入版本号:\c"
 read versionString
 
-##修改Debug模式的Build Active Architecture Only为NO
-##               Debug Information Format为DWARF with dSYM File
-##               Strip Debug Symbols During Copy为YES
-#if [ ! -f ../Dentist.xcodeproj/project.pbxproj.backup ]; then
-#	sed -i.backup -e 's/\(.*\)ONLY_ACTIVE_ARCH = YES;/\1ONLY_ACTIVE_ARCH = NO;/g' -e 's/\(.*\)COPY_PHASE_STRIP = NO;/\1COPY_PHASE_STRIP = YES;/g' -e 's/\(.*\)DEBUG_INFORMATION_FORMAT = dwarf;/\1DEBUG_INFORMATION_FORMAT = \"dwarf-with-dsym\";/g' ../Dentist.xcodeproj/project.pbxproj
-#fi
-#if [ ! -f ../Pods/Pods.xcodeproj/project.pbxproj.backup ]; then
-#    sed -i.backup -e 's/\(.*\)ONLY_ACTIVE_ARCH = YES;/\1ONLY_ACTIVE_ARCH = NO;/g' -e 's/\(.*\)COPY_PHASE_STRIP = NO;/\1COPY_PHASE_STRIP = YES;/g' -e 's/\(.*\)DEBUG_INFORMATION_FORMAT = dwarf;/\1DEBUG_INFORMATION_FORMAT = \"dwarf-with-dsym\";/g' ../Pods/Pods.xcodeproj/project.pbxproj
-#fi
-#if [ ! -f ../DentistCommon/DentistCommon.xcodeproj/project.pbxproj.backup ]; then
-#    sed -i.backup -e 's/\(.*\)ONLY_ACTIVE_ARCH = YES;/\1ONLY_ACTIVE_ARCH = NO;/g' -e 's/\(.*\)COPY_PHASE_STRIP = NO;/\1COPY_PHASE_STRIP = YES;/g' -e 's/\(.*\)DEBUG_INFORMATION_FORMAT = dwarf;/\1DEBUG_INFORMATION_FORMAT = \"dwarf-with-dsym\";/g' ../DentistCommon/DentistCommon.xcodeproj/project.pbxproj
-#fi
-
 
 main
 ret=$?
 cd ${binDir}
 
-
-##还原Debug模式的Build Active Architecture Only配置
-#mv ../Dentist.xcodeproj/project.pbxproj.backup ../Dentist.xcodeproj/project.pbxproj
-#mv ../Pods/Pods.xcodeproj/project.pbxproj.backup ../Pods/Pods.xcodeproj/project.pbxproj
-#mv ../DentistCommon/DentistCommon.xcodeproj/project.pbxproj.backup ../DentistCommon/DentistCommon.xcodeproj/project.pbxproj
 
 if [ ${ret} -eq 0 ]; then
    	open ${destinationDir}

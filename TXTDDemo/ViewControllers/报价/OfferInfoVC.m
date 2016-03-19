@@ -13,6 +13,9 @@
 @interface OfferInfoVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray* dataSource;
+@property (strong, nonatomic) IBOutlet UIView *searchBarView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UIButton *searchConfirmButton;
 
 @end
 
@@ -44,6 +47,15 @@
     self.view.backgroundColor = [UIColor bgGray002Color];
     self.tableView.backgroundColor = [UIColor bgGray002Color];
     
+    [self setNavRightItemWithImage:@"sousou" target:self action:@selector(didClickSearchItem)];
+    [self setNavLeftItemWithImage:@"zhidaojia" target:self action:@selector(didClickZhiDaoItem)];
+    
+    [self.searchBarView circular:3];
+    [self.searchConfirmButton circular:3];
+    
+    self.searchBarView.frame = CGRectMake(0, -self.searchBarView.height, kScreenWidth, self.searchBarView.height);
+    [self.view addSubview:self.searchBarView];
+    
     UINib* cellNib = [UINib nibWithNibName:[OfferInfoCell identifier] bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:[OfferInfoCell identifier]];
 }
@@ -51,6 +63,29 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UIColor*)preferNavBarBackgroundColor{
+    return [UIColor themeBlueColor];
+}
+
+#pragma mark - Action
+
+-(void)didClickSearchItem{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.searchBarView.y = 0;
+    }];
+}
+
+-(IBAction)didClickConfirmSearch:(id)sender{
+    [self.searchBar resignFirstResponder];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.searchBarView.y = -self.searchBarView.height;
+    }];
+}
+
+-(void)didClickZhiDaoItem{
+
 }
 
 #pragma mark - Table

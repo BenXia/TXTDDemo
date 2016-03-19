@@ -15,7 +15,7 @@ function rmOldProvisioningProfiles()
     OLD_IFS=$IFS
 IFS="
 "
-    for file in `grep -r -l "yayiabc" .`
+    for file in `grep -r -l "TXTDDemo" .`
     do
         rm ${file}
     done

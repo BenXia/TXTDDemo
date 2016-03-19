@@ -17,7 +17,7 @@ packages/
 *.perspectivev3
 !default.perspectivev3
 *.xcworkspace
-!Dentist.xcworkspace
+!TXTDDemo.xcworkspace
 xcuserdata
 xcshareddata
 *.moved-aside
