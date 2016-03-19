@@ -409,10 +409,6 @@
 		33DC49C61C9D13F600849762 /* PPCreateOrderDC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC47751C9D13F600849762 /* PPCreateOrderDC.m */; };
 		33DC49C71C9D13F600849762 /* PPPayResultDC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC47771C9D13F600849762 /* PPPayResultDC.m */; };
 		33DC49C81C9D13F600849762 /* PPRepayDC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC47791C9D13F600849762 /* PPRepayDC.m */; };
-		33DC49C91C9D13F600849762 /* SetNickVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC477D1C9D13F600849762 /* SetNickVC.m */; };
-		33DC49CA1C9D13F600849762 /* SetNickVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33DC477E1C9D13F600849762 /* SetNickVC.xib */; };
-		33DC49CB1C9D13F600849762 /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC47801C9D13F600849762 /* UserInfoVC.m */; };
-		33DC49CC1C9D13F600849762 /* UserInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33DC47811C9D13F600849762 /* UserInfoVC.xib */; };
 		33DC49CD1C9D13F600849762 /* UserDetailPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC47841C9D13F600849762 /* UserDetailPageVC.m */; };
 		33DC49CE1C9D13F600849762 /* UserDetailPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33DC47851C9D13F600849762 /* UserDetailPageVC.xib */; };
 		33DC49CF1C9D13F600849762 /* ProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC47881C9D13F600849762 /* ProfileVC.m */; };
@@ -563,6 +559,14 @@
 		884804901C9D26F800984EF7 /* zhixiang@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 884804721C9D26F800984EF7 /* zhixiang@3x.png */; };
 		884804911C9D26F800984EF7 /* zijinchanpin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 884804731C9D26F800984EF7 /* zijinchanpin@2x.png */; };
 		884804921C9D26F800984EF7 /* zijinchanpin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 884804741C9D26F800984EF7 /* zijinchanpin@3x.png */; };
+		935FC70C1C9D5B9C00B8B643 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7001C9D5B9C00B8B643 /* MessageCell.m */; };
+		935FC70D1C9D5B9C00B8B643 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7011C9D5B9C00B8B643 /* MessageCell.xib */; };
+		935FC70E1C9D5B9C00B8B643 /* MyMessgaeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7031C9D5B9C00B8B643 /* MyMessgaeVC.m */; };
+		935FC70F1C9D5B9C00B8B643 /* MyMessgaeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7041C9D5B9C00B8B643 /* MyMessgaeVC.xib */; };
+		935FC7101C9D5B9C00B8B643 /* SetNickVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7071C9D5B9C00B8B643 /* SetNickVC.m */; };
+		935FC7111C9D5B9C00B8B643 /* SetNickVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7081C9D5B9C00B8B643 /* SetNickVC.xib */; };
+		935FC7121C9D5B9C00B8B643 /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC70A1C9D5B9C00B8B643 /* UserInfoVC.m */; };
+		935FC7131C9D5B9C00B8B643 /* UserInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC70B1C9D5B9C00B8B643 /* UserInfoVC.xib */; };
 		B5F386061C45ED3A00E666F7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F071C51C42D12900DAC58F /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -1092,12 +1096,6 @@
 		33DC47771C9D13F600849762 /* PPPayResultDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPayResultDC.m; sourceTree = "<group>"; };
 		33DC47781C9D13F600849762 /* PPRepayDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRepayDC.h; sourceTree = "<group>"; };
 		33DC47791C9D13F600849762 /* PPRepayDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRepayDC.m; sourceTree = "<group>"; };
-		33DC477C1C9D13F600849762 /* SetNickVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNickVC.h; sourceTree = "<group>"; };
-		33DC477D1C9D13F600849762 /* SetNickVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNickVC.m; sourceTree = "<group>"; };
-		33DC477E1C9D13F600849762 /* SetNickVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetNickVC.xib; sourceTree = "<group>"; };
-		33DC477F1C9D13F600849762 /* UserInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoVC.h; sourceTree = "<group>"; };
-		33DC47801C9D13F600849762 /* UserInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoVC.m; sourceTree = "<group>"; };
-		33DC47811C9D13F600849762 /* UserInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoVC.xib; sourceTree = "<group>"; };
 		33DC47831C9D13F600849762 /* UserDetailPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailPageVC.h; sourceTree = "<group>"; };
 		33DC47841C9D13F600849762 /* UserDetailPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailPageVC.m; sourceTree = "<group>"; };
 		33DC47851C9D13F600849762 /* UserDetailPageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailPageVC.xib; sourceTree = "<group>"; };
@@ -1326,6 +1324,18 @@
 		884804721C9D26F800984EF7 /* zhixiang@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhixiang@3x.png"; sourceTree = "<group>"; };
 		884804731C9D26F800984EF7 /* zijinchanpin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zijinchanpin@2x.png"; sourceTree = "<group>"; };
 		884804741C9D26F800984EF7 /* zijinchanpin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zijinchanpin@3x.png"; sourceTree = "<group>"; };
+		935FC6FF1C9D5B9C00B8B643 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		935FC7001C9D5B9C00B8B643 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		935FC7011C9D5B9C00B8B643 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		935FC7021C9D5B9C00B8B643 /* MyMessgaeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessgaeVC.h; sourceTree = "<group>"; };
+		935FC7031C9D5B9C00B8B643 /* MyMessgaeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessgaeVC.m; sourceTree = "<group>"; };
+		935FC7041C9D5B9C00B8B643 /* MyMessgaeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMessgaeVC.xib; sourceTree = "<group>"; };
+		935FC7061C9D5B9C00B8B643 /* SetNickVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNickVC.h; sourceTree = "<group>"; };
+		935FC7071C9D5B9C00B8B643 /* SetNickVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNickVC.m; sourceTree = "<group>"; };
+		935FC7081C9D5B9C00B8B643 /* SetNickVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetNickVC.xib; sourceTree = "<group>"; };
+		935FC7091C9D5B9C00B8B643 /* UserInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoVC.h; sourceTree = "<group>"; };
+		935FC70A1C9D5B9C00B8B643 /* UserInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoVC.m; sourceTree = "<group>"; };
+		935FC70B1C9D5B9C00B8B643 /* UserInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoVC.xib; sourceTree = "<group>"; };
 		A11DE1C2BA504D2B28E4F469 /* Pods.distribute.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.distribute.xcconfig; path = "Pods/Target Support Files/Pods/Pods.distribute.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2418,26 +2428,17 @@
 		33DC477A1C9D13F600849762 /* 个人 */ = {
 			isa = PBXGroup;
 			children = (
-				33DC477B1C9D13F600849762 /* 个人信息 */,
+				935FC6FB1C9D5B9C00B8B643 /* 我的报价 */,
+				935FC6FC1C9D5B9C00B8B643 /* 我的关注 */,
+				935FC6FD1C9D5B9C00B8B643 /* 我的偏好 */,
+				935FC6FE1C9D5B9C00B8B643 /* 我的消息 */,
+				935FC7051C9D5B9C00B8B643 /* 我的信息 */,
 				33DC47821C9D13F600849762 /* 个人详情页 */,
 				33DC47861C9D13F600849762 /* 个人首页 */,
 				33DC478A1C9D13F600849762 /* 地址管理 */,
 				33DC47931C9D13F600849762 /* 设置 */,
 			);
 			path = "个人";
-			sourceTree = "<group>";
-		};
-		33DC477B1C9D13F600849762 /* 个人信息 */ = {
-			isa = PBXGroup;
-			children = (
-				33DC477C1C9D13F600849762 /* SetNickVC.h */,
-				33DC477D1C9D13F600849762 /* SetNickVC.m */,
-				33DC477E1C9D13F600849762 /* SetNickVC.xib */,
-				33DC477F1C9D13F600849762 /* UserInfoVC.h */,
-				33DC47801C9D13F600849762 /* UserInfoVC.m */,
-				33DC47811C9D13F600849762 /* UserInfoVC.xib */,
-			);
-			path = "个人信息";
 			sourceTree = "<group>";
 		};
 		33DC47821C9D13F600849762 /* 个人详情页 */ = {
@@ -2844,6 +2845,53 @@
 			path = "报价";
 			sourceTree = "<group>";
 		};
+		935FC6FB1C9D5B9C00B8B643 /* 我的报价 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "我的报价";
+			sourceTree = "<group>";
+		};
+		935FC6FC1C9D5B9C00B8B643 /* 我的关注 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "我的关注";
+			sourceTree = "<group>";
+		};
+		935FC6FD1C9D5B9C00B8B643 /* 我的偏好 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "我的偏好";
+			sourceTree = "<group>";
+		};
+		935FC6FE1C9D5B9C00B8B643 /* 我的消息 */ = {
+			isa = PBXGroup;
+			children = (
+				935FC6FF1C9D5B9C00B8B643 /* MessageCell.h */,
+				935FC7001C9D5B9C00B8B643 /* MessageCell.m */,
+				935FC7011C9D5B9C00B8B643 /* MessageCell.xib */,
+				935FC7021C9D5B9C00B8B643 /* MyMessgaeVC.h */,
+				935FC7031C9D5B9C00B8B643 /* MyMessgaeVC.m */,
+				935FC7041C9D5B9C00B8B643 /* MyMessgaeVC.xib */,
+			);
+			path = "我的消息";
+			sourceTree = "<group>";
+		};
+		935FC7051C9D5B9C00B8B643 /* 我的信息 */ = {
+			isa = PBXGroup;
+			children = (
+				935FC7061C9D5B9C00B8B643 /* SetNickVC.h */,
+				935FC7071C9D5B9C00B8B643 /* SetNickVC.m */,
+				935FC7081C9D5B9C00B8B643 /* SetNickVC.xib */,
+				935FC7091C9D5B9C00B8B643 /* UserInfoVC.h */,
+				935FC70A1C9D5B9C00B8B643 /* UserInfoVC.m */,
+				935FC70B1C9D5B9C00B8B643 /* UserInfoVC.xib */,
+			);
+			path = "我的信息";
+			sourceTree = "<group>";
+		};
 		A5E898AFEE1719ED2D5007E0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2965,6 +3013,7 @@
 				33DC48DD1C9D13F600849762 /* Ico_PopPublished.png in Resources */,
 				33DC49111C9D13F600849762 /* 收藏的商品.png in Resources */,
 				33DC49291C9D13F600849762 /* goods_tag_Present@3x.png in Resources */,
+				935FC70F1C9D5B9C00B8B643 /* MyMessgaeVC.xib in Resources */,
 				33DC489F1C9D13F600849762 /* guide1_35_inch.png in Resources */,
 				33DC49331C9D13F600849762 /* 包邮2@3x.png in Resources */,
 				8848047A1C9D26F800984EF7 /* jiaruguanzhu@3x.png in Resources */,
@@ -3007,6 +3056,7 @@
 				33DC485E1C9D13F600849762 /* pay_pic@3x.png in Resources */,
 				8848048C1C9D26F800984EF7 /* zhaiquanchanpin@3x.png in Resources */,
 				33DC48F21C9D13F600849762 /* 微信朋友圈@2x.png in Resources */,
+				935FC70D1C9D5B9C00B8B643 /* MessageCell.xib in Resources */,
 				33DC48791C9D13F600849762 /* web_right@2x.png in Resources */,
 				8848047D1C9D26F800984EF7 /* licaichanpin@2x.png in Resources */,
 				33DC49E81C9D13F600849762 /* MultilevelTableViewCell.xib in Resources */,
@@ -3021,7 +3071,6 @@
 				33DC49041C9D13F600849762 /* 关于我们.jpg in Resources */,
 				33DC4A241C9D13F700849762 /* ProductDescriptionVC.xib in Resources */,
 				33DC488C1C9D13F600849762 /* btn_photo_default@3x.png in Resources */,
-				33DC49CA1C9D13F600849762 /* SetNickVC.xib in Resources */,
 				33DC49921C9D13F600849762 /* ELCAlbumPickerController.xib in Resources */,
 				33DC49961C9D13F600849762 /* selected_photo_overlay@3x.png in Resources */,
 				33DC48601C9D13F600849762 /* 支付方式-微信支付@3x.png in Resources */,
@@ -3188,7 +3237,6 @@
 				8848047E1C9D26F800984EF7 /* licaichanpin@3x.png in Resources */,
 				33DC49C01C9D13F600849762 /* PaySuccessVC.xib in Resources */,
 				33DC4A011C9D13F700849762 /* OfferProductDetailVC.xib in Resources */,
-				33DC49CC1C9D13F600849762 /* UserInfoVC.xib in Resources */,
 				33DC48E91C9D13F600849762 /* 删除@3x.png in Resources */,
 				33DC48C71C9D13F600849762 /* dot_blur.png in Resources */,
 				33DC490F1C9D13F600849762 /* 待评价@2x.png in Resources */,
@@ -3268,6 +3316,7 @@
 				33DC49211C9D13F600849762 /* Ico_Successed@3x.png in Resources */,
 				33DC491A1C9D13F600849762 /* 设置.png in Resources */,
 				33DC49561C9D13F600849762 /* btn_clinical_pressed.png in Resources */,
+				935FC7131C9D5B9C00B8B643 /* UserInfoVC.xib in Resources */,
 				33DC48991C9D13F600849762 /* common_topnav_icon01@2x.png in Resources */,
 				33DC48611C9D13F600849762 /* 支付方式-支付宝@2x.png in Resources */,
 				8848048D1C9D26F800984EF7 /* zhidaojia@2x.png in Resources */,
@@ -3314,6 +3363,7 @@
 				33DC48C81C9D13F600849762 /* dot_focus.png in Resources */,
 				33DC48CB1C9D13F600849762 /* goods_tag_Present@2X.png in Resources */,
 				33DC49EF1C9D13F700849762 /* LaunchViewController.xib in Resources */,
+				935FC7111C9D5B9C00B8B643 /* SetNickVC.xib in Resources */,
 				33DC48861C9D13F600849762 /* 包邮@3x.png in Resources */,
 				33DC48EB1C9D13F600849762 /* 图层-0@3x.png in Resources */,
 				33DC49431C9D13F600849762 /* 购买套餐@3x.png in Resources */,
@@ -3408,7 +3458,6 @@
 				33DC496E1C9D13F600849762 /* ProductDetailDC.m in Sources */,
 				33DC49B41C9D13F600849762 /* OrderItemHeaderCell.m in Sources */,
 				33DC49841C9D13F600849762 /* CartProductUpdateNumberDC.m in Sources */,
-				33DC49C91C9D13F600849762 /* SetNickVC.m in Sources */,
 				33DC4A131C9D13F700849762 /* OrderListTableViewCell.m in Sources */,
 				33DC48521C9D13F600849762 /* UserInfoModel.m in Sources */,
 				33DC4A211C9D13F700849762 /* GroupProductView.m in Sources */,
@@ -3436,6 +3485,7 @@
 				33DC4A311C9D13F700849762 /* SaleActivityCell.m in Sources */,
 				33DC49A11C9D13F600849762 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				33DC49AC1C9D13F600849762 /* WebBrowserVC.m in Sources */,
+				935FC7121C9D5B9C00B8B643 /* UserInfoVC.m in Sources */,
 				33DC49DC1C9D13F600849762 /* EasyJSDataFunction.m in Sources */,
 				33DC49711C9D13F600849762 /* AddressListDC.m in Sources */,
 				33DC499F1C9D13F600849762 /* IQTitleBarButtonItem.m in Sources */,
@@ -3446,7 +3496,6 @@
 				33DC496D1C9D13F600849762 /* ProductEvaluateDC.m in Sources */,
 				33DC4A171C9D13F700849762 /* OrderDetailModel.m in Sources */,
 				33DC49DD1C9D13F600849762 /* EasyJSWebView.m in Sources */,
-				33DC49CB1C9D13F600849762 /* UserInfoVC.m in Sources */,
 				33DC49971C9D13F600849762 /* IQNSArray+Sort.m in Sources */,
 				33DC49D81C9D13F600849762 /* SettingVCViewController.m in Sources */,
 				33DC496C1C9D13F600849762 /* ProductAppraiseDC.m in Sources */,
@@ -3487,7 +3536,9 @@
 				33DC499A1C9D13F600849762 /* IQKeyboardManager.m in Sources */,
 				33DC49B81C9D13F600849762 /* InvoiceVC.m in Sources */,
 				33DC49761C9D13F600849762 /* FavoriteProductModel.m in Sources */,
+				935FC70E1C9D5B9C00B8B643 /* MyMessgaeVC.m in Sources */,
 				33DC499E1C9D13F600849762 /* IQBarButtonItem.m in Sources */,
+				935FC70C1C9D5B9C00B8B643 /* MessageCell.m in Sources */,
 				33DC4A181C9D13F700849762 /* OrderDetailVC.m in Sources */,
 				33DC49871C9D13F600849762 /* BannerModel.m in Sources */,
 				33DC4A1D1C9D13F700849762 /* FeedbackVC.m in Sources */,
@@ -3503,6 +3554,7 @@
 				33DC4A061C9D13F700849762 /* MyFavoriteVC.m in Sources */,
 				33DC4A351C9D13F700849762 /* TuanGouCell.m in Sources */,
 				33DC49C81C9D13F600849762 /* PPRepayDC.m in Sources */,
+				935FC7101C9D5B9C00B8B643 /* SetNickVC.m in Sources */,
 				33DC49BA1C9D13F600849762 /* OrderItemModel.m in Sources */,
 				33DC49F81C9D13F700849762 /* OfferInfoCell.m in Sources */,
 				33DC49E01C9D13F600849762 /* PPJSExternal.m in Sources */,
