@@ -76,8 +76,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font = [UIFont systemFontOfSize:15];
-        cell.textLabel.textColor = [UIColor gray006Color];
-        cell.detailTextLabel.textColor = [UIColor gray006Color];
+        cell.textLabel.textColor = [g_commonConfig gray006Color];
+        cell.detailTextLabel.textColor = [g_commonConfig gray006Color];
     }
     if (indexPath.section == 0) {
         switch (indexPath.row) {
