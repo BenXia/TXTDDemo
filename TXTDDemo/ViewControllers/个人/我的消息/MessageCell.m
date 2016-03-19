@@ -8,10 +8,19 @@
 
 #import "MessageCell.h"
 
+@interface MessageCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *detailInfoLabel;
+
+@end
+
+
 @implementation MessageCell
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.detailInfoLabel.numberOfLines = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
