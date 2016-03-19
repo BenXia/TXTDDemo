@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"李新林";
-    self.view.backgroundColor = [UIColor bgGray002Color];
+    self.view.backgroundColor = [g_commonConfig bgGray002Color];
     
     [self setNavRightItemWithImage:@"geranxinxi" target:self action:@selector(didClickGerenxinxi)];
     
