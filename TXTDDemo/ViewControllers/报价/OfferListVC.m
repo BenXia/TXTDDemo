@@ -9,6 +9,7 @@
 #import "OfferListVC.h"
 #import "OfferListCell.h"
 #import "OfferProductDetailVC.h"
+#import "OfferFilterVC.h"
 
 @interface OfferListVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *menuButtonView;
@@ -59,6 +60,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Action
+
+-(IBAction)didClickMoreFilter:(id)sender{
+    OfferFilterVC* vc = [OfferFilterVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table
