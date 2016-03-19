@@ -292,6 +292,18 @@
 		88367AA11C7CACF400658214 /* SearchProductDC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88367AA01C7CACF400658214 /* SearchProductDC.m */; };
 		88367AA51C7CB11900658214 /* SubCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88367AA31C7CB11900658214 /* SubCategoryVC.m */; };
 		88367AA61C7CB11900658214 /* SubCategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88367AA41C7CB11900658214 /* SubCategoryVC.xib */; };
+		884804351C9CF26B00984EF7 /* OfferListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 884804331C9CF26B00984EF7 /* OfferListVC.m */; };
+		884804361C9CF26B00984EF7 /* OfferListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884804341C9CF26B00984EF7 /* OfferListVC.xib */; };
+		8848043B1C9CF3C100984EF7 /* OfferInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 884804391C9CF3C100984EF7 /* OfferInfoVC.m */; };
+		8848043C1C9CF3C100984EF7 /* OfferInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8848043A1C9CF3C100984EF7 /* OfferInfoVC.xib */; };
+		884804401C9CF3E700984EF7 /* OfferProductDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8848043E1C9CF3E700984EF7 /* OfferProductDetailVC.m */; };
+		884804411C9CF3E700984EF7 /* OfferProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8848043F1C9CF3E700984EF7 /* OfferProductDetailVC.xib */; };
+		884804451C9CF44900984EF7 /* OfferFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 884804431C9CF44900984EF7 /* OfferFilterVC.m */; };
+		884804461C9CF44900984EF7 /* OfferFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884804441C9CF44900984EF7 /* OfferFilterVC.xib */; };
+		8848044A1C9CF5D400984EF7 /* OfferInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 884804481C9CF5D400984EF7 /* OfferInfoCell.m */; };
+		8848044B1C9CF5D400984EF7 /* OfferInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884804491C9CF5D400984EF7 /* OfferInfoCell.xib */; };
+		8848044F1C9CF61C00984EF7 /* OfferListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8848044D1C9CF61C00984EF7 /* OfferListCell.m */; };
+		884804501C9CF61C00984EF7 /* OfferListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8848044E1C9CF61C00984EF7 /* OfferListCell.xib */; };
 		887988121C829734004BB938 /* 已收藏@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 887988101C829734004BB938 /* 已收藏@2x.png */; };
 		887988131C829734004BB938 /* 已收藏@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 887988111C829734004BB938 /* 已收藏@3x.png */; };
 		888811AC1C7B4DEC00F6672C /* GuessYouLikeProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888811AB1C7B4DEC00F6672C /* GuessYouLikeProductView.m */; };
@@ -904,6 +916,24 @@
 		88367AA21C7CB11900658214 /* SubCategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryVC.h; sourceTree = "<group>"; };
 		88367AA31C7CB11900658214 /* SubCategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryVC.m; sourceTree = "<group>"; };
 		88367AA41C7CB11900658214 /* SubCategoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubCategoryVC.xib; sourceTree = "<group>"; };
+		884804321C9CF26B00984EF7 /* OfferListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferListVC.h; sourceTree = "<group>"; };
+		884804331C9CF26B00984EF7 /* OfferListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferListVC.m; sourceTree = "<group>"; };
+		884804341C9CF26B00984EF7 /* OfferListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferListVC.xib; sourceTree = "<group>"; };
+		884804381C9CF3C100984EF7 /* OfferInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferInfoVC.h; sourceTree = "<group>"; };
+		884804391C9CF3C100984EF7 /* OfferInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferInfoVC.m; sourceTree = "<group>"; };
+		8848043A1C9CF3C100984EF7 /* OfferInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferInfoVC.xib; sourceTree = "<group>"; };
+		8848043D1C9CF3E700984EF7 /* OfferProductDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferProductDetailVC.h; sourceTree = "<group>"; };
+		8848043E1C9CF3E700984EF7 /* OfferProductDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferProductDetailVC.m; sourceTree = "<group>"; };
+		8848043F1C9CF3E700984EF7 /* OfferProductDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferProductDetailVC.xib; sourceTree = "<group>"; };
+		884804421C9CF44900984EF7 /* OfferFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferFilterVC.h; sourceTree = "<group>"; };
+		884804431C9CF44900984EF7 /* OfferFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferFilterVC.m; sourceTree = "<group>"; };
+		884804441C9CF44900984EF7 /* OfferFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferFilterVC.xib; sourceTree = "<group>"; };
+		884804471C9CF5D400984EF7 /* OfferInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferInfoCell.h; sourceTree = "<group>"; };
+		884804481C9CF5D400984EF7 /* OfferInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferInfoCell.m; sourceTree = "<group>"; };
+		884804491C9CF5D400984EF7 /* OfferInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferInfoCell.xib; sourceTree = "<group>"; };
+		8848044C1C9CF61C00984EF7 /* OfferListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferListCell.h; sourceTree = "<group>"; };
+		8848044D1C9CF61C00984EF7 /* OfferListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferListCell.m; sourceTree = "<group>"; };
+		8848044E1C9CF61C00984EF7 /* OfferListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferListCell.xib; sourceTree = "<group>"; };
 		887988101C829734004BB938 /* 已收藏@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "已收藏@2x.png"; sourceTree = "<group>"; };
 		887988111C829734004BB938 /* 已收藏@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "已收藏@3x.png"; sourceTree = "<group>"; };
 		888811AA1C7B4DEC00F6672C /* GuessYouLikeProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessYouLikeProductView.h; sourceTree = "<group>"; };
@@ -1857,6 +1887,8 @@
 		33F070391C4295F200DAC58F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				884804301C9CF24100984EF7 /* 报价 */,
+				884804311C9CF24100984EF7 /* IM */,
 				33F070411C42964A00DAC58F /* 主页 */,
 				888E70F61C7F31DB00A12377 /* 搜索商品 */,
 				888811B11C7B58AF00F6672C /* 浏览历史 */,
@@ -2093,6 +2125,38 @@
 				88965B2A1C8152BC001FA633 /* SearchProductModel.m */,
 			);
 			path = "商品搜索";
+			sourceTree = "<group>";
+		};
+		884804301C9CF24100984EF7 /* 报价 */ = {
+			isa = PBXGroup;
+			children = (
+				884804381C9CF3C100984EF7 /* OfferInfoVC.h */,
+				884804391C9CF3C100984EF7 /* OfferInfoVC.m */,
+				8848043A1C9CF3C100984EF7 /* OfferInfoVC.xib */,
+				884804321C9CF26B00984EF7 /* OfferListVC.h */,
+				884804331C9CF26B00984EF7 /* OfferListVC.m */,
+				884804341C9CF26B00984EF7 /* OfferListVC.xib */,
+				8848043D1C9CF3E700984EF7 /* OfferProductDetailVC.h */,
+				8848043E1C9CF3E700984EF7 /* OfferProductDetailVC.m */,
+				8848043F1C9CF3E700984EF7 /* OfferProductDetailVC.xib */,
+				884804421C9CF44900984EF7 /* OfferFilterVC.h */,
+				884804431C9CF44900984EF7 /* OfferFilterVC.m */,
+				884804441C9CF44900984EF7 /* OfferFilterVC.xib */,
+				884804471C9CF5D400984EF7 /* OfferInfoCell.h */,
+				884804481C9CF5D400984EF7 /* OfferInfoCell.m */,
+				884804491C9CF5D400984EF7 /* OfferInfoCell.xib */,
+				8848044C1C9CF61C00984EF7 /* OfferListCell.h */,
+				8848044D1C9CF61C00984EF7 /* OfferListCell.m */,
+				8848044E1C9CF61C00984EF7 /* OfferListCell.xib */,
+			);
+			path = "报价";
+			sourceTree = "<group>";
+		};
+		884804311C9CF24100984EF7 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IM;
 			sourceTree = "<group>";
 		};
 		88816DD41C7F5BBA00314B43 /* 分类 */ = {
@@ -2783,6 +2847,7 @@
 				33CAF89B1C7810D20015B4BC /* web_right_highlighted@2x.png in Resources */,
 				33CAF8991C7810D20015B4BC /* web_left@2x.png in Resources */,
 				33CAE43D1C7372DB0038748F /* OrderReceiverCell.xib in Resources */,
+				8848044B1C9CF5D400984EF7 /* OfferInfoCell.xib in Resources */,
 				88965B271C814B98001FA633 /* 包邮@3x.png in Resources */,
 				939E589B1C80875600E24080 /* 首页右上角信息栏@3x.png in Resources */,
 				33DD6CAF1C611A5500CE6B31 /* Btn_SearchDelete_default@2X.png in Resources */,
@@ -2805,6 +2870,7 @@
 				3309CFEA1C7F484600986C30 /* ic_pay_weixin@3x.png in Resources */,
 				939E589A1C80875600E24080 /* 首页右上角信息栏@2x.png in Resources */,
 				88367A981C7CA6AB00658214 /* LookHistoryVC.xib in Resources */,
+				884804461C9CF44900984EF7 /* OfferFilterVC.xib in Resources */,
 				88965B5D1C819483001FA633 /* guide4_35_inch.png in Resources */,
 				33DD6CCF1C611A5500CE6B31 /* ico_certification.png in Resources */,
 				88965B551C819483001FA633 /* guide2_35_inch.png in Resources */,
@@ -2849,6 +2915,7 @@
 				93EBD68A1C7F2D14005FA9A1 /* ic_share05@2x.png in Resources */,
 				33D0286D1C74BCC900277C3C /* PaySuccessVC.xib in Resources */,
 				939345681C7B54B20054E2EC /* SettingVCViewController.xib in Resources */,
+				884804501C9CF61C00984EF7 /* OfferListCell.xib in Resources */,
 				33DD6CC51C611A5500CE6B31 /* goodsdetails_ico_TopDrug.png in Resources */,
 				33DD6BE91C61195600CE6B31 /* btn_choice_t@2x.png in Resources */,
 				B583394C1C796FB000F9EBE2 /* Btn_delete_selected@2X.png in Resources */,
@@ -2860,6 +2927,7 @@
 				9379D3B11C632A2200390702 /* tempShop.png in Resources */,
 				888E70F21C7F2D7100A12377 /* 快递@2x.png in Resources */,
 				33DD6CBF1C611A5500CE6B31 /* example.png in Resources */,
+				884804361C9CF26B00984EF7 /* OfferListVC.xib in Resources */,
 				33DD6CCC1C611A5500CE6B31 /* ico_adress.png in Resources */,
 				33440D1A1C783C1B00A441E3 /* photoViewer_error_placeholder@3x.png in Resources */,
 				B58339521C79970300F9EBE2 /* OrderDetailVC.xib in Resources */,
@@ -2942,6 +3010,7 @@
 				33DD6BE61C61195600CE6B31 /* btn_back_white@3x.png in Resources */,
 				33D00F3C1C62375B00499EE9 /* btn_numberplus72_default@3x.png in Resources */,
 				33DD6CB21C611A5500CE6B31 /* btn_setting_pressed.png in Resources */,
+				8848043C1C9CF3C100984EF7 /* OfferInfoVC.xib in Resources */,
 				33DD6C9A1C611A5500CE6B31 /* Btn_Buying_pressed@2X.png in Resources */,
 				33DD6CD51C611A5500CE6B31 /* ico_ordercommenting.png in Resources */,
 				B58339671C79BB3400F9EBE2 /* like_f@2x.png in Resources */,
@@ -2975,6 +3044,7 @@
 				33DD6D1C1C611A5500CE6B31 /* 评价晒单-星-未点击@2x.png in Resources */,
 				887988121C829734004BB938 /* 已收藏@2x.png in Resources */,
 				33DD6BFC1C6119A600CE6B31 /* btn_user_f@2x.png in Resources */,
+				884804411C9CF3E700984EF7 /* OfferProductDetailVC.xib in Resources */,
 				33D187431C70CE3800658F3D /* 收藏@3x.png in Resources */,
 				33DD6CC41C611A5500CE6B31 /* goods_tagL_Present@2X.png in Resources */,
 				B597107E1C788D1E006BC9FE /* OrderListTableViewCell.xib in Resources */,
@@ -3136,6 +3206,7 @@
 				33DD6BBA1C6103CA00CE6B31 /* IQToolbar.m in Sources */,
 				33CAF88D1C780C030015B4BC /* PPJSExternal.m in Sources */,
 				33CAB7CC1C81EAEF00911A91 /* WeiXinMD5Encrypt.m in Sources */,
+				8848044F1C9CF61C00984EF7 /* OfferListCell.m in Sources */,
 				930C349D1C7A0BC1008823F9 /* UPdataAddressDC.m in Sources */,
 				B58339751C79FFAC00F9EBE2 /* OrderListDC.m in Sources */,
 				B58339571C79976A00F9EBE2 /* ProductEvaluateVC.m in Sources */,
@@ -3170,6 +3241,7 @@
 				93DEA88E1C4BC6FB008211F7 /* HomePageCourseListCell.m in Sources */,
 				9379D3AF1C63239100390702 /* MultilevelMenu.m in Sources */,
 				88367A971C7CA6AB00658214 /* LookHistoryVC.m in Sources */,
+				884804401C9CF3E700984EF7 /* OfferProductDetailVC.m in Sources */,
 				33F070501C429AD300DAC58F /* AppInitializer.m in Sources */,
 				B5DA4D291C8094C5003677DD /* OrderConfermDC.m in Sources */,
 				9377AC651C537837003B24B1 /* ADBannerDC.m in Sources */,
@@ -3193,6 +3265,7 @@
 				888811AC1C7B4DEC00F6672C /* GuessYouLikeProductView.m in Sources */,
 				930C34461C795CEB008823F9 /* SetNickVC.m in Sources */,
 				33DD6BB31C6103CA00CE6B31 /* IQUIWindow+Hierarchy.m in Sources */,
+				8848044A1C9CF5D400984EF7 /* OfferInfoCell.m in Sources */,
 				88EBEE7E1C79B83000F20C90 /* AddCartDC.m in Sources */,
 				888C7A591C79901000CA2ED9 /* ProductDescriptionVC.m in Sources */,
 				930C343C1C783E5C008823F9 /* SalesPromotionDC.m in Sources */,
@@ -3204,6 +3277,7 @@
 				33CAF88B1C780C030015B4BC /* EasyJSWebViewProxyDelegate.m in Sources */,
 				33DD6BB41C6103CA00CE6B31 /* IQKeyboardManager.m in Sources */,
 				33D187391C70C9D100658F3D /* ProductDetailVC.m in Sources */,
+				884804451C9CF44900984EF7 /* OfferFilterVC.m in Sources */,
 				888811CB1C7B60B000F6672C /* FavoriteProductCell.m in Sources */,
 				33CB5B751C807C220038EBDC /* OrderItemModel.m in Sources */,
 				9377AC681C53793A003B24B1 /* BannerModel.m in Sources */,
@@ -3234,6 +3308,7 @@
 				930C349B1C7A0BC1008823F9 /* Address.m in Sources */,
 				33F070691C42A42100DAC58F /* CartVC.m in Sources */,
 				33CAF8891C780C030015B4BC /* EasyJSDataFunction.m in Sources */,
+				884804351C9CF26B00984EF7 /* OfferListVC.m in Sources */,
 				B5DA4D0F1C7B4402003677DD /* ShoppingCardVM.m in Sources */,
 				93DEA8D21C4BCBAA008211F7 /* TAPageControl.m in Sources */,
 				B5DA4D1E1C7DDBBE003677DD /* CartProductDeleteDC.m in Sources */,
@@ -3266,6 +3341,7 @@
 				93DEA8D51C4BCBAA008211F7 /* UIView+SDExtension.m in Sources */,
 				9379D3AB1C63239100390702 /* MultilevelCollectionViewCell.m in Sources */,
 				33CAE4461C7373360038748F /* OrderItemCell.m in Sources */,
+				8848043B1C9CF3C100984EF7 /* OfferInfoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
