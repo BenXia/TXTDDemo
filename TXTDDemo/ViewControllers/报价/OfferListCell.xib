@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="195" id="KGk-i7-Jjw" customClass="OfferListCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="195" id="KGk-i7-Jjw" customClass="OfferListCell">
             <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -28,7 +28,7 @@
                             </mask>
                         </variation>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-89-azh">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-89-azh" customClass="FramedView">
                         <rect key="frame" x="0.0" y="12" width="391" height="187"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wBo-ax-9SC">
@@ -58,29 +58,29 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvk-HJ-JaH" userLabel="buttonView">
-                                <rect key="frame" x="0.0" y="147" width="391" height="40"/>
+                                <rect key="frame" x="2" y="147" width="387" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBi-eA-kXL">
-                                        <rect key="frame" x="261" y="1" width="130" height="39"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBi-eA-kXL">
+                                        <rect key="frame" x="259" y="1" width="128" height="39"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="加入关注">
+                                        <state key="normal" title="加入关注" image="jiaruguanzhu.png">
                                             <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJc-xS-npw">
-                                        <rect key="frame" x="0.0" y="1" width="130" height="39"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJc-xS-npw">
+                                        <rect key="frame" x="0.0" y="1" width="128" height="39"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="拨打电话">
+                                        <state key="normal" title="拨打电话" image="phone.png">
                                             <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cC1-Kb-WmL">
-                                        <rect key="frame" x="131" y="1" width="129" height="39"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cC1-Kb-WmL">
+                                        <rect key="frame" x="129" y="1" width="129" height="39"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="加入圈子">
+                                        <state key="normal" title="加入圈子" image="jiaruquanzi.png">
                                             <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
@@ -156,12 +156,12 @@
                             <constraint firstItem="YlE-5h-Xe9" firstAttribute="leading" secondItem="Xam-xs-auR" secondAttribute="leading" id="GSp-o6-A36"/>
                             <constraint firstItem="bFv-d7-zy2" firstAttribute="leading" secondItem="ZF0-rE-Tqb" secondAttribute="leading" id="GqC-OK-JsI"/>
                             <constraint firstItem="Xam-xs-auR" firstAttribute="top" secondItem="wBo-ax-9SC" secondAttribute="top" id="KJB-GQ-5T0"/>
-                            <constraint firstAttribute="trailing" secondItem="Zvk-HJ-JaH" secondAttribute="trailing" id="LcG-v3-KbQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Zvk-HJ-JaH" secondAttribute="trailing" constant="2" id="LcG-v3-KbQ"/>
                             <constraint firstItem="ZF0-rE-Tqb" firstAttribute="top" secondItem="JkP-7m-ocq" secondAttribute="bottom" constant="8" id="N36-3h-0u9"/>
                             <constraint firstItem="pic-JQ-CJZ" firstAttribute="trailing" secondItem="JkP-7m-ocq" secondAttribute="trailing" id="O1C-G2-5yE"/>
                             <constraint firstItem="pic-JQ-CJZ" firstAttribute="top" secondItem="ZF0-rE-Tqb" secondAttribute="top" id="Pok-Sr-7fg"/>
                             <constraint firstItem="Mo1-HH-VnQ" firstAttribute="leading" secondItem="ZF0-rE-Tqb" secondAttribute="leading" id="Ppm-eo-rJl"/>
-                            <constraint firstItem="Zvk-HJ-JaH" firstAttribute="leading" secondItem="Zji-89-azh" secondAttribute="leading" id="RE5-ZL-K42"/>
+                            <constraint firstItem="Zvk-HJ-JaH" firstAttribute="leading" secondItem="Zji-89-azh" secondAttribute="leading" constant="2" id="RE5-ZL-K42"/>
                             <constraint firstItem="hud-z2-Tux" firstAttribute="centerY" secondItem="jmA-wy-LtG" secondAttribute="centerY" id="TXP-ys-xab"/>
                             <constraint firstItem="cVH-oK-DIK" firstAttribute="top" secondItem="bFv-d7-zy2" secondAttribute="top" id="U1f-h2-h5C"/>
                             <constraint firstAttribute="bottom" secondItem="Zvk-HJ-JaH" secondAttribute="bottom" id="UNJ-LF-5Ar"/>
@@ -182,6 +182,7 @@
                         </variation>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="FUc-NG-rO4" firstAttribute="trailing" secondItem="Zji-89-azh" secondAttribute="trailing" constant="3" id="9y9-ke-y0R"/>
                     <constraint firstAttribute="bottom" secondItem="Zji-89-azh" secondAttribute="bottom" id="JH3-Tq-RXO"/>
@@ -199,10 +200,19 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="containerView" destination="Zji-89-azh" id="P0d-ga-0Sr"/>
+                <outlet property="containerViewTopConstraint" destination="eKs-0M-gSX" id="fPd-gK-XQc"/>
+                <outlet property="typeIcon" destination="FUc-NG-rO4" id="cJB-4q-gQi"/>
+            </connections>
             <point key="canvasLocation" x="249" y="154.5"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="jiaruguanzhu.png" width="22" height="19"/>
+        <image name="jiaruquanzi.png" width="19" height="19"/>
         <image name="mokuai.png" width="209" height="63"/>
+        <image name="phone.png" width="17" height="19"/>
     </resources>
 </document>

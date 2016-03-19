@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FramedView.h"
 
 @interface OfferListCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *typeIcon;
+@property (weak, nonatomic) IBOutlet FramedView *containerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewTopConstraint;
 
 @end

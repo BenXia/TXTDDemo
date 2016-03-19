@@ -12,10 +12,24 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [self.typeIcon bringToFront];
+}
+
+-(void)prepareForReuse{
+    self.containerViewTopConstraint.constant = PIXEL_12;
+}
+
+-(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
+    [super setHighlighted:highlighted animated:animated];
+    if (highlighted) {
+        self.containerView.backgroundColor = [UIColor gray003Color];
+    }else{
+        self.containerView.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+//    [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }

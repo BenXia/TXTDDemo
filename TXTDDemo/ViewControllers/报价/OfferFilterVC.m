@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"更多过滤";
     self.scrollView.backgroundColor = [UIColor bgGray002Color];
     
     for (UIButton* button in self.filterButtonArray) {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OfferFilterVC : UIViewController
+@interface OfferFilterVC : BaseViewController
 
 @end
