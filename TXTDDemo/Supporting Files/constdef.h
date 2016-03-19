@@ -16,9 +16,10 @@
 
 typedef NS_ENUM(NSUInteger, MainTabIndexType) {
     kMainTabIndexType_HomePage           = 0,
-    kMainTabIndexType_CategoryPage       = 1,
-    kMainTabIndexType_CartPage           = 2,
-    kMainTabIndexType_ProfilePage        = 3,
+    kMainTabIndexType_OfferInfoPage      = 1,
+    kMainTabIndexType_PublishPage        = 2,
+    kMainTabIndexType_IMHomePage         = 3,
+    kMainTabIndexType_ProfilePage        = 4,
     kMainTabIndexType_Unknown            = 100,
 };
 

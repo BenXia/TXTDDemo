@@ -25,8 +25,8 @@
     if (self = [super init]) {
         self.title = @"报价信息";
         self.tabBarItem.title = @"报价";
-        self.tabBarItem.image = [UIImage imageNamed:@"btn_user_f"];
-        self.tabBarItem.selectedImage = [[UIImage imageNamed:@"btn_user_t"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image = [[UIImage imageNamed:@"tabbtn_baojia"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbtn_baojia_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     return self;
 }
