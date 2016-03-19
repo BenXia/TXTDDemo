@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="ChatSenderCell">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8q-Ot-oig">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="64"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_boy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="88i-Xa-ZNT">
+                                <rect key="frame" x="299" y="9" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="88i-Xa-ZNT" secondAttribute="height" multiplier="1:1" id="WOY-ba-jni"/>
+                                    <constraint firstAttribute="height" constant="45" id="iuI-dD-rsO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duihuakuang2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-8p-IgN">
+                                <rect key="frame" x="80" y="14" width="211" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5WR-cF-s6Z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你猜猜看看啊" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-JR-fTA">
+                                <rect key="frame" x="80" y="14" width="196" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kpc-8p-IgN" firstAttribute="centerY" secondItem="88i-Xa-ZNT" secondAttribute="centerY" id="076-1u-5x1"/>
+                            <constraint firstAttribute="trailing" secondItem="88i-Xa-ZNT" secondAttribute="trailing" constant="12" id="2iN-X0-vez"/>
+                            <constraint firstItem="88i-Xa-ZNT" firstAttribute="leading" secondItem="kpc-8p-IgN" secondAttribute="trailing" constant="8" id="7rd-Nj-hak"/>
+                            <constraint firstItem="88i-Xa-ZNT" firstAttribute="centerY" secondItem="u8q-Ot-oig" secondAttribute="centerY" id="EFN-IM-Sv7"/>
+                            <constraint firstItem="FoN-JR-fTA" firstAttribute="top" secondItem="kpc-8p-IgN" secondAttribute="top" id="I1F-6A-IyW"/>
+                            <constraint firstItem="88i-Xa-ZNT" firstAttribute="leading" secondItem="FoN-JR-fTA" secondAttribute="trailing" constant="8" id="MSl-xs-uN8"/>
+                            <constraint firstItem="kpc-8p-IgN" firstAttribute="leading" secondItem="u8q-Ot-oig" secondAttribute="leading" constant="80" id="PCy-dh-caC"/>
+                            <constraint firstItem="FoN-JR-fTA" firstAttribute="trailing" secondItem="kpc-8p-IgN" secondAttribute="trailing" constant="-15" id="VUC-wS-GXl"/>
+                            <constraint firstAttribute="trailing" secondItem="kpc-8p-IgN" secondAttribute="trailing" constant="70" id="W2g-TO-itC"/>
+                            <constraint firstItem="FoN-JR-fTA" firstAttribute="leading" secondItem="kpc-8p-IgN" secondAttribute="leading" id="n9e-8n-77c"/>
+                            <constraint firstItem="FoN-JR-fTA" firstAttribute="bottom" secondItem="kpc-8p-IgN" secondAttribute="bottom" id="t0z-vK-0hU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W2g-TO-itC"/>
+                                <exclude reference="MSl-xs-uN8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="u8q-Ot-oig" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fEa-Nr-Xxc"/>
+                    <constraint firstAttribute="bottom" secondItem="u8q-Ot-oig" secondAttribute="bottom" id="gvB-fW-dbg"/>
+                    <constraint firstAttribute="trailing" secondItem="u8q-Ot-oig" secondAttribute="trailing" id="sq5-Nv-ATI"/>
+                    <constraint firstItem="u8q-Ot-oig" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xV9-dx-gwX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="280" y="330.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="duihuakuang2.png" width="375" height="55"/>
+        <image name="user_boy.jpg" width="220" height="220"/>
+    </resources>
+</document>

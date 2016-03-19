@@ -1,19 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IMHomeVC">
             <connections>
+                <outlet property="menuView" destination="mYT-lJ-acx" id="Zfi-mg-da9"/>
+                <outlet property="tableView" destination="v4E-or-xeo" id="QjA-0N-lkt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="名字/手机号" translatesAutoresizingMaskIntoConstraints="NO" id="oga-YM-5r0">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-or-xeo">
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eGP-SA-Tmx"/>
+                        <outlet property="delegate" destination="-1" id="5ol-do-uO9"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="v4E-or-xeo" firstAttribute="top" secondItem="oga-YM-5r0" secondAttribute="bottom" id="2Js-8l-veI"/>
+                <constraint firstAttribute="bottom" secondItem="v4E-or-xeo" secondAttribute="bottom" id="6HZ-UL-s4A"/>
+                <constraint firstItem="v4E-or-xeo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Amk-Ew-lBj"/>
+                <constraint firstItem="oga-YM-5r0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OZc-0V-snO"/>
+                <constraint firstItem="oga-YM-5r0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WgY-3O-1db"/>
+                <constraint firstAttribute="trailing" secondItem="oga-YM-5r0" secondAttribute="trailing" id="ckN-GG-C8U"/>
+                <constraint firstAttribute="trailing" secondItem="v4E-or-xeo" secondAttribute="trailing" id="hKH-aL-Ue0"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="61" y="225"/>
+        </view>
+        <view contentMode="scaleToFill" id="mYT-lJ-acx">
+            <rect key="frame" x="0.0" y="0.0" width="197" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvW-m3-naQ">
+                    <rect key="frame" x="0.0" y="0.0" width="197" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title=" 添加好友" image="tjhy.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickAddFriend:" destination="-1" eventType="touchUpInside" id="Hnu-Gc-yEs"/>
+                    </connections>
+                </button>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cto-1D-uva" userLabel="lineView">
+                    <rect key="frame" x="0.0" y="48" width="197" height="1"/>
+                    <color key="backgroundColor" red="0.025580505079695327" green="0.015952161030308214" blue="0.39905315896739135" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="xcb-L9-MPj"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLA-Kl-KZI">
+                    <rect key="frame" x="0.0" y="49" width="197" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title=" 发起群聊" image="faqiqunliao.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickStartGroupChat:" destination="-1" eventType="touchUpInside" id="JIx-NO-hbK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.17254901959999999" green="0.3294117647" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mLA-Kl-KZI" secondAttribute="bottom" id="0Yt-lg-Je1"/>
+                <constraint firstItem="cto-1D-uva" firstAttribute="leading" secondItem="mYT-lJ-acx" secondAttribute="leading" id="4Ma-N4-R8H"/>
+                <constraint firstItem="CvW-m3-naQ" firstAttribute="top" secondItem="mYT-lJ-acx" secondAttribute="top" id="KJx-rJ-fE8"/>
+                <constraint firstItem="cto-1D-uva" firstAttribute="centerY" secondItem="mYT-lJ-acx" secondAttribute="centerY" id="R4r-rY-ord"/>
+                <constraint firstAttribute="trailing" secondItem="mLA-Kl-KZI" secondAttribute="trailing" id="V6j-cL-FuE"/>
+                <constraint firstAttribute="trailing" secondItem="CvW-m3-naQ" secondAttribute="trailing" id="Ygg-Bv-7cD"/>
+                <constraint firstItem="mLA-Kl-KZI" firstAttribute="leading" secondItem="mYT-lJ-acx" secondAttribute="leading" id="aeu-cw-lyR"/>
+                <constraint firstAttribute="trailing" secondItem="cto-1D-uva" secondAttribute="trailing" id="fuN-EO-Z5M"/>
+                <constraint firstItem="CvW-m3-naQ" firstAttribute="leading" secondItem="mYT-lJ-acx" secondAttribute="leading" id="hsf-dL-kME"/>
+                <constraint firstItem="cto-1D-uva" firstAttribute="top" secondItem="CvW-m3-naQ" secondAttribute="bottom" id="jb2-VZ-eCP"/>
+                <constraint firstItem="mLA-Kl-KZI" firstAttribute="top" secondItem="cto-1D-uva" secondAttribute="bottom" id="utt-10-sNc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="348.5" y="74"/>
         </view>
     </objects>
+    <resources>
+        <image name="faqiqunliao.png" width="21" height="18"/>
+        <image name="tjhy.png" width="21" height="18"/>
+    </resources>
 </document>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OfferProductDetailVC : UIViewController
+@interface OfferProductDetailVC : BaseViewController
 
 @end

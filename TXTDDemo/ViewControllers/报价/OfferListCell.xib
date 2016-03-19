@@ -31,7 +31,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-89-azh" customClass="FramedView">
                         <rect key="frame" x="0.0" y="12" width="391" height="187"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wBo-ax-9SC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_boy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wBo-ax-9SC">
                                 <rect key="frame" x="12" y="8" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="2Bc-bS-JUH"/>
@@ -214,5 +214,6 @@
         <image name="jiaruquanzi.png" width="19" height="19"/>
         <image name="mokuai.png" width="209" height="63"/>
         <image name="phone.png" width="17" height="19"/>
+        <image name="user_boy.jpg" width="220" height="220"/>
     </resources>
 </document>
