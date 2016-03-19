@@ -19,6 +19,7 @@
 @interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UIView *headImageBackGroundView;
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailDecLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -43,7 +44,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 
     [self refreshUI];
 }
@@ -73,6 +74,9 @@
     self.headImageView.layer.cornerRadius = self.headImageView.width/2;
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.userInteractionEnabled = YES;
+    self.headImageBackGroundView.layer.cornerRadius = self.headImageBackGroundView.width/2;
+    self.headImageBackGroundView.layer.masksToBounds = YES;
+    self.headImageBackGroundView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
     [self.headerView addGestureRecognizer:tap];
     [self refreshUI];
@@ -144,20 +148,24 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = [UIColor gray005Color];
+    cell.textLabel.textColor = [UIColor themeButtonBlueColor];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     cell.detailTextLabel.textColor = [UIColor gray006Color];
-    cell.imageView.image = [UIImage imageNamed:@"btn_cart_t"];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"我的信息";
+        cell.imageView.image = [UIImage imageNamed:@"wdxx"];
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"我的报价";
+        cell.imageView.image = [UIImage imageNamed:@"wdbj"];
     } else if (indexPath.row == 2) {
         cell.textLabel.text = @"我的关注";
+        cell.imageView.image = [UIImage imageNamed:@"wdgz"];
     } else if (indexPath.row == 3){
         cell.textLabel.text = @"我的偏好";
+        cell.imageView.image = [UIImage imageNamed:@"wdph"];
     } else {
         cell.textLabel.text = @"我的消息";
+        cell.imageView.image = [UIImage imageNamed:@"wdxiaoxi"];
     }
     return cell;
 }
@@ -165,7 +173,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
-        
+        UserInfoVC *userInfoVC = [[UserInfoVC alloc] initWithNibName:@"UserInfoVC" bundle:nil];
+        userInfoVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:userInfoVC animated:YES];
     } else if (indexPath.row == 1) {
         
     } else if (indexPath.row == 2) {

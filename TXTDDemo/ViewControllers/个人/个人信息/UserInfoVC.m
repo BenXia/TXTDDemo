@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "SetNickVC.h"
 #import "AddressListVC.h"
+#import "UserDetailPageVC.h"
 
 @interface UserInfoVC () <UITableViewDataSource,
 UITableViewDelegate,
@@ -25,6 +26,8 @@ UINavigationControllerDelegate>
 @property (strong, nonatomic) NSMutableArray *modelArray;
 @property (strong, nonatomic) UIImageView *headImageView;
 @property (strong, nonatomic) UIImage *uploadImage;
+@property (strong, nonatomic) IBOutlet UIView *footView;
+@property (weak, nonatomic) IBOutlet UIButton *changUserInfoBtn;
 
 @end
 
@@ -32,12 +35,13 @@ UINavigationControllerDelegate>
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.tableView reloadData];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人信息";
+    self.tableView.tableFooterView = self.footView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,11 +52,15 @@ UINavigationControllerDelegate>
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    if (section == 0) {
+        return 5;
+    } else {
+        return 4;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -61,51 +69,55 @@ UINavigationControllerDelegate>
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.textColor = [UIColor gray005Color];
+        cell.textLabel.textColor = [UIColor gray006Color];
         cell.detailTextLabel.textColor = [UIColor gray006Color];
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.detailTextLabel.font = [UIFont systemFontOfSize:15];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"头像";
-        [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[UserInfoModel sharedUserInfoModel].headPath] placeholderImage:[UIImage imageNamed:@"头像"]];
-        [cell.contentView addSubview:self.headImageView];
-    } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"昵称";
-        cell.detailTextLabel.text = [UserInfoModel sharedUserInfoModel].nickName;
-    } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"绑定手机号";
-        cell.detailTextLabel.text = [UserInfoModel sharedUserInfoModel].mobile;
-    } else if (indexPath.row == 3) {
-        cell.textLabel.text = @"我的地址";
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"用户名";
+            cell.detailTextLabel.text = @"王大锤";
+        } else if (indexPath.row == 1) {
+            cell.textLabel.text = @"真实姓名";
+            cell.detailTextLabel.text = @"李晨";
+        } else if (indexPath.row == 2) {
+            cell.textLabel.text = @"手机号码";
+            cell.detailTextLabel.text = @"15222222222";
+        } else if (indexPath.row == 3) {
+            cell.textLabel.text = @"个人邮箱";
+            cell.detailTextLabel.text = @"未绑定";
+        } else {
+            cell.textLabel.text = @"个人QQ";
+            cell.detailTextLabel.text = @"未绑定";
+        }
+    } else {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"公司名称";
+            cell.detailTextLabel.text = @"上海建设银行股份有限公司";
+        } else if (indexPath.row == 1) {
+            cell.textLabel.text = @"职位";
+            cell.detailTextLabel.text = @"业务经理";
+        } else if (indexPath.row == 2) {
+            cell.textLabel.text = @"公司电话";
+            cell.detailTextLabel.text = @"0551-37373777";
+        } else if (indexPath.row == 3) {
+            cell.textLabel.text = @"公司邮箱";
+            cell.detailTextLabel.text = @"timo@ccb.com";
+        }
     }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        [self changeUserHead];
-    } else if (indexPath.row == 1) {
-        SetNickVC *setNickVC = [[SetNickVC alloc] initWithNibName:@"SetNickVC" bundle:nil];
-        setNickVC.nick = [UserInfoModel sharedUserInfoModel].nickName;
-        [self.navigationController pushViewController:setNickVC animated:YES];
-    } else if (indexPath.row == 3) {
-        AddressListVC *addressListVC = [[AddressListVC alloc] initWithNibName:@"AddressListVC" bundle:nil];
-        addressListVC.isSelectAddress = NO;
-        addressListVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:addressListVC animated:YES];
-        
-    }
+   
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        return 84;
-    } else {
-        return 50;
-    }
+    return 40;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -211,7 +223,18 @@ UINavigationControllerDelegate>
 
 #pragma mark - public method
 
+- (IBAction)changUserInfo:(UIButton *)sender {
+    if (self.changUserInfoBtn.selected) {
+        [self.changUserInfoBtn setTitle:@"确认修改" forState:UIControlStateNormal];
+    } else {
+        [self.changUserInfoBtn setTitle:@"修改个人资料" forState:UIControlStateNormal];
+    }
+}
 
+- (IBAction)scanUserInfoDetail:(id)sender {
+    UserDetailPageVC *userDetailPageVC = [[UserDetailPageVC alloc] initWithNibName:@"UserDetailPageVC" bundle:nil];
+    [self.navigationController pushViewController:userDetailPageVC animated:YES];
+}
 
 
 #pragma mark - setters and getters

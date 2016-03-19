@@ -26,7 +26,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="bxo-Zb-Jvm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UIk-Em-WoJ"/>
                 <constraint firstItem="bxo-Zb-Jvm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="cqY-9o-6wj"/>
