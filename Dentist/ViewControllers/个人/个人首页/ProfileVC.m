@@ -7,7 +7,6 @@
 //
 
 #import "ProfileVC.h"
-#import "MyOrderCell.h"
 #import "UserInfoVC.h"
 #import "AddressListVC.h"
 #import "MyFavoriteVC.h"
@@ -15,13 +14,13 @@
 #import "AllOrderListVC.h"
 #import "AppDeinitializer.h"
 #import "SettingVCViewController.h"
+#import "UserDetailPageVC.h"
 
-
-@interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate,MyOrderCellDelegate>
+@interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;
-@property (weak, nonatomic) IBOutlet UIButton *userLevelBtn;
+@property (weak, nonatomic) IBOutlet UILabel *detailDecLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -63,14 +62,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Public methods
-
-- (void)showAllOrderListVC {
-    AllOrderListVC * allOrderListVC = [[AllOrderListVC alloc] initWithOrderStatusType:OrderStatusType_NeedHandle];
-    allOrderListVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:allOrderListVC animated:NO];
-}
-
 #pragma mark - Private methods
 
 - (void)refreshUI {
@@ -79,7 +70,6 @@
 }
 
 - (void)initUI {
-    [self.userLevelBtn liningThematized:[UIColor themeButtonBlueColor]];
     self.headImageView.layer.cornerRadius = self.headImageView.width/2;
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.userInteractionEnabled = YES;
@@ -90,7 +80,6 @@
 
 - (void)initTableView {
     self.tableView.tableHeaderView = self.headerView;
-    [self.tableView registerNib:[MyOrderCell nib] forCellReuseIdentifier:[MyOrderCell identifier]];
 }
 
 #pragma mark - IBOut Action
@@ -115,9 +104,9 @@
 }
 
 - (void)onSettingBtn {
-    SettingVCViewController *settingVC = [[SettingVCViewController alloc] initWithNibName:@"SettingVCViewController" bundle:nil];
-    settingVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:settingVC animated:YES];
+    UserDetailPageVC *userDetailVC = [[UserDetailPageVC alloc] initWithNibName:@"UserDetailPageVC" bundle:nil];
+    userDetailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:userDetailVC animated:YES];
 }
 
 - (void)didClickOnHeadImageView:(UITapGestureRecognizer *)tap {
@@ -143,63 +132,54 @@
 #pragma mark - UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 2;
-    } else {
-        return 1;
-    }
+   return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && indexPath.row == 1) {
-        MyOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:[MyOrderCell identifier] forIndexPath:indexPath];
-        cell.delegate = self;
-        return cell;
-        
+    static NSString *cellIdentifier = @"cell";
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.textColor = [UIColor gray005Color];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+    cell.detailTextLabel.textColor = [UIColor gray006Color];
+    cell.imageView.image = [UIImage imageNamed:@"btn_cart_t"];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"我的信息";
+    } else if (indexPath.row == 1) {
+        cell.textLabel.text = @"我的报价";
+    } else if (indexPath.row == 2) {
+        cell.textLabel.text = @"我的关注";
+    } else if (indexPath.row == 3){
+        cell.textLabel.text = @"我的偏好";
     } else {
-        static NSString *cellIdentifier = @"cell";
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.font = [UIFont systemFontOfSize:14];
-        cell.textLabel.textColor = [UIColor gray005Color];
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-        cell.detailTextLabel.textColor = [UIColor gray006Color];
-        if (indexPath.section == 0 && indexPath.row == 0) {
-            cell.textLabel.text = @"我的订单";
-            cell.detailTextLabel.text = @"查看全部";
-        } else if (indexPath.section == 1) {
-            cell.textLabel.text = @"客服热线";
-            cell.detailTextLabel.text = @"400-001-4980";
-        } else if (indexPath.section == 2) {
-            cell.textLabel.text = @"使用帮助";
-            cell.detailTextLabel.text = @"";
-        }
-        return cell;
+        cell.textLabel.text = @"我的消息";
     }
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.section == 1) {
-        [Utilities makePhoneCall:@"4000014980"];
-    } else if (indexPath.section == 0 && indexPath.row == 0){
-        AllOrderListVC * allOrderListVC = [[AllOrderListVC alloc] initWithOrderStatusType:OrderStatusType_All];
-        allOrderListVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:allOrderListVC animated:YES];
+    if (indexPath.row == 0) {
+        
+    } else if (indexPath.row == 1) {
+        
+    } else if (indexPath.row == 2) {
+        
+    } else if (indexPath.row == 3){
+        
+    } else {
+        
     }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && indexPath.row == 1) {
-        return 90;
-    } else {
-        return 44;
-    }
+    return 44;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -209,30 +189,5 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 1;
 }
-#pragma mark - UITableViewCellDelegate
 
-- (void)orderButtonClickedWithType:(OrderHandleType)orderHandleType {
-    OrderStatusType orderType;
-    switch (orderHandleType) {
-        case OrderHandle_WaitingPay: {
-            orderType = OrderStatusType_NeedHandle;
-        }
-            break;
-        case OrderHandle_WaitingPraise: {
-            orderType = OrderStatusType_NeedPraise;
-        }
-            break;
-        case OrderHandle_Done: {
-            orderType = OrderStatusType_Complete;
-        }
-            break;
-
-        default:
-            break;
-    }
-
-    AllOrderListVC * allOrderListVC = [[AllOrderListVC alloc] initWithOrderStatusType:orderType];
-    allOrderListVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:allOrderListVC animated:YES];
-}
 @end
