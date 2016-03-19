@@ -8,10 +8,6 @@
 
 #import "ProfileVC.h"
 #import "UserInfoVC.h"
-#import "AddressListVC.h"
-#import "MyFavoriteVC.h"
-#import "LookHistoryVC.h"
-#import "AllOrderListVC.h"
 #import "AppDeinitializer.h"
 #import "SettingVCViewController.h"
 #import "UserDetailPageVC.h"
@@ -87,26 +83,7 @@
     self.tableView.tableHeaderView = self.headerView;
 }
 
-#pragma mark - IBOut Action
-
-- (IBAction)onShouCangBtn:(UIButton *)sender {
-    MyFavoriteVC* favoriteVC = [MyFavoriteVC new];
-    favoriteVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:favoriteVC animated:YES];
-}
-
-- (IBAction)onScanHistoryBtn:(UIButton *)sender {
-    LookHistoryVC* lookHistoryVC = [LookHistoryVC new];
-    lookHistoryVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:lookHistoryVC animated:YES];
-}
-
-- (IBAction)onAddressBtn:(UIButton *)sender {
-    AddressListVC *addressListVC = [[AddressListVC alloc] initWithNibName:@"AddressListVC" bundle:nil];
-    addressListVC.isSelectAddress = NO;
-    addressListVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:addressListVC animated:YES];
-}
+#pragma mark - IBActions
 
 - (IBAction)onSettingBtn:(UIButton *)sender {
     SettingVCViewController *setVC = [[SettingVCViewController alloc] initWithNibName:@"SettingVCViewController" bundle:nil];
