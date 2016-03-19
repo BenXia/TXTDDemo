@@ -16,14 +16,14 @@
 @implementation AttentionCell
 
 - (void)awakeFromNib {
-    NSMutableAttributedString *moneyAttributedString = [[NSMutableAttributedString alloc] initWithString:@"2000" attributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:[UIFont systemFontOfSize:25]}];
+    NSMutableAttributedString *moneyAttributedString = [[NSMutableAttributedString alloc] initWithString:@"2000" attributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:[UIFont systemFontOfSize:30]}];
     
-    [moneyAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@",@"万元"] attributes:@{NSForegroundColorAttributeName:[UIColor gray006Color], NSFontAttributeName:[UIFont systemFontOfSize:10]}]];
+    [moneyAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",@"万元"] attributes:@{NSForegroundColorAttributeName:[UIColor gray006Color], NSFontAttributeName:[UIFont systemFontOfSize:14]}]];
     self.moneyLabel.attributedText = moneyAttributedString;
     
-    NSMutableAttributedString *mouthAttributedString = [[NSMutableAttributedString alloc] initWithString:@"12" attributes:@{NSForegroundColorAttributeName:[UIColor themeBlueColor], NSFontAttributeName:[UIFont systemFontOfSize:25]}];
+    NSMutableAttributedString *mouthAttributedString = [[NSMutableAttributedString alloc] initWithString:@"12" attributes:@{NSForegroundColorAttributeName:[UIColor themeBlueColor], NSFontAttributeName:[UIFont systemFontOfSize:30]}];
     
-    [mouthAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@",@"个月"] attributes:@{NSForegroundColorAttributeName:[UIColor gray006Color], NSFontAttributeName:[UIFont systemFontOfSize:10]}]];
+    [mouthAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",@"个月"] attributes:@{NSForegroundColorAttributeName:[UIColor gray006Color], NSFontAttributeName:[UIFont systemFontOfSize:14]}]];
     self.mouthLabel.attributedText = mouthAttributedString;
 }
 
