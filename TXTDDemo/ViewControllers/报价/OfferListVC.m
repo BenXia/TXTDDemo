@@ -37,8 +37,8 @@
                         @"其他业务",
                         ];
     
-    self.view.backgroundColor = [UIColor bgGray002Color];
-    self.tableView.backgroundColor = [UIColor bgGray002Color];
+    self.view.backgroundColor = [g_commonConfig bgGray002Color];
+    self.tableView.backgroundColor = [g_commonConfig bgGray002Color];
     
     //菜单按钮栏
     self.menuButtonView.layer.shadowOffset = CGSizeMake(2, 2);

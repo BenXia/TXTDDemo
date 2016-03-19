@@ -44,8 +44,8 @@
                         @"其他业务",
                         ];
     
-    self.view.backgroundColor = [UIColor bgGray002Color];
-    self.tableView.backgroundColor = [UIColor bgGray002Color];
+    self.view.backgroundColor = [g_commonConfig bgGray002Color];
+    self.tableView.backgroundColor = [g_commonConfig bgGray002Color];
     
     [self setNavRightItemWithImage:@"sousuo" target:self action:@selector(didClickSearchItem)];
     [self setNavLeftItemWithImage:@"zhidaojia" target:self action:@selector(didClickZhiDaoItem)];
@@ -66,7 +66,7 @@
 }
 
 -(UIColor*)preferNavBarBackgroundColor{
-    return [UIColor themeBlueColor];
+    return [g_commonConfig themeBlueColor];
 }
 
 #pragma mark - Action

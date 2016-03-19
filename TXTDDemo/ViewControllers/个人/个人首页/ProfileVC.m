@@ -12,6 +12,8 @@
 #import "SettingVCViewController.h"
 #import "UserDetailPageVC.h"
 #import "MyMessgaeVC.h"
+#import "MyOffersVC.h"
+#import "MyAttentionsVC.h"
 
 @interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headerView;
@@ -73,7 +75,7 @@
     self.headImageBackGroundView.layer.cornerRadius = self.headImageBackGroundView.width/2;
     self.headImageBackGroundView.layer.masksToBounds = YES;
     self.headImageBackGroundView.userInteractionEnabled = YES;
-    self.headerView.backgroundColor = [UIColor themeBlueColor];
+    self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
     [self.headerView addGestureRecognizer:tap];
     [self refreshUI];
@@ -100,7 +102,7 @@
 #pragma mark - Navigation Style
 
 //- (UIColor*)preferNavBarBackgroundColor{
-//    return [UIColor themeBlueColor];
+//    return [g_commonConfig themeBlueColor];
 //}
 //
 //- (UIColor*)preferNavBarNormalTitleColor{
@@ -126,9 +128,9 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = [UIColor themeButtonBlueColor];
+    cell.textLabel.textColor = [g_commonConfig themeButtonBlueColor];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-    cell.detailTextLabel.textColor = [UIColor gray006Color];
+    cell.detailTextLabel.textColor = [g_commonConfig gray006Color];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"我的信息";
         cell.imageView.image = [UIImage imageNamed:@"wdxx"];
@@ -150,18 +152,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0) {           //我的信息
         UserInfoVC *userInfoVC = [[UserInfoVC alloc] initWithNibName:@"UserInfoVC" bundle:nil];
         userInfoVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:userInfoVC animated:YES];
-    } else if (indexPath.row == 1) {
+    } else if (indexPath.row == 1) {    //我的报价
+        MyOffersVC *myOfferVC = [[MyOffersVC alloc] initWithNibName:@"MyOffersVC" bundle:nil];
+        myOfferVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myOfferVC animated:YES];
+    } else if (indexPath.row == 2) {    //我的关注
+        MyAttentionsVC *myAttentionVC = [[MyAttentionsVC alloc] initWithNibName:@"MyAttentionsVC" bundle:nil];
+        myAttentionVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myAttentionVC animated:YES];
+    } else if (indexPath.row == 3){     //我的偏好
         
-    } else if (indexPath.row == 2) {
-        
-    } else if (indexPath.row == 3){
-        
-    } else {
-        MyMessgaeVC *messageVC = [[MyMessgaeVC alloc] initWithNibName:@"MyMessageVC" bundle:nil];
+    } else {                            //我的消息
+        MyMessgaeVC *messageVC = [[MyMessgaeVC alloc] initWithNibName:@"MyMessgaeVC" bundle:nil];
         messageVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController  pushViewController:messageVC animated:YES];
     }

@@ -17,7 +17,7 @@
 -(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
     [super setHighlighted:highlighted animated:animated];
     if (highlighted) {
-        self.containerView.backgroundColor = [UIColor gray003Color];
+        self.containerView.backgroundColor = [g_commonConfig gray003Color];
     }else{
         self.containerView.backgroundColor = [UIColor whiteColor];
     }

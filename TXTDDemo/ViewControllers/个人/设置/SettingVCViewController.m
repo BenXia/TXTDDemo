@@ -47,7 +47,7 @@
     [self setNavTitleString:@"设置"];
     
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 1)];
-    [self.quitBtn liningThematized:[UIColor themeBlueColor]];
+    [self.quitBtn liningThematized:[g_commonConfig themeBlueColor]];
     self.quitBtn.layer.cornerRadius = 20;
     [self.weixinPyqBtn centerImageAndTitle];
     [self.sinaBtn centerImageAndTitle];
@@ -73,9 +73,11 @@
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font = [UIFont systemFontOfSize:15];
+        cell.textLabel.textColor = [g_commonConfig gray006Color];
+        cell.detailTextLabel.textColor = [g_commonConfig gray006Color];
     }
     if (indexPath.section == 0) {
         switch (indexPath.row) {

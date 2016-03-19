@@ -26,9 +26,10 @@
     
     self.title = @"产品详情";
     
-    self.scrollView.backgroundColor = [UIColor bgGray002Color];
-    self.detailView.backgroundColor = [UIColor bgGray002Color];
+    self.scrollView.backgroundColor = [g_commonConfig bgGray002Color];
+    self.detailView.backgroundColor = [g_commonConfig bgGray002Color];
     
+    self.descriptionLabel.numberOfLines = 0;
     CGFloat limitWidth = kScreenWidth - 2*PIXEL_12;
     [self.descriptionLabel ajustHeightWithLimitWidth:limitWidth];
     self.descripitionView.height = self.descriptionLabel.height + 2*PIXEL_12;
