@@ -15,6 +15,7 @@
 #import "AppDeinitializer.h"
 #import "SettingVCViewController.h"
 #import "UserDetailPageVC.h"
+#import "MyMessgaeVC.h"
 
 @interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headerView;
@@ -53,7 +54,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self clearNavLeftItem];
-    [self setNavRightItemWithImage:@"设置" target:self action:@selector(onSettingBtn)];
     [self initUI];
     [self initTableView];
 }
@@ -77,6 +77,7 @@
     self.headImageBackGroundView.layer.cornerRadius = self.headImageBackGroundView.width/2;
     self.headImageBackGroundView.layer.masksToBounds = YES;
     self.headImageBackGroundView.userInteractionEnabled = YES;
+    self.headerView.backgroundColor = [UIColor themeBlueColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
     [self.headerView addGestureRecognizer:tap];
     [self refreshUI];
@@ -107,10 +108,10 @@
     [self.navigationController pushViewController:addressListVC animated:YES];
 }
 
-- (void)onSettingBtn {
-    UserDetailPageVC *userDetailVC = [[UserDetailPageVC alloc] initWithNibName:@"UserDetailPageVC" bundle:nil];
-    userDetailVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:userDetailVC animated:YES];
+- (IBAction)onSettingBtn:(UIButton *)sender {
+    SettingVCViewController *setVC = [[SettingVCViewController alloc] initWithNibName:@"SettingVCViewController" bundle:nil];
+    setVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:setVC animated:YES];
 }
 
 - (void)didClickOnHeadImageView:(UITapGestureRecognizer *)tap {
@@ -183,7 +184,9 @@
     } else if (indexPath.row == 3){
         
     } else {
-        
+        MyMessgaeVC *messageVC = [[MyMessgaeVC alloc] initWithNibName:@"MyMessageVC" bundle:nil];
+        messageVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController  pushViewController:messageVC animated:YES];
     }
 
 }

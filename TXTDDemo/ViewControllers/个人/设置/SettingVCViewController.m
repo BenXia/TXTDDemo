@@ -25,6 +25,11 @@
 
 @implementation SettingVCViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
@@ -60,7 +65,7 @@
     if (section == 0) {
         return 2;
     } else {
-        return 1;
+        return 4;
     }
 }
 
@@ -74,35 +79,44 @@
     }
     if (indexPath.section == 0) {
         switch (indexPath.row) {
-//            case 0: {
-//                cell.textLabel.text = @"推荐给朋友";
-//            }
-//                break;
             case 0: {
-                cell.textLabel.text = @"关于我们";
+                cell.textLabel.text = @"修改登录密码";
             }
                 break;
             case 1: {
-                cell.textLabel.text = @"联系我们";
+                cell.accessoryType = UITableViewCellAccessoryNone;
+                cell.textLabel.text = @"开启手势密码";
+                UISwitch *switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(kScreenWidth - 62, 0, 50, 40)];
+                switchBtn.centerY = cell.contentView.centerY;
+                [cell.contentView addSubview:switchBtn];
             }
                 break;
-//            case 3: {
-//                cell.textLabel.text = @"给我打分";
-//            }
-//                break;
                 
             default:
                 break;
         }
     } else {
         switch (indexPath.row) {
-//            case 0: {
-//                cell.textLabel.text = @"版本更新";
-//            }
-//                break;
             case 0: {
-                cell.textLabel.text = @"清除缓存";
+                cell.textLabel.text = @"意见反馈";
             }
+                break;
+            case 1: {
+                cell.textLabel.text = @"清除缓存";
+                cell.detailTextLabel.text = @"30KB";
+            }
+                break;
+            case 2: {
+                cell.textLabel.text = @"APP版本";
+                cell.detailTextLabel.text = @"版本号3.1.1";
+            }
+                break;
+            case 3: {
+                cell.textLabel.text = @"联系客服";
+                cell.detailTextLabel.text = @"400-800-1212";
+            }
+                break;
+                
             default:
                 break;
         }
@@ -118,45 +132,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.section == 0) {
-        switch (indexPath.row) {
-//            case 0: {
-//                //cell.textLabel.text = @"推荐给朋友";
-//                //[Utilities showPopup:self.shareVC.view touchBackgroundHide:YES animationType:PopupAnimationType_Drop];
-//            }
-//                break;
-            case 0: {
-                AboutUsVC *aboutVC = [[AboutUsVC alloc] init];
-                [self.navigationController pushViewController:aboutVC animated:YES];
-            }
-                break;
-            case 1: {
-                [Utilities makePhoneCall:@"40088889990"];
-            }
-                break;
-//            case 2: {
-//                //cell.textLabel.text = @"给我打分";
-//            }
-//                break;
-                
-            default:
-                break;
-        }
-    } else {
-        switch (indexPath.row) {
-//            case 0: {
-//                [Utilities showAlertView:@"已是最新版本！" :nil :@"确定"];
-//            }
-//                break;
-            case 0: {
-                //cell.textLabel.text = @"清除缓存";
-                [Utilities showAlertView:@"已清除缓存！" :nil :@"确定"];
-            }
-            default:
-                break;
-        }
-        
-    }
 
 }
 
