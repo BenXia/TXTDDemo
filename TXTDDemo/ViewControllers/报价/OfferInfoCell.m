@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    [self.headImageView circular:self.headImageView.height/2];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

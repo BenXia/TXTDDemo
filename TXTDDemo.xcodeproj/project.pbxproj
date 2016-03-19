@@ -2528,9 +2528,6 @@
 		33DC47D01C9D13F600849762 /* 报价 */ = {
 			isa = PBXGroup;
 			children = (
-				33DC47D11C9D13F600849762 /* OfferFilterVC.h */,
-				33DC47D21C9D13F600849762 /* OfferFilterVC.m */,
-				33DC47D31C9D13F600849762 /* OfferFilterVC.xib */,
 				33DC47D41C9D13F600849762 /* OfferInfoCell.h */,
 				33DC47D51C9D13F600849762 /* OfferInfoCell.m */,
 				33DC47D61C9D13F600849762 /* OfferInfoCell.xib */,
@@ -2543,6 +2540,9 @@
 				33DC47DD1C9D13F600849762 /* OfferListVC.h */,
 				33DC47DE1C9D13F600849762 /* OfferListVC.m */,
 				33DC47DF1C9D13F600849762 /* OfferListVC.xib */,
+				33DC47D11C9D13F600849762 /* OfferFilterVC.h */,
+				33DC47D21C9D13F600849762 /* OfferFilterVC.m */,
+				33DC47D31C9D13F600849762 /* OfferFilterVC.xib */,
 				33DC47E01C9D13F600849762 /* OfferProductDetailVC.h */,
 				33DC47E11C9D13F600849762 /* OfferProductDetailVC.m */,
 				33DC47E21C9D13F600849762 /* OfferProductDetailVC.xib */,

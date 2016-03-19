@@ -102,6 +102,23 @@
     OfferInfoCell* cell = [tableView dequeueReusableCellWithIdentifier:[OfferInfoCell identifier] forIndexPath:indexPath];
     NSString* title = [self.dataSource objectAtIndex:indexPath.row];
     cell.productTitleLabel.text = title;
+    cell.productDetailLabel.text = @"融出：23 融入：24";
+    if([title isEqualToString:@"资金产品"]){
+        cell.headImageView.image = [UIImage imageNamed:@"zijinchanpin"];
+    }else if([title isEqualToString:@"存款产品"]){
+        cell.headImageView.image = [UIImage imageNamed:@"cunkuanchanpin"];
+    }else if([title isEqualToString:@"票据产品"]){
+        cell.headImageView.image = [UIImage imageNamed:@"piaojuchanpin"];
+    }else if([title isEqualToString:@"债券产品"]){
+        cell.headImageView.image = [UIImage imageNamed:@"zhaiquanchanpin"];
+        cell.productDetailLabel.text = @"融出：23 融入：24 发行：23";
+    }else if([title isEqualToString:@"非标产品"]){
+        cell.headImageView.image = [UIImage imageNamed:@"feibiaochanpin"];
+    }else if([title isEqualToString:@"理财产品"]){
+        cell.headImageView.image = [UIImage imageNamed:@"licaichanpin"];
+    }else if([title isEqualToString:@"其他业务"]){
+        cell.headImageView.image = [UIImage imageNamed:@"qitayewu"];
+    }
     return cell;
 }
 
