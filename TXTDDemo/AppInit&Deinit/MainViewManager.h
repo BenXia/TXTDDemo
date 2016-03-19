@@ -40,9 +40,11 @@
 
 - (void)selectTabHomeVC;
 
-- (void)selectTabCategoryVC;
+- (void)selectTabOfferInfoVC;
 
-- (void)selectTabCartVC;
+- (void)selectTabPublishVC;
+
+- (void)selectTabIMHomeVC;
 
 - (void)selectTabProfileVC;
 

@@ -9,6 +9,9 @@
 #import "OfferFilterVC.h"
 
 @interface OfferFilterVC ()
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *filterButtonArray;
+@property (strong, nonatomic) IBOutlet UIView *filterView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -17,21 +20,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.scrollView.backgroundColor = [UIColor bgGray002Color];
+    
+    for (UIButton* button in self.filterButtonArray) {
+        button.layer.cornerRadius = 3;
+        if (![[button titleForState:UIControlStateNormal] isEqualToString:@"全部"]) {
+            button.layer.borderWidth = 1.f;
+            button.layer.borderColor = [UIColor lineGray001Color].CGColor;
+        }
+    }
+    
+    self.filterView.x = 0;
+    self.filterView.y = 0;
+    self.filterView.width = kScreenWidth;
+    [self.scrollView addSubview:self.filterView];
+    self.scrollView.contentSize = CGSizeMake(kScreenWidth, self.filterView.height);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

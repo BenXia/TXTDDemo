@@ -10,8 +10,9 @@
 #import "AppDelegate.h"
 #import "MainPageTabBarVC.h"
 #import "HomePageVC.h"
-#import "CategoryVC.h"
-#import "CartVC.h"
+#import "OfferInfoVC.h"
+#import "PublishVC.h"
+#import "IMHomeVC.h"
 #import "ProfileVC.h"
 #import "LoginVC.h"
 #import "GuidanceVC.h"
@@ -71,33 +72,38 @@ static MainViewManager* sInstance = nil;
     HomePageVC *homePageVC = [[HomePageVC alloc] init];
     UINavigationController *nav1 = [[BaseNavigationController alloc] initWithRootViewController:homePageVC];
     
-    CategoryVC *categoryVC = [[CategoryVC alloc] init];
-    UINavigationController *nav2 = [[BaseNavigationController alloc] initWithRootViewController:categoryVC];
+    OfferInfoVC *offerInfoVC = [[OfferInfoVC alloc] init];
+    UINavigationController *nav2 = [[BaseNavigationController alloc] initWithRootViewController:offerInfoVC];
     
-    CartVC *cartVC = [[CartVC alloc] init];
-    UINavigationController *nav3 = [[BaseNavigationController alloc] initWithRootViewController:cartVC];
+    PublishVC *publishVC = [[PublishVC alloc] init];
+    UINavigationController *nav3 = [[BaseNavigationController alloc] initWithRootViewController:publishVC];
+    
+    IMHomeVC *imHomeVC = [[IMHomeVC alloc] init];
+    UINavigationController *nav4 = [[BaseNavigationController alloc] initWithRootViewController:imHomeVC];
 
     ProfileVC *profileVC = [[ProfileVC alloc] init];
-    UINavigationController *nav4 = [[BaseNavigationController alloc] initWithRootViewController:profileVC];
+    UINavigationController *nav5 = [[BaseNavigationController alloc] initWithRootViewController:profileVC];
     
     _tabBarController = [[MainPageTabBarVC alloc] init];
     _tabBarController.tabBar.translucent = NO;
     _tabBarController.delegate = self;
+    ((CustomTabBarController *)_tabBarController).tabBarButtonOffsetY = 5;
     _tabBarController.viewControllers = [NSArray arrayWithObjects:
                                          nav1,
                                          nav2,
                                          nav3,
                                          nav4,
+                                         nav5,
                                          nil];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        RGB(146,146,146), NSForegroundColorAttributeName,
-                                                       [UIFont systemFontOfSize:14.0], NSFontAttributeName,
+                                                       [UIFont systemFontOfSize:13.0], NSFontAttributeName,
                                                        nil]
                                              forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        [UIColor themeBlueColor], NSForegroundColorAttributeName,
-                                                       [UIFont systemFontOfSize:14.0], NSFontAttributeName,
+                                                       [UIFont systemFontOfSize:13.0], NSFontAttributeName,
                                                        nil]
                                              forState:UIControlStateSelected];
     
@@ -254,35 +260,52 @@ static MainViewManager* sInstance = nil;
     }
 }
 
-- (void)selectTabCategoryVC {
-    if (self.tabBarController.selectedIndex != kMainTabIndexType_CategoryPage) {
+- (void)selectTabOfferInfoVC {
+    if (self.tabBarController.selectedIndex != kMainTabIndexType_OfferInfoPage) {
         UINavigationController *oldRootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:self.tabBarController.selectedIndex];
         
-        [self.tabBarController setSelectedIndex:kMainTabIndexType_CategoryPage];
+        [self.tabBarController setSelectedIndex:kMainTabIndexType_OfferInfoPage];
         
         if (oldRootNavigationVC.visibleViewController != [oldRootNavigationVC.viewControllers objectAtIndexIfIndexInBounds:0]) {
             [oldRootNavigationVC popToRootViewControllerAnimated:NO];
         }
     }
     
-    UINavigationController *rootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:kMainTabIndexType_CategoryPage];
+    UINavigationController *rootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:kMainTabIndexType_OfferInfoPage];
     if (rootNavigationVC.visibleViewController != [rootNavigationVC.viewControllers objectAtIndexIfIndexInBounds:0]) {
         [rootNavigationVC popToRootViewControllerAnimated:NO];
     }
 }
 
-- (void)selectTabCartVC {
-    if (self.tabBarController.selectedIndex != kMainTabIndexType_CartPage) {
+- (void)selectTabPublishVC {
+    if (self.tabBarController.selectedIndex != kMainTabIndexType_PublishPage) {
         UINavigationController *oldRootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:self.tabBarController.selectedIndex];
         
-        [self.tabBarController setSelectedIndex:kMainTabIndexType_CartPage];
+        [self.tabBarController setSelectedIndex:kMainTabIndexType_PublishPage];
         
         if (oldRootNavigationVC.visibleViewController != [oldRootNavigationVC.viewControllers objectAtIndexIfIndexInBounds:0]) {
             [oldRootNavigationVC popToRootViewControllerAnimated:NO];
         }
     }
     
-    UINavigationController *rootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:kMainTabIndexType_CartPage];
+    UINavigationController *rootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:kMainTabIndexType_PublishPage];
+    if (rootNavigationVC.visibleViewController != [rootNavigationVC.viewControllers objectAtIndexIfIndexInBounds:0]) {
+        [rootNavigationVC popToRootViewControllerAnimated:NO];
+    }
+}
+
+- (void)selectTabIMHomeVC {
+    if (self.tabBarController.selectedIndex != kMainTabIndexType_IMHomePage) {
+        UINavigationController *oldRootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:self.tabBarController.selectedIndex];
+        
+        [self.tabBarController setSelectedIndex:kMainTabIndexType_IMHomePage];
+        
+        if (oldRootNavigationVC.visibleViewController != [oldRootNavigationVC.viewControllers objectAtIndexIfIndexInBounds:0]) {
+            [oldRootNavigationVC popToRootViewControllerAnimated:NO];
+        }
+    }
+    
+    UINavigationController *rootNavigationVC = [self.tabBarController.viewControllers objectAtIndexIfIndexInBounds:kMainTabIndexType_IMHomePage];
     if (rootNavigationVC.visibleViewController != [rootNavigationVC.viewControllers objectAtIndexIfIndexInBounds:0]) {
         [rootNavigationVC popToRootViewControllerAnimated:NO];
     }

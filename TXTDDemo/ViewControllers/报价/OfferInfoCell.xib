@@ -88,6 +88,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="containerView" destination="wbK-a6-cHQ" id="OHn-I8-8Nj"/>
                 <outlet property="headImageView" destination="pJF-zk-f2l" id="l9I-Sb-EaI"/>
                 <outlet property="productDetailLabel" destination="QD4-1V-BBr" id="XmS-0E-Mpz"/>
                 <outlet property="productTitleLabel" destination="pz9-PO-l9j" id="EzO-KX-amZ"/>

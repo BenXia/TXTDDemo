@@ -36,8 +36,8 @@
     if (self) {
         self.title = @"我的";
         self.tabBarItem.title = @"我的";
-        self.tabBarItem.image = [UIImage imageNamed:@"btn_user_f"];
-        self.tabBarItem.selectedImage = [[UIImage imageNamed:@"btn_user_t"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image = [[UIImage imageNamed:@"tabbtn_wode"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbtn_wode_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     return self;
 }

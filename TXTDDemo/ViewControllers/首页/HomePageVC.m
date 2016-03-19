@@ -62,8 +62,8 @@ saleActivityCellDelegate>
     if (self) {
         self.title = @"首页";
         self.tabBarItem.title = @"首页";
-        self.tabBarItem.image = [UIImage imageNamed:@"btn_homepage_f"];
-        self.tabBarItem.selectedImage = [[UIImage imageNamed:@"btn_homepage_t"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image = [[UIImage imageNamed:@"tabbtn_shouye"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbtn_shouye_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     return self;
 }

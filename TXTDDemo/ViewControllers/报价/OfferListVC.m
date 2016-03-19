@@ -9,8 +9,11 @@
 #import "OfferListVC.h"
 #import "OfferListCell.h"
 #import "OfferProductDetailVC.h"
+#import "OfferFilterVC.h"
 
 @interface OfferListVC ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIView *menuButtonView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *menuButtonArray;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray* dataSource;
@@ -22,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"报价列表";
     
     self.dataSource = @[@"资金产品",
                         @"存款产品",
@@ -35,6 +40,19 @@
     self.view.backgroundColor = [UIColor bgGray002Color];
     self.tableView.backgroundColor = [UIColor bgGray002Color];
     
+    //菜单按钮栏
+    self.menuButtonView.layer.shadowOffset = CGSizeMake(2, 2);
+    self.menuButtonView.layer.shadowOpacity = 0.2;
+    self.menuButtonView.layer.shadowRadius = 1;
+    self.menuButtonView.layer.shadowColor = [UIColor grayColor].CGColor;
+    
+    for (UIButton* menuButton in self.menuButtonArray) {
+        CGFloat imageWidth = menuButton.imageView.size.width;
+        CGFloat titleWidth = [menuButton.titleLabel.text textSizeForOneLineWithFont:menuButton.titleLabel.font].width;
+        [menuButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -imageWidth, 0, imageWidth)];
+        [menuButton setImageEdgeInsets:UIEdgeInsetsMake(0, titleWidth, 0, -titleWidth)];
+    }
+    
     UINib* cellNib = [UINib nibWithNibName:[OfferListCell identifier] bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:[OfferListCell identifier]];
 }
@@ -42,6 +60,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Action
+
+-(IBAction)didClickMoreFilter:(id)sender{
+    OfferFilterVC* vc = [OfferFilterVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table
