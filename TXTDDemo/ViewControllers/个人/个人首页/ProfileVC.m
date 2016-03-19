@@ -16,6 +16,8 @@
 #import "SettingVCViewController.h"
 #import "UserDetailPageVC.h"
 #import "MyMessgaeVC.h"
+#import "MyOfferVC.h"
+#import "MyAttentionVC.h"
 
 @interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headerView;
@@ -173,18 +175,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0) {           //我的信息
         UserInfoVC *userInfoVC = [[UserInfoVC alloc] initWithNibName:@"UserInfoVC" bundle:nil];
         userInfoVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:userInfoVC animated:YES];
-    } else if (indexPath.row == 1) {
+    } else if (indexPath.row == 1) {    //我的报价
+        MyOfferVC *myOfferVC = [[MyOfferVC alloc] initWithNibName:@"MyOfferVC" bundle:nil];
+        myOfferVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myOfferVC animated:YES];
+    } else if (indexPath.row == 2) {    //我的关注
+        MyAttentionVC *myAttentionVC = [[MyAttentionVC alloc] initWithNibName:@"MyAttentionVC" bundle:nil];
+        myAttentionVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myAttentionVC animated:YES];
+    } else if (indexPath.row == 3){     //我的偏好
         
-    } else if (indexPath.row == 2) {
-        
-    } else if (indexPath.row == 3){
-        
-    } else {
-        MyMessgaeVC *messageVC = [[MyMessgaeVC alloc] initWithNibName:@"MyMessageVC" bundle:nil];
+    } else {                            //我的消息
+        MyMessgaeVC *messageVC = [[MyMessgaeVC alloc] initWithNibName:@"MyMessgaeVC" bundle:nil];
         messageVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController  pushViewController:messageVC animated:YES];
     }
