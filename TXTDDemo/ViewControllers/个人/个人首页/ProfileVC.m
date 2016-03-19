@@ -75,7 +75,7 @@
     self.headImageBackGroundView.layer.cornerRadius = self.headImageBackGroundView.width/2;
     self.headImageBackGroundView.layer.masksToBounds = YES;
     self.headImageBackGroundView.userInteractionEnabled = YES;
-    self.headerView.backgroundColor = [UIColor themeBlueColor];
+    self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
     [self.headerView addGestureRecognizer:tap];
     [self refreshUI];
@@ -102,7 +102,7 @@
 #pragma mark - Navigation Style
 
 //- (UIColor*)preferNavBarBackgroundColor{
-//    return [UIColor themeBlueColor];
+//    return [g_commonConfig themeBlueColor];
 //}
 //
 //- (UIColor*)preferNavBarNormalTitleColor{
@@ -128,9 +128,9 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = [UIColor themeButtonBlueColor];
+    cell.textLabel.textColor = [g_commonConfig themeButtonBlueColor];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-    cell.detailTextLabel.textColor = [UIColor gray006Color];
+    cell.detailTextLabel.textColor = [g_commonConfig gray006Color];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"我的信息";
         cell.imageView.image = [UIImage imageNamed:@"wdxx"];

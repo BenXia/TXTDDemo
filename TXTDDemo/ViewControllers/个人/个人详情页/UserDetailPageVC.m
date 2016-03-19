@@ -86,7 +86,7 @@
 #pragma mark - Navigation Style
 
 //- (UIColor*)preferNavBarBackgroundColor{
-//    return [UIColor themeBlueColor];
+//    return [g_commonConfig themeBlueColor];
 //}
 //
 //- (UIColor*)preferNavBarNormalTitleColor{
@@ -112,9 +112,9 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = [UIColor gray005Color];
+    cell.textLabel.textColor = [g_commonConfig gray005Color];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-    cell.detailTextLabel.textColor = [UIColor gray006Color];
+    cell.detailTextLabel.textColor = [g_commonConfig gray006Color];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.row == 0) {
         cell.textLabel.text = @"用户名";

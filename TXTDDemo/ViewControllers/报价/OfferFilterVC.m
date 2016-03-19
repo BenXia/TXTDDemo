@@ -22,13 +22,13 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"更多过滤";
-    self.scrollView.backgroundColor = [UIColor bgGray002Color];
+    self.scrollView.backgroundColor = [g_commonConfig bgGray002Color];
     
     for (UIButton* button in self.filterButtonArray) {
         button.layer.cornerRadius = 3;
         if (![[button titleForState:UIControlStateNormal] isEqualToString:@"全部"]) {
             button.layer.borderWidth = 1.f;
-            button.layer.borderColor = [UIColor lineGray001Color].CGColor;
+            button.layer.borderColor = [g_commonConfig lineGray001Color].CGColor;
         }
     }
     
