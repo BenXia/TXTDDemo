@@ -8,17 +8,15 @@
 
 #import "ProfileVC.h"
 #import "UserInfoVC.h"
-#import "AddressListVC.h"
-#import "MyFavoriteVC.h"
-#import "LookHistoryVC.h"
-#import "AllOrderListVC.h"
 #import "AppDeinitializer.h"
 #import "SettingVCViewController.h"
 #import "UserDetailPageVC.h"
+#import "MyMessgaeVC.h"
 
 @interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UIView *headImageBackGroundView;
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailDecLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -43,7 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 
     [self refreshUI];
 }
@@ -52,7 +50,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self clearNavLeftItem];
-    [self setNavRightItemWithImage:@"设置" target:self action:@selector(onSettingBtn)];
     [self initUI];
     [self initTableView];
 }
@@ -73,6 +70,10 @@
     self.headImageView.layer.cornerRadius = self.headImageView.width/2;
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.userInteractionEnabled = YES;
+    self.headImageBackGroundView.layer.cornerRadius = self.headImageBackGroundView.width/2;
+    self.headImageBackGroundView.layer.masksToBounds = YES;
+    self.headImageBackGroundView.userInteractionEnabled = YES;
+    self.headerView.backgroundColor = [UIColor themeBlueColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
     [self.headerView addGestureRecognizer:tap];
     [self refreshUI];
@@ -82,31 +83,12 @@
     self.tableView.tableHeaderView = self.headerView;
 }
 
-#pragma mark - IBOut Action
+#pragma mark - IBActions
 
-- (IBAction)onShouCangBtn:(UIButton *)sender {
-    MyFavoriteVC* favoriteVC = [MyFavoriteVC new];
-    favoriteVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:favoriteVC animated:YES];
-}
-
-- (IBAction)onScanHistoryBtn:(UIButton *)sender {
-    LookHistoryVC* lookHistoryVC = [LookHistoryVC new];
-    lookHistoryVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:lookHistoryVC animated:YES];
-}
-
-- (IBAction)onAddressBtn:(UIButton *)sender {
-    AddressListVC *addressListVC = [[AddressListVC alloc] initWithNibName:@"AddressListVC" bundle:nil];
-    addressListVC.isSelectAddress = NO;
-    addressListVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:addressListVC animated:YES];
-}
-
-- (void)onSettingBtn {
-    UserDetailPageVC *userDetailVC = [[UserDetailPageVC alloc] initWithNibName:@"UserDetailPageVC" bundle:nil];
-    userDetailVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:userDetailVC animated:YES];
+- (IBAction)onSettingBtn:(UIButton *)sender {
+    SettingVCViewController *setVC = [[SettingVCViewController alloc] initWithNibName:@"SettingVCViewController" bundle:nil];
+    setVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:setVC animated:YES];
 }
 
 - (void)didClickOnHeadImageView:(UITapGestureRecognizer *)tap {
@@ -144,20 +126,24 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = [UIColor gray005Color];
+    cell.textLabel.textColor = [UIColor themeButtonBlueColor];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     cell.detailTextLabel.textColor = [UIColor gray006Color];
-    cell.imageView.image = [UIImage imageNamed:@"btn_cart_t"];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"我的信息";
+        cell.imageView.image = [UIImage imageNamed:@"wdxx"];
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"我的报价";
+        cell.imageView.image = [UIImage imageNamed:@"wdbj"];
     } else if (indexPath.row == 2) {
         cell.textLabel.text = @"我的关注";
+        cell.imageView.image = [UIImage imageNamed:@"wdgz"];
     } else if (indexPath.row == 3){
         cell.textLabel.text = @"我的偏好";
+        cell.imageView.image = [UIImage imageNamed:@"wdph"];
     } else {
         cell.textLabel.text = @"我的消息";
+        cell.imageView.image = [UIImage imageNamed:@"wdxiaoxi"];
     }
     return cell;
 }
@@ -165,7 +151,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
-        
+        UserInfoVC *userInfoVC = [[UserInfoVC alloc] initWithNibName:@"UserInfoVC" bundle:nil];
+        userInfoVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:userInfoVC animated:YES];
     } else if (indexPath.row == 1) {
         
     } else if (indexPath.row == 2) {
@@ -173,7 +161,9 @@
     } else if (indexPath.row == 3){
         
     } else {
-        
+        MyMessgaeVC *messageVC = [[MyMessgaeVC alloc] initWithNibName:@"MyMessageVC" bundle:nil];
+        messageVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController  pushViewController:messageVC animated:YES];
     }
 
 }

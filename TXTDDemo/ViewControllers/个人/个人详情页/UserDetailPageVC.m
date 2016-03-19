@@ -63,8 +63,7 @@
     self.headImageView.layer.cornerRadius = self.headImageView.width/2;
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
-    [self.headerView addGestureRecognizer:tap];
+    [self setNavRightItemWithImage:@"geranxinxi" target:self action:@selector(didClickOnUserInfo)];
     [self refreshUI];
 }
 
@@ -78,6 +77,11 @@
 //    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
+#pragma mark - UIAction
+
+- (void)didClickOnUserInfo {
+    NSLog(@"个人信息");
+}
 
 #pragma mark - Navigation Style
 
