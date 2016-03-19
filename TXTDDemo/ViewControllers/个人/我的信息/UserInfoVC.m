@@ -8,21 +8,16 @@
 
 #import<AssetsLibrary/ALAssetsLibrary.h>
 #import "UserInfoVC.h"
-#import "UserInfoDC.h"
 #import "UIImageView+WebCache.h"
-#import "SetNickVC.h"
-#import "AddressListVC.h"
 #import "UserDetailPageVC.h"
 
 @interface UserInfoVC () <UITableViewDataSource,
 UITableViewDelegate,
-PPDataControllerDelegate,
 UIActionSheetDelegate,
 UIImagePickerControllerDelegate,
 UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) UserInfoDC *userInfoRequest;
 @property (strong, nonatomic) NSMutableArray *modelArray;
 @property (strong, nonatomic) UIImageView *headImageView;
 @property (strong, nonatomic) UIImage *uploadImage;
@@ -203,22 +198,6 @@ UINavigationControllerDelegate>
             
         }];
     }];
-}
-
-#pragma mark - PPDataControllerDelegate
-
-- (void)loadingData:(PPDataController *)controller failedWithError:(NSError *)error {
-    if (controller == self.userInfoRequest) {
-        [Utilities showToastWithText:[NSString stringWithFormat:@"获取个人信息失败"]];
-    }
-}
-
-- (void)loadingDataFinished:(PPDataController *)controller {
-    if (controller == self.userInfoRequest) {
-        [[GCDQueue mainQueue] queueBlock:^{
-            [self.tableView reloadData];
-        }];
-    }
 }
 
 #pragma mark - public method
