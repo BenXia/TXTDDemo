@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainPageTabBarVC : UITabBarController
+@interface MainPageTabBarVC : CustomTabBarController
 
 @end
