@@ -219,6 +219,12 @@
 		935FC70F1C9D5B9C00B8B643 /* MyMessgaeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7041C9D5B9C00B8B643 /* MyMessgaeVC.xib */; };
 		935FC7121C9D5B9C00B8B643 /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC70A1C9D5B9C00B8B643 /* UserInfoVC.m */; };
 		935FC7131C9D5B9C00B8B643 /* UserInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC70B1C9D5B9C00B8B643 /* UserInfoVC.xib */; };
+		935FC7541C9D810300B8B643 /* AttentionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7521C9D810300B8B643 /* AttentionCell.m */; };
+		935FC7551C9D810300B8B643 /* AttentionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7531C9D810300B8B643 /* AttentionCell.xib */; };
+		935FC7591C9D873C00B8B643 /* MyOffersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7571C9D873C00B8B643 /* MyOffersVC.m */; };
+		935FC75A1C9D873C00B8B643 /* MyOffersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7581C9D873C00B8B643 /* MyOffersVC.xib */; };
+		935FC75E1C9D890C00B8B643 /* MyAttentionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC75C1C9D890C00B8B643 /* MyAttentionsVC.m */; };
+		935FC75F1C9D890C00B8B643 /* MyAttentionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC75D1C9D890C00B8B643 /* MyAttentionsVC.xib */; };
 		B5F386061C45ED3A00E666F7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F071C51C42D12900DAC58F /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -548,6 +554,15 @@
 		935FC7091C9D5B9C00B8B643 /* UserInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoVC.h; sourceTree = "<group>"; };
 		935FC70A1C9D5B9C00B8B643 /* UserInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoVC.m; sourceTree = "<group>"; };
 		935FC70B1C9D5B9C00B8B643 /* UserInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoVC.xib; sourceTree = "<group>"; };
+		935FC7511C9D810300B8B643 /* AttentionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionCell.h; sourceTree = "<group>"; };
+		935FC7521C9D810300B8B643 /* AttentionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttentionCell.m; sourceTree = "<group>"; };
+		935FC7531C9D810300B8B643 /* AttentionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttentionCell.xib; sourceTree = "<group>"; };
+		935FC7561C9D873C00B8B643 /* MyOffersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOffersVC.h; sourceTree = "<group>"; };
+		935FC7571C9D873C00B8B643 /* MyOffersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOffersVC.m; sourceTree = "<group>"; };
+		935FC7581C9D873C00B8B643 /* MyOffersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOffersVC.xib; sourceTree = "<group>"; };
+		935FC75B1C9D890C00B8B643 /* MyAttentionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAttentionsVC.h; sourceTree = "<group>"; };
+		935FC75C1C9D890C00B8B643 /* MyAttentionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAttentionsVC.m; sourceTree = "<group>"; };
+		935FC75D1C9D890C00B8B643 /* MyAttentionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAttentionsVC.xib; sourceTree = "<group>"; };
 		A11DE1C2BA504D2B28E4F469 /* Pods.distribute.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.distribute.xcconfig; path = "Pods/Target Support Files/Pods/Pods.distribute.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1296,6 +1311,9 @@
 		935FC6FB1C9D5B9C00B8B643 /* 我的报价 */ = {
 			isa = PBXGroup;
 			children = (
+				935FC7561C9D873C00B8B643 /* MyOffersVC.h */,
+				935FC7571C9D873C00B8B643 /* MyOffersVC.m */,
+				935FC7581C9D873C00B8B643 /* MyOffersVC.xib */,
 			);
 			path = "我的报价";
 			sourceTree = "<group>";
@@ -1303,6 +1321,12 @@
 		935FC6FC1C9D5B9C00B8B643 /* 我的关注 */ = {
 			isa = PBXGroup;
 			children = (
+				935FC7511C9D810300B8B643 /* AttentionCell.h */,
+				935FC7521C9D810300B8B643 /* AttentionCell.m */,
+				935FC7531C9D810300B8B643 /* AttentionCell.xib */,
+				935FC75B1C9D890C00B8B643 /* MyAttentionsVC.h */,
+				935FC75C1C9D890C00B8B643 /* MyAttentionsVC.m */,
+				935FC75D1C9D890C00B8B643 /* MyAttentionsVC.xib */,
 			);
 			path = "我的关注";
 			sourceTree = "<group>";
@@ -1471,6 +1495,7 @@
 				33DC48AF1C9D13F600849762 /* guide5_35_inch.png in Resources */,
 				884804771C9D26F800984EF7 /* feibiaochanpin@2x.png in Resources */,
 				33DC48A11C9D13F600849762 /* guide1_4_inch.png in Resources */,
+				935FC75F1C9D890C00B8B643 /* MyAttentionsVC.xib in Resources */,
 				884804781C9D26F800984EF7 /* feibiaochanpin@3x.png in Resources */,
 				33DC489A1C9D13F600849762 /* common_topnav_icon01@3x.png in Resources */,
 				8848048B1C9D26F800984EF7 /* zhaiquanchanpin@2x.png in Resources */,
@@ -1482,6 +1507,7 @@
 				33DC48981C9D13F600849762 /* common_completed_icon@3x.png in Resources */,
 				33C92C4A1C9D5CE70079F3A3 /* wdxx@2x.png in Resources */,
 				338971D11C9D43A400ED2D67 /* tabbtn_fabu@3x.png in Resources */,
+				935FC75A1C9D873C00B8B643 /* MyOffersVC.xib in Resources */,
 				33DC48AA1C9D13F600849762 /* guide3_55_inch.png in Resources */,
 				33C92C461C9D5CE70079F3A3 /* wdph@2x.png in Resources */,
 				33DC49FB1C9D13F700849762 /* OfferInfoVC.xib in Resources */,
@@ -1524,6 +1550,7 @@
 				33DC4A011C9D13F700849762 /* OfferProductDetailVC.xib in Resources */,
 				33DC48AE1C9D13F600849762 /* guide4_55_inch.png in Resources */,
 				338971CB1C9D43A400ED2D67 /* tabbtn_baojia_selected@3x.png in Resources */,
+				935FC7551C9D810300B8B643 /* AttentionCell.xib in Resources */,
 				33DC48B11C9D13F600849762 /* guide5_4_inch.png in Resources */,
 				33DC489C1C9D13F600849762 /* common_topnav_icon02@3x.png in Resources */,
 				338971D01C9D43A400ED2D67 /* tabbtn_fabu@2x.png in Resources */,
@@ -1534,19 +1561,7 @@
 				33DC49FF1C9D13F700849762 /* OfferListVC.xib in Resources */,
 				33C92C3F1C9D5CE70079F3A3 /* geranxinxi@3x.png in Resources */,
 				33DC49D71C9D13F600849762 /* AboutUsVC.xib in Resources */,
-				33DC48631C9D13F600849762 /* 确认订单-购买资质-已认证@2x.png in Resources */,
-				33DC48771C9D13F600849762 /* web_left_highlighted@2x.png in Resources */,
-				33DC48DC1C9D13F600849762 /* ico_ordering.png in Resources */,
-				33DC49181C9D13F600849762 /* 浏览记录@2x.png in Resources */,
-				33DC492B1C9D13F600849762 /* goods_tagL_FreeShipping@3x.png in Resources */,
-				33DC4A191C9D13F700849762 /* OrderDetailVC.xib in Resources */,
-				33DC48D31C9D13F600849762 /* Ico_bySelf@2X.png in Resources */,
-				33DC494B1C9D13F600849762 /* btn_numberplus72_pressed@3x.png in Resources */,
-				33DC48581C9D13F600849762 /* ic_pay_weixin@3x.png in Resources */,
 				8848049A1C9D630F00984EF7 /* frame_bg01@2x.png in Resources */,
-				33DC48591C9D13F600849762 /* icon_failed@2x.png in Resources */,
-				33DC48FF1C9D13F600849762 /* 评价晒单-星-未点击@3x.png in Resources */,
-				33DC4A341C9D13F700849762 /* TodayIntroduceCell.xib in Resources */,
 				33DC498B1C9D13F600849762 /* Images.xcassets in Resources */,
 				33DC48A91C9D13F600849762 /* guide3_4_inch.png in Resources */,
 				33DC49D01C9D13F600849762 /* ProfileVC.xib in Resources */,
@@ -1563,7 +1578,6 @@
 				8848048D1C9D26F800984EF7 /* zhidaojia@2x.png in Resources */,
 				338971CD1C9D43A400ED2D67 /* tabbtn_baojia@3x.png in Resources */,
 				8848049B1C9D630F00984EF7 /* frame_bg01@3x.png in Resources */,
-				33DC48951C9D13F600849762 /* like_t@2x.png in Resources */,
 				33DC49ED1C9D13F700849762 /* GuidanceVC.xib in Resources */,
 				33DC48A31C9D13F600849762 /* guide2_35_inch.png in Resources */,
 				338971D51C9D43A400ED2D67 /* tabbtn_quanzi@3x.png in Resources */,
@@ -1658,17 +1672,14 @@
 				33DC49D61C9D13F600849762 /* AboutUsVC.m in Sources */,
 				33DC49CF1C9D13F600849762 /* ProfileVC.m in Sources */,
 				33DC49A11C9D13F600849762 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				935FC75E1C9D890C00B8B643 /* MyAttentionsVC.m in Sources */,
 				33DC49AC1C9D13F600849762 /* WebBrowserVC.m in Sources */,
 				935FC7121C9D5B9C00B8B643 /* UserInfoVC.m in Sources */,
+				935FC7591C9D873C00B8B643 /* MyOffersVC.m in Sources */,
 				33DC49DC1C9D13F600849762 /* EasyJSDataFunction.m in Sources */,
 				33DC499F1C9D13F600849762 /* IQTitleBarButtonItem.m in Sources */,
 				33DC49EE1C9D13F700849762 /* LaunchViewController.m in Sources */,
-				33DC49C71C9D13F600849762 /* PPPayResultDC.m in Sources */,
 				884804971C9D5C9B00984EF7 /* FramedView.m in Sources */,
-				33DC49831C9D13F600849762 /* CartProductDeleteDC.m in Sources */,
-				33DC49B61C9D13F600849762 /* OrderReceiverCell.m in Sources */,
-				33DC496D1C9D13F600849762 /* ProductEvaluateDC.m in Sources */,
-				33DC4A171C9D13F700849762 /* OrderDetailModel.m in Sources */,
 				33DC49DD1C9D13F600849762 /* EasyJSWebView.m in Sources */,
 				33DC49971C9D13F600849762 /* IQNSArray+Sort.m in Sources */,
 				33DC49D81C9D13F600849762 /* SettingVCViewController.m in Sources */,
@@ -1685,6 +1696,7 @@
 				33DC499A1C9D13F600849762 /* IQKeyboardManager.m in Sources */,
 				935FC70E1C9D5B9C00B8B643 /* MyMessgaeVC.m in Sources */,
 				33DC499E1C9D13F600849762 /* IQBarButtonItem.m in Sources */,
+				935FC7541C9D810300B8B643 /* AttentionCell.m in Sources */,
 				935FC70C1C9D5B9C00B8B643 /* MessageCell.m in Sources */,
 				33DC49A61C9D13F600849762 /* TAAnimatedDotView.m in Sources */,
 				33DC4A0E1C9D13F700849762 /* LoginVC.m in Sources */,

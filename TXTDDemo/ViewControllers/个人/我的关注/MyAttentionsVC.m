@@ -1,19 +1,20 @@
 //
-//  MyOfferVC.m
+//  MyAttentionsVC.m
 //  TXTDDemo
 //
 //  Created by 王涛 on 16/3/19.
 //  Copyright © 2016年 iOSStudio. All rights reserved.
 //
 
-#import "MyOfferVC.h"
-#import "OfferListCell.h"
+#import "MyAttentionsVC.h"
+#import "AttentionCell.h"
 
-@interface MyOfferVC ()
+@interface MyAttentionsVC ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation MyOfferVC
+@implementation MyAttentionsVC
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -22,8 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerNib:[OfferListCell nib] forCellReuseIdentifier:[OfferListCell identifier]];
-}
+    self.title = @"我的关注";
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 1)];
+    [self.tableView registerNib:[AttentionCell nib] forCellReuseIdentifier:[AttentionCell identifier]];}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -33,16 +35,15 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    OfferListCell *cell = [tableView dequeueReusableCellWithIdentifier:[OfferListCell identifier] forIndexPath:indexPath];
+    AttentionCell *cell = [tableView dequeueReusableCellWithIdentifier:[AttentionCell identifier] forIndexPath:indexPath];
     return cell;
 }
 
@@ -50,12 +51,17 @@
     return 200;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 1;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 1;
 }
 
 #pragma mark - Table view delegate
- 
+
+// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }

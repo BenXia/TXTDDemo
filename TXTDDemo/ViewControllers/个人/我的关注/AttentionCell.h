@@ -1,5 +1,5 @@
 //
-//  MyAttentionVC.h
+//  AttentionCell.h
 //  TXTDDemo
 //
 //  Created by 王涛 on 16/3/19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyAttentionVC : UITableViewController
+@interface AttentionCell : UITableViewCell
 
 @end

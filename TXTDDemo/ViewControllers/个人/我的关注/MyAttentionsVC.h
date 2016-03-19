@@ -1,5 +1,5 @@
 //
-//  MyOfferVC.h
+//  MyAttentionsVC.h
 //  TXTDDemo
 //
 //  Created by 王涛 on 16/3/19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyOfferVC : UITableViewController
+@interface MyAttentionsVC : UIViewController
 
 @end

@@ -12,8 +12,8 @@
 #import "SettingVCViewController.h"
 #import "UserDetailPageVC.h"
 #import "MyMessgaeVC.h"
-#import "MyOfferVC.h"
-#import "MyAttentionVC.h"
+#import "MyOffersVC.h"
+#import "MyAttentionsVC.h"
 
 @interface ProfileVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *headerView;
@@ -157,11 +157,11 @@
         userInfoVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:userInfoVC animated:YES];
     } else if (indexPath.row == 1) {    //我的报价
-        MyOfferVC *myOfferVC = [[MyOfferVC alloc] initWithNibName:@"MyOfferVC" bundle:nil];
+        MyOffersVC *myOfferVC = [[MyOffersVC alloc] initWithNibName:@"MyOffersVC" bundle:nil];
         myOfferVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:myOfferVC animated:YES];
     } else if (indexPath.row == 2) {    //我的关注
-        MyAttentionVC *myAttentionVC = [[MyAttentionVC alloc] initWithNibName:@"MyAttentionVC" bundle:nil];
+        MyAttentionsVC *myAttentionVC = [[MyAttentionsVC alloc] initWithNibName:@"MyAttentionsVC" bundle:nil];
         myAttentionVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:myAttentionVC animated:YES];
     } else if (indexPath.row == 3){     //我的偏好
