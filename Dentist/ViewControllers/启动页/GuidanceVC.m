@@ -13,7 +13,7 @@
 
 @interface GuidanceVC () <UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, weak)   IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) UIPageControl* pageControl;
 
 @property (nonatomic, strong) NSArray *scrollViewImages;
@@ -142,3 +142,4 @@
 }
 
 @end
+
