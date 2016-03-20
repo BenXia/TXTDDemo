@@ -64,6 +64,10 @@
 		33CCDA981C9EA6020026FF7B /* yuyindianhua@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA941C9EA6020026FF7B /* yuyindianhua@3x.png */; };
 		33CCDA9C1C9EACCF0026FF7B /* icon_successed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA9A1C9EACCF0026FF7B /* icon_successed@2x.png */; };
 		33CCDA9D1C9EACCF0026FF7B /* icon_successed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA9B1C9EACCF0026FF7B /* icon_successed@3x.png */; };
+		33CCDAA61C9EB8050026FF7B /* circle_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDAA21C9EB8050026FF7B /* circle_selected@2x.png */; };
+		33CCDAA71C9EB8050026FF7B /* circle_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDAA31C9EB8050026FF7B /* circle_selected@3x.png */; };
+		33CCDAA81C9EB8050026FF7B /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDAA41C9EB8050026FF7B /* circle@2x.png */; };
+		33CCDAA91C9EB8050026FF7B /* circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDAA51C9EB8050026FF7B /* circle@3x.png */; };
 		33D0102F1C62483700499EE9 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D0102E1C62483700499EE9 /* AlipaySDK.framework */; };
 		33D010301C62492E00499EE9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F071D41C42D9BE00DAC58F /* libsqlite3.0.tbd */; };
 		33D010331C6249E200499EE9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D010321C6249E200499EE9 /* CoreTelephony.framework */; };
@@ -389,6 +393,10 @@
 		33CCDA941C9EA6020026FF7B /* yuyindianhua@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yuyindianhua@3x.png"; sourceTree = "<group>"; };
 		33CCDA9A1C9EACCF0026FF7B /* icon_successed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_successed@2x.png"; sourceTree = "<group>"; };
 		33CCDA9B1C9EACCF0026FF7B /* icon_successed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_successed@3x.png"; sourceTree = "<group>"; };
+		33CCDAA21C9EB8050026FF7B /* circle_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_selected@2x.png"; sourceTree = "<group>"; };
+		33CCDAA31C9EB8050026FF7B /* circle_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_selected@3x.png"; sourceTree = "<group>"; };
+		33CCDAA41C9EB8050026FF7B /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
+		33CCDAA51C9EB8050026FF7B /* circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@3x.png"; sourceTree = "<group>"; };
 		33D0102E1C62483700499EE9 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = StudioCommon/StudioCommon/Vendors/SDK/alipay/AlipaySDK.framework; sourceTree = "<group>"; };
 		33D010321C6249E200499EE9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		33DC45641C9D13F600849762 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -888,6 +896,10 @@
 		33CCDA901C9EA6020026FF7B /* 登录注册 */ = {
 			isa = PBXGroup;
 			children = (
+				33CCDAA21C9EB8050026FF7B /* circle_selected@2x.png */,
+				33CCDAA31C9EB8050026FF7B /* circle_selected@3x.png */,
+				33CCDAA41C9EB8050026FF7B /* circle@2x.png */,
+				33CCDAA51C9EB8050026FF7B /* circle@3x.png */,
 				33CCDA9A1C9EACCF0026FF7B /* icon_successed@2x.png */,
 				33CCDA9B1C9EACCF0026FF7B /* icon_successed@3x.png */,
 				33CCDA911C9EA6020026FF7B /* kefu@2x.png */,
@@ -1732,6 +1744,8 @@
 				33CCDA7E1C9E47D40026FF7B /* RegistStepTwoVC.xib in Resources */,
 				33DC489E1C9D13F600849762 /* topnav_icon08@3x.png in Resources */,
 				33DC498F1C9D13F600849762 /* photoViewer_error_placeholder@3x.png in Resources */,
+				33CCDAA91C9EB8050026FF7B /* circle@3x.png in Resources */,
+				33CCDAA61C9EB8050026FF7B /* circle_selected@2x.png in Resources */,
 				884804811C9D26F800984EF7 /* phone@2x.png in Resources */,
 				33DC48A81C9D13F600849762 /* guide3_47_inch.png in Resources */,
 				33DC48661C9D13F600849762 /* btn_back_white@3x.png in Resources */,
@@ -1802,6 +1816,7 @@
 				8848047B1C9D26F800984EF7 /* jiaruquanzi@2x.png in Resources */,
 				884804881C9D26F800984EF7 /* shengxu@3x.png in Resources */,
 				884804BD1C9D861100984EF7 /* tjhy@3x.png in Resources */,
+				33CCDAA81C9EB8050026FF7B /* circle@2x.png in Resources */,
 				33DC48971C9D13F600849762 /* common_completed_icon@2x.png in Resources */,
 				33DC4A301C9D13F700849762 /* HomePageVC.xib in Resources */,
 				33DC48AB1C9D13F600849762 /* guide4_35_inch.png in Resources */,
@@ -1852,6 +1867,7 @@
 				33CCDA9C1C9EACCF0026FF7B /* icon_successed@2x.png in Resources */,
 				884804BF1C9D861100984EF7 /* tongxunlu@3x.png in Resources */,
 				884804B91C9D861100984EF7 /* faqiqunliao@3x.png in Resources */,
+				33CCDAA71C9EB8050026FF7B /* circle_selected@3x.png in Resources */,
 				33DC48B21C9D13F600849762 /* guide5_55_inch.png in Resources */,
 				33CCDA741C9E47BC0026FF7B /* ForgetPasswordStepTwoVC.xib in Resources */,
 				33DC48A61C9D13F600849762 /* guide2_55_inch.png in Resources */,

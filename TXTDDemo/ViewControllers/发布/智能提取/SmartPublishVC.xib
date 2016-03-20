@@ -27,11 +27,11 @@
                                 <constraint firstAttribute="height" constant="1" id="iDU-mp-Wh6"/>
                             </constraints>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbtn_quanzi_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-X1-yTZ">
-                            <rect key="frame" x="85" y="40" width="20" height="20"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-X1-yTZ">
+                            <rect key="frame" x="89" y="44" width="12" height="12"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="20" id="sB4-PV-iBP"/>
-                                <constraint firstAttribute="height" constant="20" id="xnS-h4-Zfo"/>
+                                <constraint firstAttribute="width" constant="12" id="sB4-PV-iBP"/>
+                                <constraint firstAttribute="height" constant="12" id="xnS-h4-Zfo"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入报价信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL2-d3-hg4">
@@ -44,11 +44,11 @@
                             <color key="textColor" red="0.20392156859999999" green="0.2784313725" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbtn_quanzi.png" translatesAutoresizingMaskIntoConstraints="NO" id="kXP-jw-Hvu">
-                            <rect key="frame" x="215" y="40" width="20" height="20"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="kXP-jw-Hvu">
+                            <rect key="frame" x="219" y="44" width="12" height="12"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="20" id="8Qe-iy-Zut"/>
-                                <constraint firstAttribute="height" constant="20" id="h6q-q0-D35"/>
+                                <constraint firstAttribute="width" constant="12" id="8Qe-iy-Zut"/>
+                                <constraint firstAttribute="height" constant="12" id="h6q-q0-D35"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认报价信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0F-JB-8tW">
@@ -64,17 +64,17 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="kXP-jw-Hvu" firstAttribute="top" secondItem="v81-Sx-E9U" secondAttribute="top" constant="40" id="0Rq-pA-syJ"/>
+                        <constraint firstItem="kXP-jw-Hvu" firstAttribute="top" secondItem="v81-Sx-E9U" secondAttribute="top" constant="44" id="0Rq-pA-syJ"/>
                         <constraint firstItem="Rcj-pS-HL0" firstAttribute="leading" secondItem="v81-Sx-E9U" secondAttribute="leading" constant="30" id="0aM-o4-HiE"/>
                         <constraint firstItem="Q0F-JB-8tW" firstAttribute="centerX" secondItem="kXP-jw-Hvu" secondAttribute="centerX" id="4DZ-qY-f15"/>
-                        <constraint firstItem="hGz-X1-yTZ" firstAttribute="leading" secondItem="v81-Sx-E9U" secondAttribute="leading" constant="85" id="Drv-E6-Grd"/>
-                        <constraint firstAttribute="trailing" secondItem="kXP-jw-Hvu" secondAttribute="trailing" constant="85" id="EkJ-tw-qfd"/>
-                        <constraint firstItem="Q0F-JB-8tW" firstAttribute="top" secondItem="kXP-jw-Hvu" secondAttribute="bottom" constant="2" id="VZU-Pk-OKu"/>
+                        <constraint firstItem="hGz-X1-yTZ" firstAttribute="leading" secondItem="v81-Sx-E9U" secondAttribute="leading" constant="89" id="Drv-E6-Grd"/>
+                        <constraint firstAttribute="trailing" secondItem="kXP-jw-Hvu" secondAttribute="trailing" constant="89" id="EkJ-tw-qfd"/>
+                        <constraint firstItem="Q0F-JB-8tW" firstAttribute="top" secondItem="kXP-jw-Hvu" secondAttribute="bottom" constant="6" id="VZU-Pk-OKu"/>
                         <constraint firstAttribute="height" constant="80" id="WzL-t1-Uez"/>
                         <constraint firstItem="dL2-d3-hg4" firstAttribute="centerX" secondItem="hGz-X1-yTZ" secondAttribute="centerX" id="Zk9-bj-gMv"/>
-                        <constraint firstItem="dL2-d3-hg4" firstAttribute="top" secondItem="hGz-X1-yTZ" secondAttribute="bottom" constant="2" id="iBg-nb-IBP"/>
+                        <constraint firstItem="dL2-d3-hg4" firstAttribute="top" secondItem="hGz-X1-yTZ" secondAttribute="bottom" constant="6" id="iBg-nb-IBP"/>
                         <constraint firstAttribute="trailing" secondItem="Rcj-pS-HL0" secondAttribute="trailing" constant="30" id="iwE-SJ-8MX"/>
-                        <constraint firstItem="hGz-X1-yTZ" firstAttribute="top" secondItem="v81-Sx-E9U" secondAttribute="top" constant="40" id="lna-WQ-KZ4"/>
+                        <constraint firstItem="hGz-X1-yTZ" firstAttribute="top" secondItem="v81-Sx-E9U" secondAttribute="top" constant="44" id="lna-WQ-KZ4"/>
                         <constraint firstItem="Rcj-pS-HL0" firstAttribute="top" secondItem="v81-Sx-E9U" secondAttribute="top" constant="50" id="mAz-Wf-rMb"/>
                     </constraints>
                 </view>
@@ -118,7 +118,7 @@
         </view>
     </objects>
     <resources>
-        <image name="tabbtn_quanzi.png" width="20" height="22"/>
-        <image name="tabbtn_quanzi_selected.png" width="20" height="22"/>
+        <image name="circle.png" width="12" height="12"/>
+        <image name="circle_selected.png" width="12" height="12"/>
     </resources>
 </document>
