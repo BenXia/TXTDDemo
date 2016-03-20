@@ -2213,7 +2213,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.toboom.txtddemo;
 				PRODUCT_NAME = TXTDDemo;
-				PROVISIONING_PROFILE = "53d76fd6-92fc-46da-8a7b-c1384e914bac";
+				PROVISIONING_PROFILE = "936ce4c1-ae46-4dea-89d0-e6b45138fca6";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
@@ -2255,7 +2255,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.toboom.txtddemo;
 				PRODUCT_NAME = TXTDDemo;
-				PROVISIONING_PROFILE = "e99e9b59-433e-4784-bfb2-a3a0e6bcd44d";
+				PROVISIONING_PROFILE = "5572d6bc-94d6-451a-9453-e4581e669cac";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
