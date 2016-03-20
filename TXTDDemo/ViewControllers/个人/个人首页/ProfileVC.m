@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailDecLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *footView;
 
 @end
 
@@ -44,8 +45,6 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-
-    [self refreshUI];
 }
 
 - (void)viewDidLoad {
@@ -63,10 +62,6 @@
 
 #pragma mark - Private methods
 
-- (void)refreshUI {
-    self.nickLabel.text = [UserInfoModel sharedUserInfoModel].nickName;
-}
-
 - (void)initUI {
     self.headImageView.layer.cornerRadius = self.headImageView.width/2;
     self.headImageView.layer.masksToBounds = YES;
@@ -77,7 +72,7 @@
     self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
     [self.headerView addGestureRecognizer:tap];
-    [self refreshUI];
+    self.tableView.tableFooterView = self.footView;
 }
 
 - (void)initTableView {
@@ -182,7 +177,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 1;
+    return 20;
 }
 
 @end

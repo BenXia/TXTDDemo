@@ -67,7 +67,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.21176470589999999" green="0.30588235289999999" blue="0.54117647059999996" alpha="0.20067349139999999" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.29042875050851868" green="0.4226386303824563" blue="0.75896493213846161" alpha="0.39771012933103445" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="DKj-jy-IAm" firstAttribute="centerX" secondItem="CIQ-ex-4e5" secondAttribute="centerX" id="8IK-Ir-mu7"/>
                         <constraint firstItem="DKj-jy-IAm" firstAttribute="centerY" secondItem="CIQ-ex-4e5" secondAttribute="centerY" id="Nkz-5E-UeC"/>
@@ -129,7 +129,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.20000000000000001" green="0.2784313725" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.21176470589999999" green="0.30588235289999999" blue="0.54117647059999996" alpha="0.5" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fF2-Lb-y2Q" firstAttribute="top" secondItem="AS3-K8-HQc" secondAttribute="bottom" constant="7.5" id="0MP-NR-BSL"/>
                 <constraint firstItem="ilx-jc-RhN" firstAttribute="width" secondItem="OLb-4o-13H" secondAttribute="width" id="11T-60-aFu"/>
