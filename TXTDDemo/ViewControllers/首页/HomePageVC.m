@@ -7,9 +7,15 @@
 //
 
 #import "HomePageVC.h"
+#import "HomePageCell.h"
 
-@interface HomePageVC ()
-
+@interface HomePageVC ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UIView *headImageBackGroundView;
+@property (weak, nonatomic) IBOutlet UILabel *outCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *inCountLabel;
 @end
 
 @implementation HomePageVC
@@ -40,7 +46,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self.navigationController setNavigationBarHidden:YES  animated:animated];
 }
 
@@ -66,7 +71,64 @@
 #pragma mark - Private methods
 
 - (void)initUIReleated {
+    self.tableView.tableHeaderView = self.headerView;
+    NSMutableAttributedString *countAttributedString = [[NSMutableAttributedString alloc] initWithString:@"200" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:25]}];
     
+    [countAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",@"笔"] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}]];
+    self.outCountLabel.attributedText = countAttributedString;
+    self.inCountLabel.attributedText = countAttributedString;
+    self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
+    self.headImageView.layer.cornerRadius = self.headImageView.width/2;
+    self.headImageView.layer.masksToBounds = YES;
+    self.headImageView.userInteractionEnabled = YES;
+    self.headImageBackGroundView.layer.cornerRadius = self.headImageBackGroundView.width/2;
+    self.headImageBackGroundView.layer.masksToBounds = YES;
+    self.headImageBackGroundView.userInteractionEnabled = YES;
+    self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
+    [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomePageCell *cell = [tableView dequeueReusableCellWithIdentifier:[HomePageCell identifier] forIndexPath:indexPath];
+    cell.leftLabel.textColor = [g_commonConfig gray006Color];
+    cell.middleLabel.textColor = [g_commonConfig gray006Color];
+    cell.rightLabel.textColor = [g_commonConfig gray006Color];
+    if (indexPath.row == 0) {
+        cell.leftLabel.text = @"期限";
+        cell.middleLabel.text = @"Shibor(%)";
+        cell.rightLabel.text = @"涨跌(%)";
+    } else if (indexPath.row == 1) {
+        cell.leftLabel.text = @"隔夜";
+        cell.middleLabel.text = @"----";
+        cell.rightLabel.text = @"+1.07";
+        cell.rightLabel.textColor = [UIColor redColor];
+    } else if (indexPath.row == 2) {
+        cell.leftLabel.text = @"7天";
+        cell.middleLabel.text = @"2.29500";
+        cell.rightLabel.text = @"-0.25";
+        cell.rightLabel.textColor = [UIColor greenColor];
+    } else if (indexPath.row == 3) {
+        cell.leftLabel.text = @"14天";
+        cell.middleLabel.text = @"2.49000";
+        cell.rightLabel.text = @"+3.07";
+        cell.rightLabel.textColor = [UIColor redColor];
+    } else {
+        cell.leftLabel.text = @"一个月";
+        cell.middleLabel.text = @"2.75900";
+        cell.rightLabel.text = @"+4.05";
+        cell.rightLabel.textColor = [UIColor redColor];
+    }
+    return cell;
 }
 
 @end
