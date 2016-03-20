@@ -59,7 +59,7 @@
                 </button>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cto-1D-uva" userLabel="lineView">
                     <rect key="frame" x="0.0" y="48" width="197" height="1"/>
-                    <color key="backgroundColor" red="0.025580505079695327" green="0.015952161030308214" blue="0.39905315896739135" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.16862745098039217" green="0.23921568627450981" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="xcb-L9-MPj"/>
                     </constraints>
@@ -75,7 +75,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.17254901959999999" green="0.3294117647" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.17647058823529413" green="0.25098039215686274" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="mLA-Kl-KZI" secondAttribute="bottom" id="0Yt-lg-Je1"/>
                 <constraint firstItem="cto-1D-uva" firstAttribute="leading" secondItem="mYT-lJ-acx" secondAttribute="leading" id="4Ma-N4-R8H"/>

@@ -15,6 +15,8 @@
 @property (weak,nonatomic) IBOutlet UITableView* tableView;
 @property (strong, nonatomic) IBOutlet UIView *menuView;
 
+@property (assign,nonatomic) int cellCount;
+
 @end
 
 @implementation IMHomeVC
@@ -27,6 +29,7 @@
         self.tabBarItem.title = @"圈子";
         self.tabBarItem.image = [[UIImage imageNamed:@"tabbtn_quanzi"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbtn_quanzi_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.cellCount = 10;
     }
     return self;
 }
@@ -60,7 +63,7 @@
 
 -(void)didClickAddItem{
     [UIView animateWithDuration:0.3 animations:^{
-        self.menuView.y = 0;
+        self.menuView.y = self.menuView.y < 0 ? 0 : -self.menuView.height;
     }];
 }
 
@@ -90,7 +93,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.cellCount;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -115,7 +118,8 @@
 }
 
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    self.cellCount --;
+    [tableView reloadData];
 }
 
 @end
