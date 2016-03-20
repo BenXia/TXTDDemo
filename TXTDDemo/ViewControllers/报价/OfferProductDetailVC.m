@@ -40,6 +40,10 @@
     [self.scrollView addSubview:self.detailView];
     self.scrollView.contentSize = CGSizeMake(kScreenWidth, self.detailView.height);
     
+    for (UIButton* button in self.bottomButtonArray) {
+        [button setBackgroundImage:[UIImage imageWithColor:[g_commonConfig gray003Color]] forState:UIControlStateHighlighted];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

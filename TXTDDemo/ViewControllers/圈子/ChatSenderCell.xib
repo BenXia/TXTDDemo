@@ -18,7 +18,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8q-Ot-oig">
                         <rect key="frame" x="0.0" y="0.0" width="356" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_boy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="88i-Xa-ZNT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="88i-Xa-ZNT">
                                 <rect key="frame" x="299" y="9" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="88i-Xa-ZNT" secondAttribute="height" multiplier="1:1" id="WOY-ba-jni"/>
@@ -74,6 +74,6 @@
     </objects>
     <resources>
         <image name="duihuakuang2.png" width="375" height="55"/>
-        <image name="user_boy.jpg" width="220" height="220"/>
+        <image name="user_girl.jpg" width="175" height="175"/>
     </resources>
 </document>

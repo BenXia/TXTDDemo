@@ -10,4 +10,6 @@
 
 @interface OfferProductDetailVC : BaseViewController
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *bottomButtonArray;
+
 @end

@@ -13,19 +13,17 @@
 - (void)awakeFromNib {
     // Initialization code
     [self.typeIcon bringToFront];
+    
+    for (UIButton* button in self.bottomButtonArray) {
+        [button setBackgroundImage:[UIImage imageWithColor:[g_commonConfig gray003Color]] forState:UIControlStateHighlighted];
+    }
 }
 
 -(void)prepareForReuse{
-    self.containerViewTopConstraint.constant = PIXEL_12;
 }
 
 -(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
     [super setHighlighted:highlighted animated:animated];
-    if (highlighted) {
-        self.containerView.backgroundColor = [g_commonConfig gray003Color];
-    }else{
-        self.containerView.backgroundColor = [UIColor whiteColor];
-    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -33,5 +31,6 @@
 
     // Configure the view for the selected state
 }
+
 
 @end

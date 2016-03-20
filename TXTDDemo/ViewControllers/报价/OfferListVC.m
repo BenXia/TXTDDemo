@@ -81,9 +81,6 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     OfferListCell* cell = [tableView dequeueReusableCellWithIdentifier:[OfferListCell identifier] forIndexPath:indexPath];
-    if (indexPath.row == 0) {
-        cell.containerViewTopConstraint.constant = 0;
-    }
 
     return cell;
 }
