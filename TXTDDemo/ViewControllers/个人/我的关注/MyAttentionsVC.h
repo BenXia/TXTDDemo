@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyAttentionsVC : UIViewController
+@interface MyAttentionsVC : BaseViewController
 
 @end

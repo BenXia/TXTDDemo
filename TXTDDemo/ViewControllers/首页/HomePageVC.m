@@ -8,6 +8,7 @@
 
 #import "HomePageVC.h"
 #import "HomePageCell.h"
+#import "OfferDetailVC.h"
 
 @interface HomePageVC ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -82,7 +83,7 @@
     self.headImageBackGroundView.layer.masksToBounds = YES;
     self.headImageBackGroundView.userInteractionEnabled = YES;
     self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
-    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 1)];
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.1)];
     [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
 }
 
@@ -135,6 +136,23 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 1;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    OfferDetailVC *offerDetailVC = [[OfferDetailVC alloc] initWithNibName:@"OfferDetailVC" bundle:nil];
+    if (indexPath.row == 0) {
+        offerDetailVC.timeString = @"隔夜";
+    } else if (indexPath.row == 1) {
+        offerDetailVC.timeString = @"7天";
+    } else if (indexPath.row == 2) {
+        offerDetailVC.timeString = @"14天";
+    } else {
+        offerDetailVC.timeString = @"一个月";
+    }
+    offerDetailVC.hidesBottomBarWhenPushed = YES;
+    [self pushVC:offerDetailVC animate:YES];
 }
 
 @end

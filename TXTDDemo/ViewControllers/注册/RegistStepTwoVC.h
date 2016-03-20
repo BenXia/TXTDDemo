@@ -1,8 +1,8 @@
 //
 //  RegistStepTwoVC.h
-//  Dentist
+//  TXTDDemo
 //
-//  Created by 王涛 on 16/1/17.
+//  Created by Ben on 16/3/19.
 //  Copyright © 2016年 iOSStudio. All rights reserved.
 //
 

@@ -18,7 +18,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-50-CdG">
                         <rect key="frame" x="3" y="0.0" width="388" height="170"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ke9-8n-lkD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ke9-8n-lkD">
                                 <rect key="frame" x="12" y="8" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ke9-8n-lkD" secondAttribute="height" multiplier="1:1" id="9Om-w7-Ve4"/>
@@ -158,5 +158,6 @@
         <image name="jiaruquanzi.png" width="19" height="19"/>
         <image name="mokuai.png" width="209" height="63"/>
         <image name="phone.png" width="17" height="19"/>
+        <image name="user_girl.jpg" width="175" height="175"/>
     </resources>
 </document>

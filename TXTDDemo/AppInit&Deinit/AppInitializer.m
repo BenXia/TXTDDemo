@@ -73,14 +73,14 @@ static AppInitializer* sInstance = nil;
 
 - (void)login {
     //登录
-//    if ([UserCache sharedUserCache].username.length > 0 &&
-//        [UserCache sharedUserCache].password.length > 0) {
+    if ([UserCache sharedUserCache].username.length > 0 &&
+        [UserCache sharedUserCache].password.length > 0) {
         //自动登录
         [self.loginVM autoLogin];
-//    } else {
-//        //手动登录
-//        [[MainViewManager sharedInstance] loadLoginVC];
-//    }
+    } else {
+        //手动登录
+        [[MainViewManager sharedInstance] loadLoginVC];
+    }
 }
 
 #pragma mark - Initiate local
