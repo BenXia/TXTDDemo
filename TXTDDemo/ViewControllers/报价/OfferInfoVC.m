@@ -9,6 +9,7 @@
 #import "OfferInfoVC.h"
 #import "OfferInfoCell.h"
 #import "OfferListVC.h"
+#import "DirectPriceVC.h"
 
 @interface OfferInfoVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -52,6 +53,7 @@
     
     [self.searchBar circular:3];
     [self.searchConfirmButton circular:3];
+    self.searchBarView.backgroundColor = [g_commonConfig themeBlueColor];
     
     self.searchBarView.frame = CGRectMake(0, -self.searchBarView.height, kScreenWidth, self.searchBarView.height);
     [self.view addSubview:self.searchBarView];
@@ -90,7 +92,9 @@
 }
 
 -(void)didClickZhiDaoItem{
-
+    DirectPriceVC* vc = [DirectPriceVC new];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table
