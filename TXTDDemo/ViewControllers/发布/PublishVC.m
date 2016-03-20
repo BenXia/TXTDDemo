@@ -48,8 +48,10 @@
 #pragma mark - Private methods
 
 - (void)initUIRelated {
-    [self.smartButton thematizedWithBackgroundColor:[g_commonConfig themeGreenColor]];
-    [self.inputButton thematizedWithBackgroundColor:[UIColor whiteColor]];
+    [self.smartButton setNormalBackgroundColor:[g_commonConfig themeGreenColor]
+                        disableBackgroundColor:[g_commonConfig gray005Color]];
+    [self.inputButton setNormalBackgroundColor:[UIColor whiteColor]
+                        disableBackgroundColor:[g_commonConfig gray005Color]];
     
     self.smartDetailInfoLabel.numberOfLines = 0;
     self.inputDetailInfoLabel.numberOfLines = 0;
