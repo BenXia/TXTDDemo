@@ -33,4 +33,8 @@
 }
 
 
+- (IBAction)didClickCallButton:(id)sender {
+    [Utilities makePhoneCall:@"13166666666"];
+}
+
 @end

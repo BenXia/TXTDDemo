@@ -300,6 +300,9 @@
                             <state key="normal" title="拨打电话" image="phone.png">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="didClickCallButton:" destination="-1" eventType="touchUpInside" id="B5B-dN-3AI"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzI-hz-bfk">
                             <rect key="frame" x="107" y="0.0" width="106" height="40"/>

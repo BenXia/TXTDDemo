@@ -75,6 +75,9 @@
                                         <state key="normal" title="拨打电话" image="phone.png">
                                             <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didClickCallButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ck2-Ox-0a4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cC1-Kb-WmL">
                                         <rect key="frame" x="129" y="1" width="127" height="39"/>

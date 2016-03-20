@@ -30,6 +30,7 @@
     
     [self.sendTextField circular:3];
     [self.sendButton circular:3];
+    [self.sendButton setBackgroundImage:[UIImage imageWithColor:[g_commonConfig themeDarkBlueColor]] forState:UIControlStateHighlighted];
     
     UINib* senderNib = [UINib nibWithNibName:[ChatSenderCell identifier] bundle:nil];
     UINib* receiverNib = [UINib nibWithNibName:[ChatReceiverCell identifier] bundle:nil];

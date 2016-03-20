@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UIView *headImageBackGroundView;
 @property (weak, nonatomic) IBOutlet UILabel *outCountLabel;
+@property (weak, nonatomic) IBOutlet UIView *titleBar;
 @property (weak, nonatomic) IBOutlet UILabel *inCountLabel;
 @end
 
@@ -85,6 +86,7 @@
     self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.1)];
     [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -141,6 +143,7 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     OfferDetailVC *offerDetailVC = [[OfferDetailVC alloc] initWithNibName:@"OfferDetailVC" bundle:nil];
     if (indexPath.row == 0) {
         offerDetailVC.timeString = @"隔夜";
