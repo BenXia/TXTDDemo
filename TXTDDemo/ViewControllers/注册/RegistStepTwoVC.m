@@ -1,8 +1,8 @@
 //
 //  RegistStepTwoVC.m
-//  Dentist
+//  TXTDDemo
 //
-//  Created by 王涛 on 16/1/17.
+//  Created by Ben on 16/3/19.
 //  Copyright © 2016年 iOSStudio. All rights reserved.
 //
 
@@ -21,10 +21,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-//    [[UserCache sharedUserCache] setUsername:self.nameTextField.text password:self.passwordTextField.text];
-//    [[MainViewManager sharedInstance] loadMainVC];
-//    [[MainViewManager sharedInstance] selectTabHomeVC];
 }
 
 @end

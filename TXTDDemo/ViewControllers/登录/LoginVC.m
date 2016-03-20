@@ -1,20 +1,24 @@
 //
 //  LoginVC.m
-//  Dentist
+//  TXTDDemo
 //
-//  Created by 王涛 on 16/1/16.
+//  Created by Ben on 16/3/19.
 //  Copyright © 2016年 iOSStudio. All rights reserved.
 //
 
 #import "LoginVC.h"
 #import "LoginVM.h"
 #import "RegistStepOneVC.h"
+#import "ForgetPasswordStepOneVC.h"
 
 @interface LoginVC () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextFileld;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UIView *userNameView;
+@property (weak, nonatomic) IBOutlet UIView *passwordView;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (strong, nonatomic) LoginVM *loginVM;
 
 @end
@@ -29,8 +33,14 @@
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
-    [self initNavigationBar];
     [self initUIRelated];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // 主动获取焦点
+    [self.nameTextFileld becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,35 +50,44 @@
 
 #pragma mark - Private methods
 
-- (void)initNavigationBar {
+- (void)initUIRelated {
     self.title = @"登录";
     self.navigationController.navigationBarHidden = YES;
-}
-
-- (void)initUIRelated {
-    self.loginBtn.layer.cornerRadius = self.loginBtn.height/2;
-    self.loginBtn.layer.masksToBounds = YES;
+    
+    self.loginButton.layer.cornerRadius = 5;
+    self.loginButton.layer.masksToBounds = YES;
+    
+    self.registerButton.layer.cornerRadius = 5;
+    self.registerButton.layer.masksToBounds = YES;
+    
+    self.userNameView.layer.borderColor = RGB(230, 230, 230).CGColor;
+    self.userNameView.layer.borderWidth = 1;
+    self.passwordView.layer.borderColor = RGB(230, 230, 230).CGColor;
+    self.passwordView.layer.borderWidth = 1;
+    
     self.nameTextFileld.delegate = self;
     self.passwordTextField.delegate = self;
     
-    // 主动获取焦点
-    [self.nameTextFileld becomeFirstResponder];
+    [self.loginButton setNormalBackgroundColor:[g_commonConfig themeBlueColor]
+                        disableBackgroundColor:[g_commonConfig gray005Color]];
+    [self.registerButton setNormalBackgroundColor:[g_commonConfig themeGreenColor]
+                           disableBackgroundColor:[g_commonConfig gray005Color]];
 }
 
-#pragma mark - Event Response
+#pragma mark - IBActions
 
-- (IBAction)onLoginBtn:(UIButton *)sender {
+- (IBAction)didClickForgetPasswordButtonAction:(id)sender {
+    ForgetPasswordStepOneVC *vc = [[ForgetPasswordStepOneVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)didClickLoginButtonAction:(id)sender {
     [self.loginVM loginWithName:self.nameTextFileld.text PassWord:self.passwordTextField.text];
 }
 
-- (void)onForgetPassword {
-    // 找回密码
-}
-
-- (void)onRegist {
-    // 注册
-    RegistStepOneVC *registVC = [[RegistStepOneVC alloc] init];
-    [self.navigationController pushViewController:registVC animated:YES];
+- (IBAction)didClickReigsterButtonAction:(id)sender {
+    RegistStepOneVC *vc = [[RegistStepOneVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -80,14 +99,14 @@
         if (textField.text.length > 1) {
             moblieResult = YES;
             if (moblieResult && passwordResult) {
-//                self.loginBtn.enabled = YES;
+//                self.loginButton.enabled = YES;
             }
         }
     } else if (textField == self.passwordTextField) {
         if (textField.text.length > 6 && textField.text.length < 20) {
             passwordResult = YES;
             if (moblieResult && passwordResult) {
-//                self.loginBtn.enabled = YES;
+//                self.loginButton.enabled = YES;
             }
         }
     }
