@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PublishVC : UIViewController
+@interface PublishVC : BaseViewController
 
 @end
