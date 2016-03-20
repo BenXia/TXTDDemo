@@ -89,7 +89,7 @@
     if (_segementedControl == nil) {
         _segementedControl = [[UISegmentedControl alloc]initWithItems:@[@"我的关注", @"智能推荐"]];
         _segementedControl.size=CGSizeMake(self.view.width/2-50, 30);
-        UIColor* selectedColor = [g_commonConfig themeButtonBlueColor];
+        UIColor* selectedColor = [g_commonConfig themeLightBlueColor];
         
         //文字颜色
         [_segementedControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateSelected];

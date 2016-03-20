@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OfferDetailVC : UIViewController
+@interface OfferDetailVC : BaseViewController
 @property (strong, nonatomic) NSString *timeString;
 @end

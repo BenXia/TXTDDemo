@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyMessgaeVC : UIViewController
+@interface MyMessgaeVC : BaseViewController
 
 @end

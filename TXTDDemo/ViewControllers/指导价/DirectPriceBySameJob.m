@@ -8,6 +8,7 @@
 
 #import "DirectPriceBySameJob.h"
 #import "DirectPriceBySameJobCell.h"
+#import "OfferDetailVC.h"
 
 @interface DirectPriceBySameJob ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -83,6 +84,23 @@
         cell.backgroundColor = [UIColor whiteColor];
     }
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    OfferDetailVC* offerDetailVC = [OfferDetailVC new];
+    if (indexPath.row == 0) {
+        offerDetailVC.timeString = @"隔夜";
+    } else if (indexPath.row == 1) {
+        offerDetailVC.timeString = @"7天";
+    } else if (indexPath.row == 2) {
+        offerDetailVC.timeString = @"14天";
+    } else {
+        offerDetailVC.timeString = @"一个月";
+    }
+
+    [self.navigationController pushViewController:offerDetailVC animated:YES];
 }
 
 @end
