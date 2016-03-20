@@ -13,7 +13,9 @@
 #import "IQKeyboardManager.h"
 
 @interface AppInitializer ()
+
 @property (nonatomic, strong)LoginVM *loginVM;
+
 @end
 
 @implementation AppInitializer
@@ -69,9 +71,10 @@ static AppInitializer* sInstance = nil;
     });
 }
 
-- (void)login{
+- (void)login {
     //登录
-    if ([UserCache sharedUserCache].username.length>0 && [UserCache sharedUserCache].password.length>0) {
+    if ([UserCache sharedUserCache].username.length > 0 &&
+        [UserCache sharedUserCache].password.length > 0) {
         //自动登录
         [self.loginVM autoLogin];
     } else {
@@ -83,7 +86,6 @@ static AppInitializer* sInstance = nil;
 #pragma mark - Initiate local
 
 - (void)initiateLocalModule {
-    
     // 前端所有时间计算以北京时区为准GMT+8
     [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8*60*60]];
     
