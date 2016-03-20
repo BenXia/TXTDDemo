@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OfferInfoVC">
             <connections>
-                <outlet property="searchBar" destination="QoC-KS-VME" id="MOX-1S-99z"/>
+                <outlet property="searchBar" destination="ne4-9F-lR5" id="4PC-BZ-rKm"/>
                 <outlet property="searchBarView" destination="BHJ-pf-oBh" id="eMa-iF-XBA"/>
                 <outlet property="searchConfirmButton" destination="rMR-UE-FqP" id="HI2-9g-Wv7"/>
                 <outlet property="tableView" destination="wPP-br-ku8" id="3Uk-Xf-gkk"/>
@@ -54,23 +54,23 @@
                         <action selector="didClickConfirmSearch:" destination="-1" eventType="touchUpInside" id="d2p-0a-ili"/>
                     </connections>
                 </button>
-                <searchBar contentMode="redraw" placeholder="输入关键字" translatesAutoresizingMaskIntoConstraints="NO" id="QoC-KS-VME">
-                    <rect key="frame" x="12" y="7" width="231" height="40"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入关键字" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ne4-9F-lR5">
+                    <rect key="frame" x="12" y="7" width="228" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="gS8-fm-xzH"/>
+                        <constraint firstAttribute="height" constant="40" id="Ob5-VE-lTP"/>
                     </constraints>
-                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                </searchBar>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.21960784310000001" green="0.45098039220000002" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="rMR-UE-FqP" firstAttribute="height" secondItem="QoC-KS-VME" secondAttribute="height" id="1ku-o1-MnX"/>
+                <constraint firstItem="ne4-9F-lR5" firstAttribute="centerY" secondItem="BHJ-pf-oBh" secondAttribute="centerY" id="4uB-rt-xfp"/>
+                <constraint firstItem="rMR-UE-FqP" firstAttribute="leading" secondItem="ne4-9F-lR5" secondAttribute="trailing" constant="8" id="IbZ-N9-hZZ"/>
+                <constraint firstItem="ne4-9F-lR5" firstAttribute="leading" secondItem="BHJ-pf-oBh" secondAttribute="leading" constant="12" id="KEn-9g-1WG"/>
                 <constraint firstAttribute="trailing" secondItem="rMR-UE-FqP" secondAttribute="trailing" constant="12" id="Pco-xh-f7u"/>
-                <constraint firstItem="rMR-UE-FqP" firstAttribute="leading" secondItem="QoC-KS-VME" secondAttribute="trailing" constant="5" id="fST-cl-b1n"/>
-                <constraint firstItem="QoC-KS-VME" firstAttribute="centerY" secondItem="BHJ-pf-oBh" secondAttribute="centerY" id="hhH-lb-CTr"/>
-                <constraint firstItem="QoC-KS-VME" firstAttribute="leading" secondItem="BHJ-pf-oBh" secondAttribute="leading" constant="12" id="iR0-KO-ggC"/>
                 <constraint firstItem="rMR-UE-FqP" firstAttribute="centerY" secondItem="BHJ-pf-oBh" secondAttribute="centerY" id="l0r-Zx-uzu"/>
+                <constraint firstItem="rMR-UE-FqP" firstAttribute="height" secondItem="ne4-9F-lR5" secondAttribute="height" id="z8w-uu-mqO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="364" y="326.5"/>

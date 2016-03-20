@@ -1,5 +1,5 @@
 //
-//  RegistVC.h
+//  ForgetPasswordStepOneVC.h
 //  Dentist
 //
 //  Created by 王涛 on 16/1/17.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegistVC : UIViewController
+@interface ForgetPasswordStepOneVC : UIViewController
 
 @end

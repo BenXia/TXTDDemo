@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray* dataSource;
 @property (strong, nonatomic) IBOutlet UIView *searchBarView;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITextField *searchBar;
 @property (weak, nonatomic) IBOutlet UIButton *searchConfirmButton;
 
 @end
@@ -60,6 +60,11 @@
     [self.tableView registerNib:cellNib forCellReuseIdentifier:[OfferInfoCell identifier]];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.searchBarView.y = -self.searchBarView.height;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -72,14 +77,14 @@
 #pragma mark - Action
 
 -(void)didClickSearchItem{
-    [UIView animateWithDuration:0.5 animations:^{
-        self.searchBarView.y = 0;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.searchBarView.y = self.searchBarView.y < 0 ? 0:-self.searchBarView.height;
     }];
 }
 
 -(IBAction)didClickConfirmSearch:(id)sender{
     [self.searchBar resignFirstResponder];
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         self.searchBarView.y = -self.searchBarView.height;
     }];
 }

@@ -18,7 +18,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.title = @"报价信息";
+        self.title = @"我要报价";
         self.tabBarItem.title = @"";
         self.tabBarItem.image = [[UIImage imageNamed:@"tabbtn_fabu"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbtn_fabu_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -35,5 +35,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Private methods
+
+
+#pragma mark - IBActions
+
 
 @end
