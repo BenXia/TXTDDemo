@@ -713,11 +713,11 @@
 		338971AA1C9D3F9100ED2D67 /* 发布 */ = {
 			isa = PBXGroup;
 			children = (
-				33CCDA4E1C9E47130026FF7B /* 精准输入 */,
-				33CCDA4F1C9E47130026FF7B /* 智能提取 */,
 				338971AC1C9D3FC200ED2D67 /* PublishVC.h */,
 				338971AD1C9D3FC200ED2D67 /* PublishVC.m */,
 				338971AE1C9D3FC200ED2D67 /* PublishVC.xib */,
+				33CCDA4E1C9E47130026FF7B /* 精准输入 */,
+				33CCDA4F1C9E47130026FF7B /* 智能提取 */,
 			);
 			path = "发布";
 			sourceTree = "<group>";
