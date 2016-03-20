@@ -7,7 +7,7 @@
 //
 
 #import "DirectPriceBySameJob.h"
-#import "HomePageCell.h"
+#import "DirectPriceBySameJobCell.h"
 
 @interface DirectPriceBySameJob ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -30,7 +30,7 @@
     self.menuButtonView.layer.shadowRadius = 1;
     self.menuButtonView.layer.shadowColor = [UIColor grayColor].CGColor;
     
-    [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
+    [self.tableView registerNib:[DirectPriceBySameJobCell nib] forCellReuseIdentifier:[DirectPriceBySameJobCell identifier]];
     self.tableView.tableFooterView = self.footerView;
     
     self.view.backgroundColor = [g_commonConfig bgGray002Color];
@@ -53,7 +53,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomePageCell *cell = [tableView dequeueReusableCellWithIdentifier:[HomePageCell identifier] forIndexPath:indexPath];
+    DirectPriceBySameJobCell *cell = [tableView dequeueReusableCellWithIdentifier:[DirectPriceBySameJobCell identifier] forIndexPath:indexPath];
     cell.leftLabel.textColor = [g_commonConfig gray006Color];
     cell.middleLabel.textColor = [g_commonConfig gray006Color];
     cell.rightLabel.textColor = [g_commonConfig gray006Color];
