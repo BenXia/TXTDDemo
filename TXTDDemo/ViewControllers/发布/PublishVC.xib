@@ -3,18 +3,115 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublishVC">
             <connections>
+                <outlet property="inputButton" destination="lqT-0k-4bV" id="lRF-Yz-KQR"/>
+                <outlet property="inputDetailInfoLabel" destination="qID-YZ-zn2" id="Xng-TH-aLU"/>
+                <outlet property="smartButton" destination="SE5-4s-sgS" id="ziH-4a-gab"/>
+                <outlet property="smartDetailInfoLabel" destination="81y-qM-CFS" id="C6B-4a-dWe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hp-3a-D9i">
+                    <rect key="frame" x="20" y="0.0" width="280" height="96"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE5-4s-sgS">
+                    <rect key="frame" x="20" y="96" width="280" height="144"/>
+                    <color key="backgroundColor" red="0.44705882352941173" green="0.76862745098039209" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="didClickSmartButtonAction:" destination="-1" eventType="touchUpInside" id="0Z9-cH-ceY"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="职能提取" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqf-K4-rCD">
+                    <rect key="frame" x="20" y="121" width="280" height="21.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入在QQ，微信等渠道发布的信息，系统自动定位类别并完成信息提取，更便捷" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81y-qM-CFS">
+                    <rect key="frame" x="60" y="156" width="200" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqT-0k-4bV">
+                    <rect key="frame" x="20" y="240" width="280" height="144"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="didClickInputButtonAction:" destination="-1" eventType="touchUpInside" id="H0C-oj-2Wy"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精准输入" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbo-TU-yk0">
+                    <rect key="frame" x="20" y="265" width="280" height="21.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手工选择类别并根据提示字段输入报价信息更精准" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qID-YZ-zn2">
+                    <rect key="frame" x="60" y="300" width="200" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV3-2W-kfp">
+                    <rect key="frame" x="20" y="384" width="280" height="96"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="两种报价方式，满足多样需求" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSk-5G-Ie2">
+                    <rect key="frame" x="20" y="404" width="280" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ymJ-hh-ROa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333333333335" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qID-YZ-zn2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="27e-ew-gXU"/>
+                <constraint firstItem="Qbo-TU-yk0" firstAttribute="top" secondItem="lqT-0k-4bV" secondAttribute="top" constant="25" id="4F7-hp-Omg"/>
+                <constraint firstItem="RV3-2W-kfp" firstAttribute="top" secondItem="lqT-0k-4bV" secondAttribute="bottom" id="6nS-tx-RDO"/>
+                <constraint firstItem="SE5-4s-sgS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="9nq-DZ-hCF"/>
+                <constraint firstItem="lqT-0k-4bV" firstAttribute="top" secondItem="SE5-4s-sgS" secondAttribute="bottom" id="B9i-ZG-pml"/>
+                <constraint firstItem="Qbo-TU-yk0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="EJN-Hl-ECY"/>
+                <constraint firstItem="qID-YZ-zn2" firstAttribute="top" secondItem="lqT-0k-4bV" secondAttribute="top" constant="60" id="GfA-X1-HTa"/>
+                <constraint firstItem="81y-qM-CFS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="I2X-21-nhC"/>
+                <constraint firstAttribute="trailing" secondItem="1hp-3a-D9i" secondAttribute="trailing" constant="20" id="JYh-kp-YWp"/>
+                <constraint firstItem="fqf-K4-rCD" firstAttribute="top" secondItem="SE5-4s-sgS" secondAttribute="top" constant="25" id="L5U-jD-JMu"/>
+                <constraint firstItem="rSk-5G-Ie2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Mcn-sN-NgR"/>
+                <constraint firstItem="lqT-0k-4bV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Ned-45-vCf"/>
+                <constraint firstItem="RV3-2W-kfp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="P5c-n2-grT"/>
+                <constraint firstAttribute="trailing" secondItem="rSk-5G-Ie2" secondAttribute="trailing" constant="20" id="Pn9-gb-qXo"/>
+                <constraint firstItem="81y-qM-CFS" firstAttribute="top" secondItem="SE5-4s-sgS" secondAttribute="top" constant="60" id="Tj6-Bg-qIl"/>
+                <constraint firstAttribute="trailing" secondItem="RV3-2W-kfp" secondAttribute="trailing" constant="20" id="WuU-ac-9Av"/>
+                <constraint firstAttribute="trailing" secondItem="Qbo-TU-yk0" secondAttribute="trailing" constant="20" id="ZS2-za-Cle"/>
+                <constraint firstItem="1hp-3a-D9i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="a23-rx-z5E"/>
+                <constraint firstAttribute="trailing" secondItem="lqT-0k-4bV" secondAttribute="trailing" constant="20" id="aze-sb-Duc"/>
+                <constraint firstItem="fqf-K4-rCD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="bar-Gr-Pte"/>
+                <constraint firstAttribute="trailing" secondItem="qID-YZ-zn2" secondAttribute="trailing" constant="60" id="ciP-N8-dS9"/>
+                <constraint firstItem="1hp-3a-D9i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="clK-yV-6xZ"/>
+                <constraint firstItem="SE5-4s-sgS" firstAttribute="height" secondItem="1hp-3a-D9i" secondAttribute="height" multiplier="3/2" id="gGR-Ka-FU9"/>
+                <constraint firstAttribute="trailing" secondItem="81y-qM-CFS" secondAttribute="trailing" constant="60" id="h4G-XI-wXf"/>
+                <constraint firstAttribute="trailing" secondItem="fqf-K4-rCD" secondAttribute="trailing" constant="20" id="hvi-S9-fxd"/>
+                <constraint firstItem="lqT-0k-4bV" firstAttribute="height" secondItem="RV3-2W-kfp" secondAttribute="height" multiplier="2/3" constant="80" id="j9L-Uf-hlF"/>
+                <constraint firstItem="SE5-4s-sgS" firstAttribute="top" secondItem="1hp-3a-D9i" secondAttribute="bottom" id="mLw-Pd-Bza"/>
+                <constraint firstItem="lqT-0k-4bV" firstAttribute="height" secondItem="SE5-4s-sgS" secondAttribute="height" id="pdp-z4-12P"/>
+                <constraint firstAttribute="bottom" secondItem="RV3-2W-kfp" secondAttribute="bottom" id="q7K-5n-iFu"/>
+                <constraint firstAttribute="trailing" secondItem="SE5-4s-sgS" secondAttribute="trailing" constant="20" id="y1s-U1-qiC"/>
+                <constraint firstItem="rSk-5G-Ie2" firstAttribute="top" secondItem="lqT-0k-4bV" secondAttribute="bottom" constant="20" id="yvm-kS-aAg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="210" y="253"/>
         </view>
     </objects>

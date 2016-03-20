@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mokuai.png" translatesAutoresizingMaskIntoConstraints="NO" id="FUc-NG-rO4">
-                        <rect key="frame" x="294" y="20" width="100" height="30"/>
+                        <rect key="frame" x="294" y="8" width="100" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="hlD-EO-Oir"/>
                             <constraint firstAttribute="width" constant="100" id="kiV-7S-EGa"/>
@@ -29,9 +29,9 @@
                         </variation>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-89-azh" customClass="FramedView">
-                        <rect key="frame" x="0.0" y="12" width="391" height="187"/>
+                        <rect key="frame" x="0.0" y="0.0" width="391" height="187"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_boy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wBo-ax-9SC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wBo-ax-9SC">
                                 <rect key="frame" x="12" y="8" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="2Bc-bS-JUH"/>
@@ -58,10 +58,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvk-HJ-JaH" userLabel="buttonView">
-                                <rect key="frame" x="2" y="147" width="387" height="40"/>
+                                <rect key="frame" x="3" y="147" width="385" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBi-eA-kXL">
-                                        <rect key="frame" x="259" y="1" width="128" height="39"/>
+                                        <rect key="frame" x="257" y="1" width="128" height="39"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="加入关注" image="jiaruguanzhu.png">
@@ -77,7 +77,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cC1-Kb-WmL">
-                                        <rect key="frame" x="129" y="1" width="129" height="39"/>
+                                        <rect key="frame" x="129" y="1" width="127" height="39"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="加入圈子" image="jiaruquanzi.png">
@@ -145,7 +145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wBo-ax-9SC" firstAttribute="leading" secondItem="Zji-89-azh" secondAttribute="leading" constant="12" id="1gN-fK-nVp"/>
                             <constraint firstItem="JkP-7m-ocq" firstAttribute="top" secondItem="wBo-ax-9SC" secondAttribute="bottom" constant="8" id="3cV-qT-f5u"/>
@@ -156,12 +156,12 @@
                             <constraint firstItem="YlE-5h-Xe9" firstAttribute="leading" secondItem="Xam-xs-auR" secondAttribute="leading" id="GSp-o6-A36"/>
                             <constraint firstItem="bFv-d7-zy2" firstAttribute="leading" secondItem="ZF0-rE-Tqb" secondAttribute="leading" id="GqC-OK-JsI"/>
                             <constraint firstItem="Xam-xs-auR" firstAttribute="top" secondItem="wBo-ax-9SC" secondAttribute="top" id="KJB-GQ-5T0"/>
-                            <constraint firstAttribute="trailing" secondItem="Zvk-HJ-JaH" secondAttribute="trailing" constant="2" id="LcG-v3-KbQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Zvk-HJ-JaH" secondAttribute="trailing" constant="3" id="LcG-v3-KbQ"/>
                             <constraint firstItem="ZF0-rE-Tqb" firstAttribute="top" secondItem="JkP-7m-ocq" secondAttribute="bottom" constant="8" id="N36-3h-0u9"/>
                             <constraint firstItem="pic-JQ-CJZ" firstAttribute="trailing" secondItem="JkP-7m-ocq" secondAttribute="trailing" id="O1C-G2-5yE"/>
                             <constraint firstItem="pic-JQ-CJZ" firstAttribute="top" secondItem="ZF0-rE-Tqb" secondAttribute="top" id="Pok-Sr-7fg"/>
                             <constraint firstItem="Mo1-HH-VnQ" firstAttribute="leading" secondItem="ZF0-rE-Tqb" secondAttribute="leading" id="Ppm-eo-rJl"/>
-                            <constraint firstItem="Zvk-HJ-JaH" firstAttribute="leading" secondItem="Zji-89-azh" secondAttribute="leading" constant="2" id="RE5-ZL-K42"/>
+                            <constraint firstItem="Zvk-HJ-JaH" firstAttribute="leading" secondItem="Zji-89-azh" secondAttribute="leading" constant="3" id="RE5-ZL-K42"/>
                             <constraint firstItem="hud-z2-Tux" firstAttribute="centerY" secondItem="jmA-wy-LtG" secondAttribute="centerY" id="TXP-ys-xab"/>
                             <constraint firstItem="cVH-oK-DIK" firstAttribute="top" secondItem="bFv-d7-zy2" secondAttribute="top" id="U1f-h2-h5C"/>
                             <constraint firstAttribute="bottom" secondItem="Zvk-HJ-JaH" secondAttribute="bottom" id="UNJ-LF-5Ar"/>
@@ -185,26 +185,20 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="FUc-NG-rO4" firstAttribute="trailing" secondItem="Zji-89-azh" secondAttribute="trailing" constant="3" id="9y9-ke-y0R"/>
-                    <constraint firstAttribute="bottom" secondItem="Zji-89-azh" secondAttribute="bottom" id="JH3-Tq-RXO"/>
-                    <constraint firstItem="FUc-NG-rO4" firstAttribute="centerY" secondItem="wBo-ax-9SC" secondAttribute="centerY" id="RaR-uR-f5i"/>
+                    <constraint firstAttribute="bottom" secondItem="Zji-89-azh" secondAttribute="bottom" constant="12" id="JH3-Tq-RXO"/>
                     <constraint firstItem="FUc-NG-rO4" firstAttribute="top" secondItem="wBo-ax-9SC" secondAttribute="top" id="ZtY-sw-ph2"/>
-                    <constraint firstItem="Zji-89-azh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="eKs-0M-gSX"/>
-                    <constraint firstItem="FUc-NG-rO4" firstAttribute="top" secondItem="Zji-89-azh" secondAttribute="top" id="hSo-HF-XFe"/>
+                    <constraint firstItem="Zji-89-azh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eKs-0M-gSX"/>
                     <constraint firstAttribute="trailing" secondItem="Zji-89-azh" secondAttribute="trailing" constant="3" id="v4B-5y-I2t"/>
                     <constraint firstItem="Zji-89-azh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zsr-Js-g9K"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="RaR-uR-f5i"/>
-                        <exclude reference="hSo-HF-XFe"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="containerView" destination="Zji-89-azh" id="P0d-ga-0Sr"/>
-                <outlet property="containerViewTopConstraint" destination="eKs-0M-gSX" id="fPd-gK-XQc"/>
                 <outlet property="typeIcon" destination="FUc-NG-rO4" id="cJB-4q-gQi"/>
+                <outletCollection property="bottomButtonArray" destination="sBi-eA-kXL" id="W0A-OL-jjf"/>
+                <outletCollection property="bottomButtonArray" destination="OJc-xS-npw" id="0qX-Ab-zEX"/>
+                <outletCollection property="bottomButtonArray" destination="cC1-Kb-WmL" id="b2E-B3-zH9"/>
             </connections>
             <point key="canvasLocation" x="335" y="107"/>
         </tableViewCell>
@@ -214,6 +208,6 @@
         <image name="jiaruquanzi.png" width="19" height="19"/>
         <image name="mokuai.png" width="209" height="63"/>
         <image name="phone.png" width="17" height="19"/>
-        <image name="user_boy.jpg" width="220" height="220"/>
+        <image name="user_girl.jpg" width="175" height="175"/>
     </resources>
 </document>

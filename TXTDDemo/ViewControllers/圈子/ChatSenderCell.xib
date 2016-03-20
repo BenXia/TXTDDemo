@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -12,13 +12,13 @@
             <rect key="frame" x="0.0" y="0.0" width="356" height="65"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="356" height="64"/>
+                <rect key="frame" x="0.0" y="0.0" width="356" height="64.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8q-Ot-oig">
                         <rect key="frame" x="0.0" y="0.0" width="356" height="64"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_boy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="88i-Xa-ZNT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="88i-Xa-ZNT">
                                 <rect key="frame" x="299" y="9" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="88i-Xa-ZNT" secondAttribute="height" multiplier="1:1" id="WOY-ba-jni"/>
@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="height" constant="35" id="5WR-cF-s6Z"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你猜猜看看啊" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-JR-fTA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你猜猜看看啊" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoN-JR-fTA">
                                 <rect key="frame" x="80" y="14" width="196" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -69,11 +69,14 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="infoLabel" destination="FoN-JR-fTA" id="qnZ-zU-FQe"/>
+            </connections>
             <point key="canvasLocation" x="280" y="330.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="duihuakuang2.png" width="375" height="55"/>
-        <image name="user_boy.jpg" width="220" height="220"/>
+        <image name="user_girl.jpg" width="175" height="175"/>
     </resources>
 </document>

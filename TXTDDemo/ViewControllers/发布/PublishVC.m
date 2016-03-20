@@ -7,8 +7,15 @@
 //
 
 #import "PublishVC.h"
+#import "SmartPublishVC.h"
+#import "InputPublishVC.h"
 
 @interface PublishVC ()
+
+@property (weak, nonatomic) IBOutlet UIButton *smartButton;
+@property (weak, nonatomic) IBOutlet UIButton *inputButton;
+@property (weak, nonatomic) IBOutlet UILabel *smartDetailInfoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *inputDetailInfoLabel;
 
 @end
 
@@ -29,6 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self initUIRelated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,8 +47,26 @@
 
 #pragma mark - Private methods
 
+- (void)initUIRelated {
+    [self.smartButton setNormalBackgroundColor:[g_commonConfig themeGreenColor]
+                        disableBackgroundColor:[g_commonConfig gray005Color]];
+    [self.inputButton setNormalBackgroundColor:[UIColor whiteColor]
+                        disableBackgroundColor:[g_commonConfig gray005Color]];
+    
+    self.smartDetailInfoLabel.numberOfLines = 0;
+    self.inputDetailInfoLabel.numberOfLines = 0;
+}
 
 #pragma mark - IBActions
 
+- (IBAction)didClickSmartButtonAction:(id)sender {
+    SmartPublishVC *vc = [[SmartPublishVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)didClickInputButtonAction:(id)sender {
+    InputPublishVC *vc = [[InputPublishVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

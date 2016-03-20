@@ -26,6 +26,7 @@
                 <outletCollection property="filterButtonArray3" destination="v4I-Cr-Ej4" id="hqc-nE-3tz"/>
                 <outletCollection property="filterButtonArray2" destination="c06-rW-XYH" id="Nbl-es-tP3"/>
                 <outletCollection property="filterButtonArray2" destination="Sa7-xw-yMC" id="dwz-op-RMq"/>
+                <outletCollection property="filterButtonArray2" destination="7TT-ne-sst" id="rMX-Ci-arS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -208,7 +209,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="QmY-em-Kly" firstAttribute="top" secondItem="rCz-VG-guG" secondAttribute="top" constant="8" id="10D-Dn-7vu"/>
                         <constraint firstItem="ZFO-ZA-ON7" firstAttribute="top" secondItem="VXr-AE-gxl" secondAttribute="top" id="1Kg-F3-b2y"/>
@@ -375,7 +376,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="wum-Vo-kXk" firstAttribute="top" secondItem="Q3W-Hh-mCG" secondAttribute="bottom" constant="8" id="43B-Zj-7Sm"/>
                         <constraint firstItem="KwP-Ox-5KH" firstAttribute="height" secondItem="wum-Vo-kXk" secondAttribute="height" id="5sb-J1-1Gw"/>
@@ -478,7 +479,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Sa7-xw-yMC" firstAttribute="height" secondItem="v4I-Cr-Ej4" secondAttribute="height" id="5e5-Zi-bnZ"/>
                         <constraint firstItem="pQC-sT-Xo0" firstAttribute="top" secondItem="BKT-SX-tLE" secondAttribute="top" constant="8" id="JV7-ys-h7M"/>

@@ -12,6 +12,6 @@
 @interface OfferListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *typeIcon;
 @property (weak, nonatomic) IBOutlet FramedView *containerView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewTopConstraint;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *bottomButtonArray;
 
 @end

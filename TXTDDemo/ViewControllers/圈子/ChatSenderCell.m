@@ -8,10 +8,18 @@
 
 #import "ChatSenderCell.h"
 
+@interface ChatSenderCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+@end
+
 @implementation ChatSenderCell
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.infoLabel.numberOfLines = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
