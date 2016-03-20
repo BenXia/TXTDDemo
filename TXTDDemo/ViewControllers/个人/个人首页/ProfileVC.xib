@@ -123,7 +123,6 @@
                 <constraint firstItem="whQ-g7-QaN" firstAttribute="centerX" secondItem="qu6-xE-mOi" secondAttribute="centerX" id="gfs-3C-WiL"/>
                 <constraint firstItem="whQ-g7-QaN" firstAttribute="top" secondItem="HO0-6h-w8z" secondAttribute="bottom" constant="8" id="lCX-8a-Gb6"/>
                 <constraint firstItem="HO0-6h-w8z" firstAttribute="top" secondItem="qu6-xE-mOi" secondAttribute="top" constant="10" id="nWU-HW-CXT"/>
-                <constraint firstItem="whQ-g7-QaN" firstAttribute="top" secondItem="HO0-6h-w8z" secondAttribute="bottom" constant="7.5" id="uwB-Sg-rd8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-167" y="480"/>
