@@ -257,6 +257,8 @@
 		889366911C9E7FD70058C13D /* zhidaojiaxialu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893668F1C9E7FD70058C13D /* zhidaojiaxialu@3x.png */; };
 		889366951C9E80510058C13D /* DirectPriceByFiancingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 889366931C9E80510058C13D /* DirectPriceByFiancingCell.m */; };
 		889366961C9E80510058C13D /* DirectPriceByFiancingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889366941C9E80510058C13D /* DirectPriceByFiancingCell.xib */; };
+		8893669B1C9E91420058C13D /* DirectPriceBySameJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 889366991C9E91420058C13D /* DirectPriceBySameJobCell.m */; };
+		8893669C1C9E91420058C13D /* DirectPriceBySameJobCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8893669A1C9E91420058C13D /* DirectPriceBySameJobCell.xib */; };
 		935FC70C1C9D5B9C00B8B643 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7001C9D5B9C00B8B643 /* MessageCell.m */; };
 		935FC70D1C9D5B9C00B8B643 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7011C9D5B9C00B8B643 /* MessageCell.xib */; };
 		935FC70E1C9D5B9C00B8B643 /* MyMessgaeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7031C9D5B9C00B8B643 /* MyMessgaeVC.m */; };
@@ -658,6 +660,9 @@
 		889366921C9E80510058C13D /* DirectPriceByFiancingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectPriceByFiancingCell.h; sourceTree = "<group>"; };
 		889366931C9E80510058C13D /* DirectPriceByFiancingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectPriceByFiancingCell.m; sourceTree = "<group>"; };
 		889366941C9E80510058C13D /* DirectPriceByFiancingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectPriceByFiancingCell.xib; sourceTree = "<group>"; };
+		889366981C9E91420058C13D /* DirectPriceBySameJobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectPriceBySameJobCell.h; sourceTree = "<group>"; };
+		889366991C9E91420058C13D /* DirectPriceBySameJobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectPriceBySameJobCell.m; sourceTree = "<group>"; };
+		8893669A1C9E91420058C13D /* DirectPriceBySameJobCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectPriceBySameJobCell.xib; sourceTree = "<group>"; };
 		935FC6FF1C9D5B9C00B8B643 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		935FC7001C9D5B9C00B8B643 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		935FC7011C9D5B9C00B8B643 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -1537,6 +1542,9 @@
 				889366921C9E80510058C13D /* DirectPriceByFiancingCell.h */,
 				889366931C9E80510058C13D /* DirectPriceByFiancingCell.m */,
 				889366941C9E80510058C13D /* DirectPriceByFiancingCell.xib */,
+				889366981C9E91420058C13D /* DirectPriceBySameJobCell.h */,
+				889366991C9E91420058C13D /* DirectPriceBySameJobCell.m */,
+				8893669A1C9E91420058C13D /* DirectPriceBySameJobCell.xib */,
 			);
 			path = "指导价";
 			sourceTree = "<group>";
@@ -1861,6 +1869,7 @@
 				338971D51C9D43A400ED2D67 /* tabbtn_quanzi@3x.png in Resources */,
 				338971CA1C9D43A400ED2D67 /* tabbtn_baojia_selected@2x.png in Resources */,
 				338971D21C9D43A400ED2D67 /* tabbtn_quanzi_selected@2x.png in Resources */,
+				8893669C1C9E91420058C13D /* DirectPriceBySameJobCell.xib in Resources */,
 				338971B51C9D3FDF00ED2D67 /* IMHomeVC.xib in Resources */,
 				936A8DA31C9E8FF3008703F6 /* OfferDetailVC.xib in Resources */,
 				33CCDA701C9E47BC0026FF7B /* ForgetPasswordStepOneVC.xib in Resources */,
@@ -1950,6 +1959,7 @@
 				33DC499D1C9D13F600849762 /* IQTextView.m in Sources */,
 				936A8D951C9E4949008703F6 /* HomePageCell.m in Sources */,
 				33DC49A91C9D13F600849762 /* SDCollectionViewCell.m in Sources */,
+				8893669B1C9E91420058C13D /* DirectPriceBySameJobCell.m in Sources */,
 				889366891C9E6B0A0058C13D /* DirectPriceByFinancing.m in Sources */,
 				33DC49FC1C9D13F700849762 /* OfferListCell.m in Sources */,
 				33DC49F61C9D13F700849762 /* OfferFilterVC.m in Sources */,

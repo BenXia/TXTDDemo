@@ -125,7 +125,7 @@
                 <constraint firstAttribute="trailing" secondItem="uCf-cb-aGV" secondAttribute="trailing" constant="12" id="PBI-Rb-LFJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="626" y="149"/>
+            <point key="canvasLocation" x="749" y="154"/>
         </view>
     </objects>
     <resources>

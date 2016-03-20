@@ -35,13 +35,14 @@
     for (UIButton* button in buttonArray) {
         button.layer.cornerRadius = 3;
         button.layer.borderWidth = 1.f;
+        [button setTitleColor:[g_commonConfig gray006Color]];
         [RACObserve(button, selected) subscribeNext:^(NSNumber* x) {
             if (x.boolValue) {
                 [button setBorderColor:[g_commonConfig themeGreenColor]];
                 [button setBackgroundColor:[g_commonConfig themeGreenColor]];
                 [button setTitleColor:[UIColor whiteColor]];
             }else{
-                [button setBorderColor:[g_commonConfig gray003Color]];
+                [button setBorderColor:[g_commonConfig gray004Color]];
                 [button setBackgroundColor:[UIColor whiteColor]];
                 [button setTitleColor:[g_commonConfig fontGray007Color]];
             }

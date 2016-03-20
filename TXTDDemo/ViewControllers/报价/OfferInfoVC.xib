@@ -59,7 +59,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Ob5-VE-lTP"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
