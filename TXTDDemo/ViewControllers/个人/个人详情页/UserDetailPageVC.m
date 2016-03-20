@@ -10,6 +10,7 @@
 
 @interface UserDetailPageVC ()
 @property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (strong, nonatomic) IBOutlet UIView *footView;
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailDecLabel;
@@ -34,8 +35,6 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-    
-    [self refreshUI];
 }
 
 - (void)viewDidLoad {
@@ -54,20 +53,16 @@
 
 #pragma mark - Private methods
 
-- (void)refreshUI {
-    self.nickLabel.text = [UserInfoModel sharedUserInfoModel].nickName;
-}
-
 - (void)initUI {
     self.headImageView.layer.cornerRadius = self.headImageView.width/2;
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.userInteractionEnabled = YES;
     [self setNavRightItemWithImage:@"geranxinxi" target:self action:@selector(didClickOnUserInfo)];
-    [self refreshUI];
 }
 
 - (void)initTableView {
     self.tableView.tableHeaderView = self.headerView;
+    self.tableView.tableFooterView = self.footView;
 }
 
 - (void)onSettingBtn {

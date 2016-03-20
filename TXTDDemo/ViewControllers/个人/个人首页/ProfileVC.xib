@@ -36,19 +36,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="319" height="270"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王大锤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhG-9E-RrW">
-                            <rect key="frame" x="133" y="208" width="54" height="21.5"/>
+                            <rect key="frame" x="133" y="202" width="54" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国建设银行有限公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-U4-niH">
-                            <rect key="frame" x="90" y="237" width="140" height="17"/>
+                            <rect key="frame" x="90" y="231" width="140" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gD-NM-9Yq">
-                            <rect key="frame" x="95" y="70" width="130" height="130"/>
+                            <rect key="frame" x="95" y="64" width="130" height="130"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8pN-5W-XKX">
                                     <rect key="frame" x="5" y="5" width="120" height="120"/>
@@ -76,12 +76,12 @@
                     </subviews>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.27843137254901962" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="9gD-NM-9Yq" firstAttribute="top" secondItem="snP-dk-joP" secondAttribute="bottom" constant="-10" id="7km-SD-QHo"/>
                         <constraint firstItem="snP-dk-joP" firstAttribute="top" secondItem="p3i-qJ-u0x" secondAttribute="top" constant="40" id="81d-2N-VZj"/>
                         <constraint firstItem="fhG-9E-RrW" firstAttribute="top" secondItem="9gD-NM-9Yq" secondAttribute="bottom" constant="8" id="EHW-uv-rS8"/>
                         <constraint firstItem="9gD-NM-9Yq" firstAttribute="centerX" secondItem="p3i-qJ-u0x" secondAttribute="centerX" id="Kux-A3-H4d"/>
                         <constraint firstItem="fhG-9E-RrW" firstAttribute="centerX" secondItem="p3i-qJ-u0x" secondAttribute="centerX" id="V7Q-v3-XXG"/>
                         <constraint firstAttribute="trailing" secondItem="snP-dk-joP" secondAttribute="trailing" constant="20" id="Yta-jG-8AE"/>
+                        <constraint firstItem="9gD-NM-9Yq" firstAttribute="top" secondItem="p3i-qJ-u0x" secondAttribute="top" constant="64" id="afQ-OI-e3z"/>
                         <constraint firstAttribute="height" constant="270" id="h8L-aM-CCg"/>
                         <constraint firstItem="gYc-U4-niH" firstAttribute="centerX" secondItem="p3i-qJ-u0x" secondAttribute="centerX" id="hHD-gv-KLU"/>
                         <constraint firstItem="gYc-U4-niH" firstAttribute="top" secondItem="fhG-9E-RrW" secondAttribute="bottom" constant="7.5" id="mye-YR-brE"/>

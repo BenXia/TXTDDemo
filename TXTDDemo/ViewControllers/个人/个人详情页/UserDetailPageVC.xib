@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserDetailPageVC">
             <connections>
                 <outlet property="detailDecLabel" destination="ed3-tf-I8S" id="3f4-Bn-kI9"/>
+                <outlet property="footView" destination="Dby-fA-Uwx" id="Pr5-t5-UB1"/>
                 <outlet property="headImageView" destination="kxQ-nD-ydo" id="PoP-xl-Nkn"/>
                 <outlet property="headerView" destination="OMs-5A-f48" id="mdq-fC-0Oi"/>
                 <outlet property="nickLabel" destination="CEB-k1-Unk" id="hLb-dv-21S"/>
@@ -58,56 +59,67 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="oSX-ou-bpp">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="oSX-ou-bpp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="400" id="2u9-wV-MIY"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2u9-wV-MIY"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="dWf-6R-dix"/>
                         <outlet property="delegate" destination="-1" id="3oe-4C-Woo"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPL-kO-cZ6">
-                    <rect key="frame" x="0.0" y="476" width="375" height="44"/>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oSX-ou-bpp" secondAttribute="trailing" id="9sj-P2-XaO"/>
+                <constraint firstAttribute="bottom" secondItem="oSX-ou-bpp" secondAttribute="bottom" id="D5a-DO-YaY"/>
+                <constraint firstItem="oSX-ou-bpp" firstAttribute="top" secondItem="Enb-I1-Nwh" secondAttribute="top" id="Moj-jS-Cln"/>
+                <constraint firstItem="oSX-ou-bpp" firstAttribute="leading" secondItem="Enb-I1-Nwh" secondAttribute="leading" id="iZS-gk-BrM"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="231.5" y="322.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="Dby-fA-Uwx">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEL-vl-roy">
+                    <rect key="frame" x="0.0" y="66" width="365" height="44"/>
                     <color key="backgroundColor" red="0.38431372549999998" green="0.73333333329999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="M7g-dz-MkT"/>
+                        <constraint firstAttribute="height" constant="44" id="W4c-JR-Dhm"/>
                     </constraints>
                     <state key="normal" title="打个招呼"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEB-sC-NRP">
-                    <rect key="frame" x="0.0" y="420" width="375" height="44"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf2-D6-RDA">
+                    <rect key="frame" x="0.0" y="10" width="365" height="44"/>
                     <color key="backgroundColor" red="0.17254901959999999" green="0.36470588240000001" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="8uQ-m3-ic0"/>
+                        <constraint firstAttribute="height" constant="44" id="fVY-Og-iPb"/>
                     </constraints>
                     <state key="normal" title="添加好友">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="oSX-ou-bpp" secondAttribute="trailing" id="9sj-P2-XaO"/>
-                <constraint firstAttribute="trailing" secondItem="nEB-sC-NRP" secondAttribute="trailing" id="C26-d7-Gy1"/>
-                <constraint firstItem="nEB-sC-NRP" firstAttribute="leading" secondItem="Enb-I1-Nwh" secondAttribute="leading" id="Mgb-sC-pvj"/>
-                <constraint firstItem="oSX-ou-bpp" firstAttribute="top" secondItem="Enb-I1-Nwh" secondAttribute="top" id="Moj-jS-Cln"/>
-                <constraint firstAttribute="bottom" secondItem="pPL-kO-cZ6" secondAttribute="bottom" constant="20" id="Ui4-gS-zhI"/>
-                <constraint firstAttribute="trailing" secondItem="pPL-kO-cZ6" secondAttribute="trailing" id="X7Y-uO-iW0"/>
-                <constraint firstItem="pPL-kO-cZ6" firstAttribute="leading" secondItem="Enb-I1-Nwh" secondAttribute="leading" id="cx0-Pm-EzV"/>
-                <constraint firstItem="pPL-kO-cZ6" firstAttribute="top" secondItem="nEB-sC-NRP" secondAttribute="bottom" constant="12" id="gcY-mx-GJq"/>
-                <constraint firstItem="oSX-ou-bpp" firstAttribute="leading" secondItem="Enb-I1-Nwh" secondAttribute="leading" id="iZS-gk-BrM"/>
-                <constraint firstItem="nEB-sC-NRP" firstAttribute="top" secondItem="oSX-ou-bpp" secondAttribute="bottom" constant="20" id="lQ3-vm-y9K"/>
+                <constraint firstAttribute="trailing" secondItem="Gf2-D6-RDA" secondAttribute="trailing" id="GD6-ex-nQU"/>
+                <constraint firstItem="Gf2-D6-RDA" firstAttribute="leading" secondItem="Dby-fA-Uwx" secondAttribute="leading" id="T2U-Vh-xw9"/>
+                <constraint firstAttribute="trailing" secondItem="IEL-vl-roy" secondAttribute="trailing" id="ZIR-rV-4HY"/>
+                <constraint firstItem="IEL-vl-roy" firstAttribute="leading" secondItem="Dby-fA-Uwx" secondAttribute="leading" id="ZYV-6O-ppZ"/>
+                <constraint firstItem="Gf2-D6-RDA" firstAttribute="top" secondItem="Dby-fA-Uwx" secondAttribute="top" constant="10" id="caD-kP-P4r"/>
+                <constraint firstItem="IEL-vl-roy" firstAttribute="top" secondItem="Gf2-D6-RDA" secondAttribute="bottom" constant="12" id="gr6-Ug-0gO"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="Ui4-gS-zhI"/>
-                </mask>
-            </variation>
-            <point key="canvasLocation" x="232" y="323"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-167" y="472"/>
         </view>
     </objects>
     <resources>
