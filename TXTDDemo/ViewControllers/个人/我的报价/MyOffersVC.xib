@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5xA-51-SW4">
-                    <rect key="frame" x="12" y="0.0" width="351" height="667"/>
+                    <rect key="frame" x="12" y="12" width="351" height="655"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="8cu-Gk-gAd"/>
@@ -28,7 +28,7 @@
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="5xA-51-SW4" secondAttribute="bottom" id="CWN-Re-eCL"/>
-                <constraint firstItem="5xA-51-SW4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XCd-KX-cdD"/>
+                <constraint firstItem="5xA-51-SW4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="XCd-KX-cdD"/>
                 <constraint firstItem="5xA-51-SW4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="XVc-mO-DyQ"/>
                 <constraint firstAttribute="trailing" secondItem="5xA-51-SW4" secondAttribute="trailing" constant="12" id="fKq-fI-xGj"/>
             </constraints>

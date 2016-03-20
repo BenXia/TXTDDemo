@@ -116,9 +116,9 @@
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.font = [UIFont systemFontOfSize:15];
     cell.textLabel.textColor = [g_commonConfig themeButtonBlueColor];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:15];
     cell.detailTextLabel.textColor = [g_commonConfig gray006Color];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"我的信息";

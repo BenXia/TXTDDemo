@@ -78,6 +78,7 @@
         cell.textLabel.font = [UIFont systemFontOfSize:15];
         cell.textLabel.textColor = [g_commonConfig gray006Color];
         cell.detailTextLabel.textColor = [g_commonConfig gray006Color];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:15];
     }
     if (indexPath.section == 0) {
         switch (indexPath.row) {
