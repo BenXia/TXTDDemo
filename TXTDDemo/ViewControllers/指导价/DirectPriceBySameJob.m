@@ -11,7 +11,9 @@
 
 @interface DirectPriceBySameJob ()<UITableViewDataSource,UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *menuButtonView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *footerView;
 
 
 @end
@@ -22,8 +24,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
+    self.menuButtonView.backgroundColor = [g_commonConfig gray003Color];
+        self.menuButtonView.layer.shadowOffset = CGSizeMake(2, 2);
+    self.menuButtonView.layer.shadowOpacity = 0.2;
+    self.menuButtonView.layer.shadowRadius = 1;
+    self.menuButtonView.layer.shadowColor = [UIColor grayColor].CGColor;
     
+    [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
+    self.tableView.tableFooterView = self.footerView;
+    
+    self.view.backgroundColor = [g_commonConfig bgGray002Color];
+    self.tableView.backgroundColor = [g_commonConfig bgGray002Color];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,23 +58,18 @@
     cell.middleLabel.textColor = [g_commonConfig gray006Color];
     cell.rightLabel.textColor = [g_commonConfig gray006Color];
     if (indexPath.row == 0) {
-        cell.leftLabel.text = @"期限";
-        cell.middleLabel.text = @"Shibor(%)";
-        cell.rightLabel.text = @"涨跌(%)";
-        cell.backgroundColor = [g_commonConfig gray003Color];
-    } else if (indexPath.row == 1) {
         cell.leftLabel.text = @"隔夜";
         cell.middleLabel.text = @"----";
         cell.rightLabel.text = @"+1.07";
         cell.rightLabel.textColor = [g_commonConfig themeRedColor];
         cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 2) {
+    } else if (indexPath.row == 1) {
         cell.leftLabel.text = @"7天";
         cell.middleLabel.text = @"2.29500";
         cell.rightLabel.text = @"-0.25";
         cell.rightLabel.textColor = [g_commonConfig themeGreenColor];
         cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 3) {
+    } else if (indexPath.row == 2) {
         cell.leftLabel.text = @"14天";
         cell.middleLabel.text = @"2.49000";
         cell.rightLabel.text = @"+3.07";

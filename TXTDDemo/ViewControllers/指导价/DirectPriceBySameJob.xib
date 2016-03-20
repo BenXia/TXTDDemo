@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DirectPriceBySameJob">
             <connections>
+                <outlet property="footerView" destination="9ou-uW-m9h" id="jed-ew-0vK"/>
+                <outlet property="menuButtonView" destination="jVl-ct-mui" id="NZ3-at-i0C"/>
                 <outlet property="tableView" destination="jjI-6q-bL2" id="obQ-cd-1Z6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,8 +18,71 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVl-ct-mui" userLabel="menuButtonView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ9-dG-RHM">
+                            <rect key="frame" x="0.0" y="0.0" width="107" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="期限">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="pic_place02.png">
+                                <color key="titleColor" red="0.3294117647" green="0.68235294120000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-i1-dOq">
+                            <rect key="frame" x="107" y="0.0" width="106" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Shibor(%)">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="pic_place02.png">
+                                <color key="titleColor" red="0.3294117647" green="0.68235294120000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qft-XW-AEz">
+                            <rect key="frame" x="213" y="0.0" width="107" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
+                            <state key="normal" title="涨跌(%)">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="pic_place02.png">
+                                <color key="titleColor" red="0.3294117647" green="0.68235294120000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="4zZ-i1-dOq" firstAttribute="leading" secondItem="ZQ9-dG-RHM" secondAttribute="trailing" id="0EV-rO-N1L"/>
+                        <constraint firstItem="ZQ9-dG-RHM" firstAttribute="leading" secondItem="jVl-ct-mui" secondAttribute="leading" id="2qo-b9-r0N"/>
+                        <constraint firstItem="4zZ-i1-dOq" firstAttribute="top" secondItem="jVl-ct-mui" secondAttribute="top" id="CS7-6z-38n"/>
+                        <constraint firstAttribute="trailing" secondItem="Qft-XW-AEz" secondAttribute="trailing" id="Cjy-CC-kgY"/>
+                        <constraint firstAttribute="bottom" secondItem="4zZ-i1-dOq" secondAttribute="bottom" id="I2W-BE-UoX"/>
+                        <constraint firstItem="Qft-XW-AEz" firstAttribute="leading" secondItem="4zZ-i1-dOq" secondAttribute="trailing" id="JqF-aJ-dbB"/>
+                        <constraint firstItem="4zZ-i1-dOq" firstAttribute="height" secondItem="ZQ9-dG-RHM" secondAttribute="height" id="KaB-Ia-OCN"/>
+                        <constraint firstAttribute="bottom" secondItem="Qft-XW-AEz" secondAttribute="bottom" id="LuU-cS-oix"/>
+                        <constraint firstItem="Qft-XW-AEz" firstAttribute="top" secondItem="jVl-ct-mui" secondAttribute="top" id="MJs-ex-yO4"/>
+                        <constraint firstAttribute="bottom" secondItem="ZQ9-dG-RHM" secondAttribute="bottom" id="OXF-u5-9yF"/>
+                        <constraint firstItem="ZQ9-dG-RHM" firstAttribute="top" secondItem="jVl-ct-mui" secondAttribute="top" id="Wwk-2v-4cD"/>
+                        <constraint firstItem="Qft-XW-AEz" firstAttribute="height" secondItem="ZQ9-dG-RHM" secondAttribute="height" id="aEN-04-Yda"/>
+                        <constraint firstItem="Qft-XW-AEz" firstAttribute="width" secondItem="ZQ9-dG-RHM" secondAttribute="width" id="dY7-rg-9xe"/>
+                        <constraint firstAttribute="height" constant="44" id="ibB-rH-tny"/>
+                        <constraint firstItem="Qft-XW-AEz" firstAttribute="width" secondItem="4zZ-i1-dOq" secondAttribute="width" id="pX2-Ln-d4y"/>
+                        <constraint firstItem="Qft-XW-AEz" firstAttribute="height" secondItem="4zZ-i1-dOq" secondAttribute="height" id="re2-ER-iEO"/>
+                        <constraint firstItem="4zZ-i1-dOq" firstAttribute="width" secondItem="ZQ9-dG-RHM" secondAttribute="width" id="tiN-Y7-OqB"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="pX2-Ln-d4y"/>
+                            <exclude reference="re2-ER-iEO"/>
+                        </mask>
+                    </variation>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jjI-6q-bL2">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="XGc-qg-ntO"/>
@@ -27,12 +92,43 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="jVl-ct-mui" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="A2T-Z8-vuU"/>
                 <constraint firstItem="jjI-6q-bL2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EkF-cG-BDX"/>
+                <constraint firstAttribute="trailing" secondItem="jVl-ct-mui" secondAttribute="trailing" id="IyT-0u-kAG"/>
                 <constraint firstItem="jjI-6q-bL2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LDi-HU-PFd"/>
                 <constraint firstAttribute="bottom" secondItem="jjI-6q-bL2" secondAttribute="bottom" id="NaM-r3-F7N"/>
+                <constraint firstItem="jjI-6q-bL2" firstAttribute="top" secondItem="jVl-ct-mui" secondAttribute="bottom" id="Zc6-zP-rFc"/>
+                <constraint firstItem="jVl-ct-mui" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p0O-hd-wyu"/>
                 <constraint firstAttribute="trailing" secondItem="jjI-6q-bL2" secondAttribute="trailing" id="qR7-oo-71a"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="LDi-HU-PFd"/>
+                </mask>
+            </variation>
+        </view>
+        <view contentMode="scaleToFill" id="9ou-uW-m9h">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新时间：203-12-12 12:13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCf-cb-aGV">
+                    <rect key="frame" x="155" y="13" width="153" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="uCf-cb-aGV" firstAttribute="centerY" secondItem="9ou-uW-m9h" secondAttribute="centerY" id="F5W-yw-VRd"/>
+                <constraint firstAttribute="trailing" secondItem="uCf-cb-aGV" secondAttribute="trailing" constant="12" id="PBI-Rb-LFJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="626" y="149"/>
         </view>
     </objects>
+    <resources>
+        <image name="pic_place02.png" width="11" height="12"/>
+    </resources>
 </document>

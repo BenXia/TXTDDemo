@@ -251,6 +251,10 @@
 		889366851C9E6AF00058C13D /* DirectPriceBySameJob.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889366831C9E6AF00058C13D /* DirectPriceBySameJob.xib */; };
 		889366891C9E6B0A0058C13D /* DirectPriceByFinancing.m in Sources */ = {isa = PBXBuildFile; fileRef = 889366871C9E6B0A0058C13D /* DirectPriceByFinancing.m */; };
 		8893668A1C9E6B0A0058C13D /* DirectPriceByFinancing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889366881C9E6B0A0058C13D /* DirectPriceByFinancing.xib */; };
+		889366901C9E7FD70058C13D /* zhidaojiaxialu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893668E1C9E7FD70058C13D /* zhidaojiaxialu@2x.png */; };
+		889366911C9E7FD70058C13D /* zhidaojiaxialu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893668F1C9E7FD70058C13D /* zhidaojiaxialu@3x.png */; };
+		889366951C9E80510058C13D /* DirectPriceByFiancingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 889366931C9E80510058C13D /* DirectPriceByFiancingCell.m */; };
+		889366961C9E80510058C13D /* DirectPriceByFiancingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889366941C9E80510058C13D /* DirectPriceByFiancingCell.xib */; };
 		935FC70C1C9D5B9C00B8B643 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7001C9D5B9C00B8B643 /* MessageCell.m */; };
 		935FC70D1C9D5B9C00B8B643 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7011C9D5B9C00B8B643 /* MessageCell.xib */; };
 		935FC70E1C9D5B9C00B8B643 /* MyMessgaeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7031C9D5B9C00B8B643 /* MyMessgaeVC.m */; };
@@ -642,6 +646,11 @@
 		889366861C9E6B0A0058C13D /* DirectPriceByFinancing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectPriceByFinancing.h; sourceTree = "<group>"; };
 		889366871C9E6B0A0058C13D /* DirectPriceByFinancing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectPriceByFinancing.m; sourceTree = "<group>"; };
 		889366881C9E6B0A0058C13D /* DirectPriceByFinancing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectPriceByFinancing.xib; sourceTree = "<group>"; };
+		8893668E1C9E7FD70058C13D /* zhidaojiaxialu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhidaojiaxialu@2x.png"; sourceTree = "<group>"; };
+		8893668F1C9E7FD70058C13D /* zhidaojiaxialu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhidaojiaxialu@3x.png"; sourceTree = "<group>"; };
+		889366921C9E80510058C13D /* DirectPriceByFiancingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectPriceByFiancingCell.h; sourceTree = "<group>"; };
+		889366931C9E80510058C13D /* DirectPriceByFiancingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectPriceByFiancingCell.m; sourceTree = "<group>"; };
+		889366941C9E80510058C13D /* DirectPriceByFiancingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectPriceByFiancingCell.xib; sourceTree = "<group>"; };
 		935FC6FF1C9D5B9C00B8B643 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		935FC7001C9D5B9C00B8B643 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		935FC7011C9D5B9C00B8B643 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -1436,6 +1445,8 @@
 		884804561C9D26F800984EF7 /* 报价 */ = {
 			isa = PBXGroup;
 			children = (
+				8893668E1C9E7FD70058C13D /* zhidaojiaxialu@2x.png */,
+				8893668F1C9E7FD70058C13D /* zhidaojiaxialu@3x.png */,
 				884804981C9D630F00984EF7 /* frame_bg01@2x.png */,
 				884804991C9D630F00984EF7 /* frame_bg01@3x.png */,
 				884804571C9D26F800984EF7 /* chuxuchanpin@2x.png */,
@@ -1507,6 +1518,9 @@
 				889366861C9E6B0A0058C13D /* DirectPriceByFinancing.h */,
 				889366871C9E6B0A0058C13D /* DirectPriceByFinancing.m */,
 				889366881C9E6B0A0058C13D /* DirectPriceByFinancing.xib */,
+				889366921C9E80510058C13D /* DirectPriceByFiancingCell.h */,
+				889366931C9E80510058C13D /* DirectPriceByFiancingCell.m */,
+				889366941C9E80510058C13D /* DirectPriceByFiancingCell.xib */,
 			);
 			path = "指导价";
 			sourceTree = "<group>";
@@ -1680,7 +1694,9 @@
 				33DC48A81C9D13F600849762 /* guide3_47_inch.png in Resources */,
 				33DC48661C9D13F600849762 /* btn_back_white@3x.png in Resources */,
 				935FC70F1C9D5B9C00B8B643 /* MyMessgaeVC.xib in Resources */,
+				889366961C9E80510058C13D /* DirectPriceByFiancingCell.xib in Resources */,
 				884804A61C9D819D00984EF7 /* ChatVC.xib in Resources */,
+				889366901C9E7FD70058C13D /* zhidaojiaxialu@2x.png in Resources */,
 				33DC489F1C9D13F600849762 /* guide1_35_inch.png in Resources */,
 				8848047A1C9D26F800984EF7 /* jiaruguanzhu@3x.png in Resources */,
 				936A8D8F1C9E452B008703F6 /* rongchu@3x.png in Resources */,
@@ -1775,6 +1791,7 @@
 				33DC48A71C9D13F600849762 /* guide3_35_inch.png in Resources */,
 				33C92C441C9D5CE70079F3A3 /* wdgz@2x.png in Resources */,
 				33DC49DB1C9D13F600849762 /* easyjs-inject.js in Resources */,
+				889366911C9E7FD70058C13D /* zhidaojiaxialu@3x.png in Resources */,
 				33C92C4B1C9D5CE70079F3A3 /* wdxx@3x.png in Resources */,
 				338971CE1C9D43A400ED2D67 /* tabbtn_fabu_selected@2x.png in Resources */,
 				8848047E1C9D26F800984EF7 /* licaichanpin@3x.png in Resources */,
@@ -1925,6 +1942,7 @@
 				33DC49A71C9D13F600849762 /* TADotView.m in Sources */,
 				889366841C9E6AF00058C13D /* DirectPriceBySameJob.m in Sources */,
 				33DC4A371C9D13F700849762 /* AlipayManager.m in Sources */,
+				889366951C9E80510058C13D /* DirectPriceByFiancingCell.m in Sources */,
 				33DC49D61C9D13F600849762 /* AboutUsVC.m in Sources */,
 				33DC49CF1C9D13F600849762 /* ProfileVC.m in Sources */,
 				33DC49A11C9D13F600849762 /* IQUIView+IQKeyboardToolbar.m in Sources */,

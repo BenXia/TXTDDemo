@@ -7,10 +7,14 @@
 //
 
 #import "DirectPriceByFinancing.h"
-#import "HomePageCell.h"
+#import "DirectPriceByFiancingCell.h"
 
 @interface DirectPriceByFinancing ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *menuButtonView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *zhidaojiaButton;
+@property (strong, nonatomic) IBOutlet UIView *footerView;
 
 @end
 
@@ -20,7 +24,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
+    self.menuButtonView.backgroundColor = [g_commonConfig gray003Color];
+    self.menuButtonView.layer.shadowOffset = CGSizeMake(2, 2);
+    self.menuButtonView.layer.shadowOpacity = 0.2;
+    self.menuButtonView.layer.shadowRadius = 1;
+    self.menuButtonView.layer.shadowColor = [UIColor grayColor].CGColor;
+    
+    UIButton* menuButton = self.zhidaojiaButton;
+    CGFloat imageWidth = menuButton.imageView.size.width;
+    CGFloat titleWidth = [menuButton.titleLabel.text textSizeForOneLineWithFont:menuButton.titleLabel.font].width;
+    [menuButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -imageWidth, 0, imageWidth)];
+    [menuButton setImageEdgeInsets:UIEdgeInsetsMake(0, titleWidth, 0, -titleWidth)];
+    
+    [self.tableView registerNib:[DirectPriceByFiancingCell nib] forCellReuseIdentifier:[DirectPriceByFiancingCell identifier]];
+    
+    self.tableView.tableFooterView = self.footerView;
+    
+    self.view.backgroundColor = [g_commonConfig bgGray002Color];
+    self.tableView.backgroundColor = [g_commonConfig bgGray002Color];
 
 }
 
@@ -40,40 +61,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomePageCell *cell = [tableView dequeueReusableCellWithIdentifier:[HomePageCell identifier] forIndexPath:indexPath];
-    cell.leftLabel.textColor = [g_commonConfig gray006Color];
-    cell.middleLabel.textColor = [g_commonConfig gray006Color];
-    cell.rightLabel.textColor = [g_commonConfig gray006Color];
-    if (indexPath.row == 0) {
-        cell.leftLabel.text = @"期限";
-        cell.middleLabel.text = @"Shibor(%)";
-        cell.rightLabel.text = @"涨跌(%)";
-        cell.backgroundColor = [g_commonConfig gray003Color];
-    } else if (indexPath.row == 1) {
-        cell.leftLabel.text = @"隔夜";
-        cell.middleLabel.text = @"----";
-        cell.rightLabel.text = @"+1.07";
-        cell.rightLabel.textColor = [g_commonConfig themeRedColor];
-        cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 2) {
-        cell.leftLabel.text = @"7天";
-        cell.middleLabel.text = @"2.29500";
-        cell.rightLabel.text = @"-0.25";
-        cell.rightLabel.textColor = [g_commonConfig themeGreenColor];
-        cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 3) {
-        cell.leftLabel.text = @"14天";
-        cell.middleLabel.text = @"2.49000";
-        cell.rightLabel.text = @"+3.07";
-        cell.rightLabel.textColor = [g_commonConfig themeRedColor];
-        cell.backgroundColor = [UIColor whiteColor];
-    } else {
-        cell.leftLabel.text = @"一个月";
-        cell.middleLabel.text = @"2.75900";
-        cell.rightLabel.text = @"+4.05";
-        cell.rightLabel.textColor = [g_commonConfig themeRedColor];
-        cell.backgroundColor = [UIColor whiteColor];
-    }
+    DirectPriceByFiancingCell *cell = [tableView dequeueReusableCellWithIdentifier:[DirectPriceByFiancingCell identifier] forIndexPath:indexPath];
+    cell.priceLabel.text = [NSString stringWithFormat:@"+1.%zd",indexPath.row];
+    cell.bankLabel.text = @"中国银行";
     return cell;
 }
 
