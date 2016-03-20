@@ -1,21 +1,21 @@
 //
-//  InputPublishVC.m
+//  SmartPublish2VC.m
 //  TXTDDemo
 //
 //  Created by Ben on 16/3/20.
 //  Copyright © 2016年 iOSStudio. All rights reserved.
 //
 
-#import "InputPublishVC.h"
+#import "SmartPublish2VC.h"
 
-@interface InputPublishVC ()
+@interface SmartPublish2VC ()
 
 @property (weak, nonatomic) IBOutlet UIButton *publishButton;
 @property (weak, nonatomic) IBOutlet UILabel *detailInfoLabel;
 
 @end
 
-@implementation InputPublishVC
+@implementation SmartPublish2VC
 
 #pragma mark - View life cycle
 

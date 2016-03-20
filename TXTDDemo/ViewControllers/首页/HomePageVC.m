@@ -40,7 +40,6 @@
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
-    
     [self initUIReleated];
 }
 
@@ -51,7 +50,6 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
     //根页面禁止右滑返回
     self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
@@ -71,9 +69,8 @@
 #pragma mark - Private methods
 
 - (void)initUIReleated {
-    self.tableView.tableHeaderView = self.headerView;
+    //self.tableView.tableHeaderView = self.headerView;
     NSMutableAttributedString *countAttributedString = [[NSMutableAttributedString alloc] initWithString:@"200" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:25]}];
-    
     [countAttributedString appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",@"笔"] attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}]];
     self.outCountLabel.attributedText = countAttributedString;
     self.inCountLabel.attributedText = countAttributedString;
@@ -85,6 +82,7 @@
     self.headImageBackGroundView.layer.masksToBounds = YES;
     self.headImageBackGroundView.userInteractionEnabled = YES;
     self.headerView.backgroundColor = [g_commonConfig themeBlueColor];
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 1)];
     [self.tableView registerNib:[HomePageCell nib] forCellReuseIdentifier:[HomePageCell identifier]];
 }
 
@@ -95,7 +93,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -104,23 +102,18 @@
     cell.middleLabel.textColor = [g_commonConfig gray006Color];
     cell.rightLabel.textColor = [g_commonConfig gray006Color];
     if (indexPath.row == 0) {
-        cell.leftLabel.text = @"期限";
-        cell.middleLabel.text = @"Shibor(%)";
-        cell.rightLabel.text = @"涨跌(%)";
-        cell.backgroundColor = [g_commonConfig gray003Color];
-    } else if (indexPath.row == 1) {
         cell.leftLabel.text = @"隔夜";
         cell.middleLabel.text = @"----";
         cell.rightLabel.text = @"+1.07";
         cell.rightLabel.textColor = [g_commonConfig themeRedColor];
         cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 2) {
+    } else if (indexPath.row == 1) {
         cell.leftLabel.text = @"7天";
         cell.middleLabel.text = @"2.29500";
         cell.rightLabel.text = @"-0.25";
         cell.rightLabel.textColor = [g_commonConfig themeGreenColor];
         cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 3) {
+    } else if (indexPath.row == 2) {
         cell.leftLabel.text = @"14天";
         cell.middleLabel.text = @"2.49000";
         cell.rightLabel.text = @"+3.07";
@@ -134,6 +127,14 @@
         cell.backgroundColor = [UIColor whiteColor];
     }
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 1;
 }
 
 @end
