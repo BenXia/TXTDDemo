@@ -55,7 +55,6 @@
 #pragma mark - Private methods
 
 - (void)refreshUI {
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[UserInfoModel sharedUserInfoModel].headPath] placeholderImage:[UIImage imageNamed:@"头像"]];
     self.nickLabel.text = [UserInfoModel sharedUserInfoModel].nickName;
 }
 
