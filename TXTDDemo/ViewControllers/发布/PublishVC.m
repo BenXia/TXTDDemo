@@ -61,11 +61,13 @@
 
 - (IBAction)didClickSmartButtonAction:(id)sender {
     SmartPublishVC *vc = [[SmartPublishVC alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)didClickInputButtonAction:(id)sender {
     InputPublishVC *vc = [[InputPublishVC alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

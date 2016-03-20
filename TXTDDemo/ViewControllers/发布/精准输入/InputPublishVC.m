@@ -37,6 +37,9 @@
     [self setNavTitleString:@"我要报价"];
     
     self.detailInfoLabel.numberOfLines = 0;
+    
+    self.publishButton.layer.cornerRadius = 5;
+    self.publishButton.layer.masksToBounds = YES;
     [self.publishButton setNormalBackgroundColor:[g_commonConfig themeBlueColor]
                           disableBackgroundColor:[g_commonConfig gray005Color]];
 }

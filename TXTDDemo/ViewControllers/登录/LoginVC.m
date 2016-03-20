@@ -60,9 +60,9 @@
     self.registerButton.layer.cornerRadius = 5;
     self.registerButton.layer.masksToBounds = YES;
     
-    self.userNameView.layer.borderColor = RGB(230, 230, 230).CGColor;
+    self.userNameView.layer.borderColor = RGB(210, 210, 210).CGColor;
     self.userNameView.layer.borderWidth = 1;
-    self.passwordView.layer.borderColor = RGB(230, 230, 230).CGColor;
+    self.passwordView.layer.borderColor = RGB(210, 210, 210).CGColor;
     self.passwordView.layer.borderWidth = 1;
     
     self.nameTextFileld.delegate = self;

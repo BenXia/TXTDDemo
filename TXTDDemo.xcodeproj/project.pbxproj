@@ -44,8 +44,6 @@
 		33C92C4B1C9D5CE70079F3A3 /* wdxx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C92C3D1C9D5CE70079F3A3 /* wdxx@3x.png */; };
 		33CCDA581C9E475F0026FF7B /* SmartPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA561C9E475F0026FF7B /* SmartPublishVC.m */; };
 		33CCDA591C9E475F0026FF7B /* SmartPublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA571C9E475F0026FF7B /* SmartPublishVC.xib */; };
-		33CCDA6D1C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA621C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m */; };
-		33CCDA6E1C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA631C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib */; };
 		33CCDA6F1C9E47BC0026FF7B /* ForgetPasswordStepOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA651C9E47BC0026FF7B /* ForgetPasswordStepOneVC.m */; };
 		33CCDA701C9E47BC0026FF7B /* ForgetPasswordStepOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA661C9E47BC0026FF7B /* ForgetPasswordStepOneVC.xib */; };
 		33CCDA711C9E47BC0026FF7B /* ForgetPasswordStepThreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA681C9E47BC0026FF7B /* ForgetPasswordStepThreeVC.m */; };
@@ -60,6 +58,12 @@
 		33CCDA861C9E679A0026FF7B /* SmartPublish2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA841C9E679A0026FF7B /* SmartPublish2VC.xib */; };
 		33CCDA8A1C9E77580026FF7B /* InputPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA881C9E77580026FF7B /* InputPublishVC.m */; };
 		33CCDA8B1C9E77580026FF7B /* InputPublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA891C9E77580026FF7B /* InputPublishVC.xib */; };
+		33CCDA951C9EA6020026FF7B /* kefu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA911C9EA6020026FF7B /* kefu@2x.png */; };
+		33CCDA961C9EA6020026FF7B /* kefu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA921C9EA6020026FF7B /* kefu@3x.png */; };
+		33CCDA971C9EA6020026FF7B /* yuyindianhua@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA931C9EA6020026FF7B /* yuyindianhua@2x.png */; };
+		33CCDA981C9EA6020026FF7B /* yuyindianhua@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA941C9EA6020026FF7B /* yuyindianhua@3x.png */; };
+		33CCDA9C1C9EACCF0026FF7B /* icon_successed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA9A1C9EACCF0026FF7B /* icon_successed@2x.png */; };
+		33CCDA9D1C9EACCF0026FF7B /* icon_successed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA9B1C9EACCF0026FF7B /* icon_successed@3x.png */; };
 		33D0102F1C62483700499EE9 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D0102E1C62483700499EE9 /* AlipaySDK.framework */; };
 		33D010301C62492E00499EE9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F071D41C42D9BE00DAC58F /* libsqlite3.0.tbd */; };
 		33D010331C6249E200499EE9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D010321C6249E200499EE9 /* CoreTelephony.framework */; };
@@ -358,9 +362,6 @@
 		33CCDA551C9E475F0026FF7B /* SmartPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartPublishVC.h; sourceTree = "<group>"; };
 		33CCDA561C9E475F0026FF7B /* SmartPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartPublishVC.m; sourceTree = "<group>"; };
 		33CCDA571C9E475F0026FF7B /* SmartPublishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartPublishVC.xib; sourceTree = "<group>"; };
-		33CCDA611C9E47BC0026FF7B /* ForgetPasswordStepFourVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordStepFourVC.h; sourceTree = "<group>"; };
-		33CCDA621C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordStepFourVC.m; sourceTree = "<group>"; };
-		33CCDA631C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordStepFourVC.xib; sourceTree = "<group>"; };
 		33CCDA641C9E47BC0026FF7B /* ForgetPasswordStepOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordStepOneVC.h; sourceTree = "<group>"; };
 		33CCDA651C9E47BC0026FF7B /* ForgetPasswordStepOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordStepOneVC.m; sourceTree = "<group>"; };
 		33CCDA661C9E47BC0026FF7B /* ForgetPasswordStepOneVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordStepOneVC.xib; sourceTree = "<group>"; };
@@ -382,6 +383,12 @@
 		33CCDA871C9E77580026FF7B /* InputPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPublishVC.h; sourceTree = "<group>"; };
 		33CCDA881C9E77580026FF7B /* InputPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPublishVC.m; sourceTree = "<group>"; };
 		33CCDA891C9E77580026FF7B /* InputPublishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPublishVC.xib; sourceTree = "<group>"; };
+		33CCDA911C9EA6020026FF7B /* kefu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kefu@2x.png"; sourceTree = "<group>"; };
+		33CCDA921C9EA6020026FF7B /* kefu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kefu@3x.png"; sourceTree = "<group>"; };
+		33CCDA931C9EA6020026FF7B /* yuyindianhua@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yuyindianhua@2x.png"; sourceTree = "<group>"; };
+		33CCDA941C9EA6020026FF7B /* yuyindianhua@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yuyindianhua@3x.png"; sourceTree = "<group>"; };
+		33CCDA9A1C9EACCF0026FF7B /* icon_successed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_successed@2x.png"; sourceTree = "<group>"; };
+		33CCDA9B1C9EACCF0026FF7B /* icon_successed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_successed@3x.png"; sourceTree = "<group>"; };
 		33D0102E1C62483700499EE9 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = StudioCommon/StudioCommon/Vendors/SDK/alipay/AlipaySDK.framework; sourceTree = "<group>"; };
 		33D010321C6249E200499EE9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		33DC45641C9D13F600849762 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -874,11 +881,21 @@
 				33CCDA671C9E47BC0026FF7B /* ForgetPasswordStepThreeVC.h */,
 				33CCDA681C9E47BC0026FF7B /* ForgetPasswordStepThreeVC.m */,
 				33CCDA691C9E47BC0026FF7B /* ForgetPasswordStepThreeVC.xib */,
-				33CCDA611C9E47BC0026FF7B /* ForgetPasswordStepFourVC.h */,
-				33CCDA621C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m */,
-				33CCDA631C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib */,
 			);
 			path = "忘记密码";
+			sourceTree = "<group>";
+		};
+		33CCDA901C9EA6020026FF7B /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				33CCDA9A1C9EACCF0026FF7B /* icon_successed@2x.png */,
+				33CCDA9B1C9EACCF0026FF7B /* icon_successed@3x.png */,
+				33CCDA911C9EA6020026FF7B /* kefu@2x.png */,
+				33CCDA921C9EA6020026FF7B /* kefu@3x.png */,
+				33CCDA931C9EA6020026FF7B /* yuyindianhua@2x.png */,
+				33CCDA941C9EA6020026FF7B /* yuyindianhua@3x.png */,
+			);
+			path = "登录注册";
 			sourceTree = "<group>";
 		};
 		33DC45631C9D13F600849762 /* TXTDDemo */ = {
@@ -950,6 +967,7 @@
 				33C92C2F1C9D5CE70079F3A3 /* 个人 */,
 				33DC45C51C9D13F600849762 /* 子工程公共资源 */,
 				33DC45CE1C9D13F600849762 /* 引导图 */,
+				33CCDA901C9EA6020026FF7B /* 登录注册 */,
 				33DC46831C9D13F600849762 /* 选项卡 */,
 			);
 			path = Images;
@@ -1722,6 +1740,7 @@
 				884804A61C9D819D00984EF7 /* ChatVC.xib in Resources */,
 				889366901C9E7FD70058C13D /* zhidaojiaxialu@2x.png in Resources */,
 				33DC489F1C9D13F600849762 /* guide1_35_inch.png in Resources */,
+				33CCDA9D1C9EACCF0026FF7B /* icon_successed@3x.png in Resources */,
 				8848047A1C9D26F800984EF7 /* jiaruguanzhu@3x.png in Resources */,
 				936A8D8F1C9E452B008703F6 /* rongchu@3x.png in Resources */,
 				33DC49D91C9D13F600849762 /* SettingVCViewController.xib in Resources */,
@@ -1768,6 +1787,7 @@
 				884804CE1C9D9B1000984EF7 /* user_boy.jpg in Resources */,
 				935FC75A1C9D873C00B8B643 /* MyOffersVC.xib in Resources */,
 				33DC48AA1C9D13F600849762 /* guide3_55_inch.png in Resources */,
+				33CCDA951C9EA6020026FF7B /* kefu@2x.png in Resources */,
 				33C92C461C9D5CE70079F3A3 /* wdph@2x.png in Resources */,
 				33DC49FB1C9D13F700849762 /* OfferInfoVC.xib in Resources */,
 				33DC49941C9D13F600849762 /* ELCAssetTablePicker.xib in Resources */,
@@ -1776,7 +1796,6 @@
 				884804921C9D26F800984EF7 /* zijinchanpin@3x.png in Resources */,
 				884804D31C9D9FCA00984EF7 /* geranxinxi@3x.png in Resources */,
 				884804841C9D26F800984EF7 /* piaojuchanpin@3x.png in Resources */,
-				33CCDA6E1C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib in Resources */,
 				8848048E1C9D26F800984EF7 /* zhidaojia@3x.png in Resources */,
 				884804BA1C9D861100984EF7 /* tianjia@2x.png in Resources */,
 				33C92C481C9D5CE70079F3A3 /* wdxiaoxi@2x.png in Resources */,
@@ -1830,6 +1849,7 @@
 				33DC489C1C9D13F600849762 /* common_topnav_icon02@3x.png in Resources */,
 				338971D01C9D43A400ED2D67 /* tabbtn_fabu@2x.png in Resources */,
 				884804851C9D26F800984EF7 /* qitachanpin@2x.png in Resources */,
+				33CCDA9C1C9EACCF0026FF7B /* icon_successed@2x.png in Resources */,
 				884804BF1C9D861100984EF7 /* tongxunlu@3x.png in Resources */,
 				884804B91C9D861100984EF7 /* faqiqunliao@3x.png in Resources */,
 				33DC48B21C9D13F600849762 /* guide5_55_inch.png in Resources */,
@@ -1840,6 +1860,7 @@
 				884804A11C9D7EDC00984EF7 /* ConversationListCell.xib in Resources */,
 				33DC49D71C9D13F600849762 /* AboutUsVC.xib in Resources */,
 				8848049A1C9D630F00984EF7 /* frame_bg01@2x.png in Resources */,
+				33CCDA981C9EA6020026FF7B /* yuyindianhua@3x.png in Resources */,
 				33DC498B1C9D13F600849762 /* Images.xcassets in Resources */,
 				33DC48A91C9D13F600849762 /* guide3_4_inch.png in Resources */,
 				33DC49D01C9D13F600849762 /* ProfileVC.xib in Resources */,
@@ -1850,6 +1871,7 @@
 				33DC48AD1C9D13F600849762 /* guide4_4_inch.png in Resources */,
 				33DC489D1C9D13F600849762 /* topnav_icon08@2x.png in Resources */,
 				884804891C9D26F800984EF7 /* sousuo@2x.png in Resources */,
+				33CCDA971C9EA6020026FF7B /* yuyindianhua@2x.png in Resources */,
 				33DC49931C9D13F600849762 /* ELCAssetPicker.xib in Resources */,
 				936A8D961C9E4949008703F6 /* HomePageCell.xib in Resources */,
 				935FC7131C9D5B9C00B8B643 /* UserInfoVC.xib in Resources */,
@@ -1871,6 +1893,7 @@
 				338971D21C9D43A400ED2D67 /* tabbtn_quanzi_selected@2x.png in Resources */,
 				8893669C1C9E91420058C13D /* DirectPriceBySameJobCell.xib in Resources */,
 				338971B51C9D3FDF00ED2D67 /* IMHomeVC.xib in Resources */,
+				33CCDA961C9EA6020026FF7B /* kefu@3x.png in Resources */,
 				936A8DA31C9E8FF3008703F6 /* OfferDetailVC.xib in Resources */,
 				33CCDA701C9E47BC0026FF7B /* ForgetPasswordStepOneVC.xib in Resources */,
 				884804CF1C9D9B1000984EF7 /* user_girl.jpg in Resources */,
@@ -1989,7 +2012,6 @@
 				33DC484B1C9D13F600849762 /* AppDeinitializer.m in Sources */,
 				33DC497A1C9D13F600849762 /* RegistDC.m in Sources */,
 				33DC49FA1C9D13F700849762 /* OfferInfoVC.m in Sources */,
-				33CCDA6D1C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m in Sources */,
 				33DC49A01C9D13F600849762 /* IQToolbar.m in Sources */,
 				33DC484C1C9D13F600849762 /* AppInitializer.m in Sources */,
 				33DC4A381C9D13F700849762 /* LoginVM.m in Sources */,
