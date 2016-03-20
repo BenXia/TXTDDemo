@@ -247,6 +247,12 @@
 		884804CF1C9D9B1000984EF7 /* user_girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 884804CD1C9D9B1000984EF7 /* user_girl.jpg */; };
 		884804D21C9D9FCA00984EF7 /* geranxinxi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 884804D01C9D9FCA00984EF7 /* geranxinxi@2x.png */; };
 		884804D31C9D9FCA00984EF7 /* geranxinxi@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 884804D11C9D9FCA00984EF7 /* geranxinxi@3x.png */; };
+		8893667B1C9E684C0058C13D /* DirectPriceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 889366791C9E684C0058C13D /* DirectPriceVC.m */; };
+		8893667C1C9E684C0058C13D /* DirectPriceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8893667A1C9E684C0058C13D /* DirectPriceVC.xib */; };
+		889366841C9E6AF00058C13D /* DirectPriceBySameJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 889366821C9E6AF00058C13D /* DirectPriceBySameJob.m */; };
+		889366851C9E6AF00058C13D /* DirectPriceBySameJob.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889366831C9E6AF00058C13D /* DirectPriceBySameJob.xib */; };
+		889366891C9E6B0A0058C13D /* DirectPriceByFinancing.m in Sources */ = {isa = PBXBuildFile; fileRef = 889366871C9E6B0A0058C13D /* DirectPriceByFinancing.m */; };
+		8893668A1C9E6B0A0058C13D /* DirectPriceByFinancing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889366881C9E6B0A0058C13D /* DirectPriceByFinancing.xib */; };
 		935FC70C1C9D5B9C00B8B643 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7001C9D5B9C00B8B643 /* MessageCell.m */; };
 		935FC70D1C9D5B9C00B8B643 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935FC7011C9D5B9C00B8B643 /* MessageCell.xib */; };
 		935FC70E1C9D5B9C00B8B643 /* MyMessgaeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FC7031C9D5B9C00B8B643 /* MyMessgaeVC.m */; };
@@ -632,6 +638,15 @@
 		884804CD1C9D9B1000984EF7 /* user_girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user_girl.jpg; sourceTree = "<group>"; };
 		884804D01C9D9FCA00984EF7 /* geranxinxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "geranxinxi@2x.png"; sourceTree = "<group>"; };
 		884804D11C9D9FCA00984EF7 /* geranxinxi@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "geranxinxi@3x.png"; sourceTree = "<group>"; };
+		889366781C9E684C0058C13D /* DirectPriceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectPriceVC.h; sourceTree = "<group>"; };
+		889366791C9E684C0058C13D /* DirectPriceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectPriceVC.m; sourceTree = "<group>"; };
+		8893667A1C9E684C0058C13D /* DirectPriceVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectPriceVC.xib; sourceTree = "<group>"; };
+		889366811C9E6AF00058C13D /* DirectPriceBySameJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectPriceBySameJob.h; sourceTree = "<group>"; };
+		889366821C9E6AF00058C13D /* DirectPriceBySameJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectPriceBySameJob.m; sourceTree = "<group>"; };
+		889366831C9E6AF00058C13D /* DirectPriceBySameJob.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectPriceBySameJob.xib; sourceTree = "<group>"; };
+		889366861C9E6B0A0058C13D /* DirectPriceByFinancing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectPriceByFinancing.h; sourceTree = "<group>"; };
+		889366871C9E6B0A0058C13D /* DirectPriceByFinancing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectPriceByFinancing.m; sourceTree = "<group>"; };
+		889366881C9E6B0A0058C13D /* DirectPriceByFinancing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectPriceByFinancing.xib; sourceTree = "<group>"; };
 		935FC6FF1C9D5B9C00B8B643 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		935FC7001C9D5B9C00B8B643 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		935FC7011C9D5B9C00B8B643 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -1228,6 +1243,7 @@
 		33DC47471C9D13F600849762 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				889366771C9E5CB00058C13D /* 指导价 */,
 				33DC479A1C9D13F600849762 /* 主页 */,
 				33DC48351C9D13F600849762 /* 首页 */,
 				33DC47D01C9D13F600849762 /* 报价 */,
@@ -1487,6 +1503,22 @@
 			path = IM;
 			sourceTree = "<group>";
 		};
+		889366771C9E5CB00058C13D /* 指导价 */ = {
+			isa = PBXGroup;
+			children = (
+				889366781C9E684C0058C13D /* DirectPriceVC.h */,
+				889366791C9E684C0058C13D /* DirectPriceVC.m */,
+				8893667A1C9E684C0058C13D /* DirectPriceVC.xib */,
+				889366811C9E6AF00058C13D /* DirectPriceBySameJob.h */,
+				889366821C9E6AF00058C13D /* DirectPriceBySameJob.m */,
+				889366831C9E6AF00058C13D /* DirectPriceBySameJob.xib */,
+				889366861C9E6B0A0058C13D /* DirectPriceByFinancing.h */,
+				889366871C9E6B0A0058C13D /* DirectPriceByFinancing.m */,
+				889366881C9E6B0A0058C13D /* DirectPriceByFinancing.xib */,
+			);
+			path = "指导价";
+			sourceTree = "<group>";
+		};
 		935FC6FB1C9D5B9C00B8B643 /* 我的报价 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1648,6 +1680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				884804761C9D26F800984EF7 /* chuxuchanpin@3x.png in Resources */,
+				8893668A1C9E6B0A0058C13D /* DirectPriceByFinancing.xib in Resources */,
 				33CCDA7E1C9E47D40026FF7B /* RegistStepTwoVC.xib in Resources */,
 				33DC489E1C9D13F600849762 /* topnav_icon08@3x.png in Resources */,
 				33DC498F1C9D13F600849762 /* photoViewer_error_placeholder@3x.png in Resources */,
@@ -1780,6 +1813,7 @@
 				338971D81C9D43A400ED2D67 /* tabbtn_shouye@2x.png in Resources */,
 				8848047F1C9D26F800984EF7 /* mokuai@2x.png in Resources */,
 				33DC48651C9D13F600849762 /* btn_back_white@2x.png in Resources */,
+				889366851C9E6AF00058C13D /* DirectPriceBySameJob.xib in Resources */,
 				33DC48AD1C9D13F600849762 /* guide4_4_inch.png in Resources */,
 				33DC489D1C9D13F600849762 /* topnav_icon08@2x.png in Resources */,
 				884804891C9D26F800984EF7 /* sousuo@2x.png in Resources */,
@@ -1809,6 +1843,7 @@
 				884804871C9D26F800984EF7 /* shengxu@2x.png in Resources */,
 				33DC48A51C9D13F600849762 /* guide2_4_inch.png in Resources */,
 				338971D61C9D43A400ED2D67 /* tabbtn_shouye_selected@2x.png in Resources */,
+				8893667C1C9E684C0058C13D /* DirectPriceVC.xib in Resources */,
 				33DC49EF1C9D13F700849762 /* LaunchViewController.xib in Resources */,
 				338971DA1C9D43A400ED2D67 /* tabbtn_wode_selected@2x.png in Resources */,
 			);
@@ -1888,6 +1923,7 @@
 				33DC499D1C9D13F600849762 /* IQTextView.m in Sources */,
 				936A8D951C9E4949008703F6 /* HomePageCell.m in Sources */,
 				33DC49A91C9D13F600849762 /* SDCollectionViewCell.m in Sources */,
+				889366891C9E6B0A0058C13D /* DirectPriceByFinancing.m in Sources */,
 				33DC49FC1C9D13F700849762 /* OfferListCell.m in Sources */,
 				33DC49F61C9D13F700849762 /* OfferFilterVC.m in Sources */,
 				33CCDA731C9E47BC0026FF7B /* ForgetPasswordStepTwoVC.m in Sources */,
@@ -1895,6 +1931,7 @@
 				884804A51C9D819D00984EF7 /* ChatVC.m in Sources */,
 				33DC49A41C9D13F600849762 /* WTLabel.m in Sources */,
 				33DC49A71C9D13F600849762 /* TADotView.m in Sources */,
+				889366841C9E6AF00058C13D /* DirectPriceBySameJob.m in Sources */,
 				33DC4A371C9D13F700849762 /* AlipayManager.m in Sources */,
 				33DC49D61C9D13F600849762 /* AboutUsVC.m in Sources */,
 				33DC49CF1C9D13F600849762 /* ProfileVC.m in Sources */,
@@ -1938,6 +1975,7 @@
 				33DC49991C9D13F600849762 /* IQUIWindow+Hierarchy.m in Sources */,
 				33DC49641C9D13F600849762 /* PPDataController.m in Sources */,
 				33DC49DE1C9D13F600849762 /* EasyJSWebViewProxyDelegate.m in Sources */,
+				8893667B1C9E684C0058C13D /* DirectPriceVC.m in Sources */,
 				33DC498D1C9D13F600849762 /* main.m in Sources */,
 				33DC499C1C9D13F600849762 /* IQSegmentedNextPrevious.m in Sources */,
 				33DC49A51C9D13F600849762 /* TAAbstractDotView.m in Sources */,

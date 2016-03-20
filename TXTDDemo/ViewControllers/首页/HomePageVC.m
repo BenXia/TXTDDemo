@@ -107,26 +107,31 @@
         cell.leftLabel.text = @"期限";
         cell.middleLabel.text = @"Shibor(%)";
         cell.rightLabel.text = @"涨跌(%)";
+        cell.backgroundColor = [g_commonConfig gray003Color];
     } else if (indexPath.row == 1) {
         cell.leftLabel.text = @"隔夜";
         cell.middleLabel.text = @"----";
         cell.rightLabel.text = @"+1.07";
-        cell.rightLabel.textColor = [UIColor redColor];
+        cell.rightLabel.textColor = [g_commonConfig themeRedColor];
+        cell.backgroundColor = [UIColor whiteColor];
     } else if (indexPath.row == 2) {
         cell.leftLabel.text = @"7天";
         cell.middleLabel.text = @"2.29500";
         cell.rightLabel.text = @"-0.25";
-        cell.rightLabel.textColor = [UIColor greenColor];
+        cell.rightLabel.textColor = [g_commonConfig themeGreenColor];
+        cell.backgroundColor = [UIColor whiteColor];
     } else if (indexPath.row == 3) {
         cell.leftLabel.text = @"14天";
         cell.middleLabel.text = @"2.49000";
         cell.rightLabel.text = @"+3.07";
-        cell.rightLabel.textColor = [UIColor redColor];
+        cell.rightLabel.textColor = [g_commonConfig themeRedColor];
+        cell.backgroundColor = [UIColor whiteColor];
     } else {
         cell.leftLabel.text = @"一个月";
         cell.middleLabel.text = @"2.75900";
         cell.rightLabel.text = @"+4.05";
-        cell.rightLabel.textColor = [UIColor redColor];
+        cell.rightLabel.textColor = [g_commonConfig themeRedColor];
+        cell.backgroundColor = [UIColor whiteColor];
     }
     return cell;
 }
