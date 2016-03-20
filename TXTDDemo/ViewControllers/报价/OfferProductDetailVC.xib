@@ -45,7 +45,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uig-IW-TEV">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_boy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Sx-Ad-kFm">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Sx-Ad-kFm">
                             <rect key="frame" x="12" y="12" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="C8l-VR-YEu"/>
@@ -375,6 +375,6 @@
         <image name="jiaruguanzhu.png" width="22" height="19"/>
         <image name="jiaruquanzi.png" width="19" height="19"/>
         <image name="phone.png" width="17" height="19"/>
-        <image name="user_boy.jpg" width="220" height="220"/>
+        <image name="user_girl.jpg" width="175" height="175"/>
     </resources>
 </document>

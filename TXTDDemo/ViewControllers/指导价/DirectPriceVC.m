@@ -66,7 +66,7 @@ static const float kItemHeight = 30;
 -(UISegmentedControl*)segementedControl{
     if (_segementedControl == nil) {
         _segementedControl = [[UISegmentedControl alloc]initWithItems:@[@"同业指导价", @"理财指导价"]];
-        _segementedControl.size=CGSizeMake(self.view.width/2-50, 30);
+        _segementedControl.size=CGSizeMake(kScreenWidth-100, 30);
         UIColor* selectedColor = [g_commonConfig themeLightBlueColor];
         
         //文字颜色

@@ -11,7 +11,9 @@
 @implementation OfferInfoCell
 
 - (void)awakeFromNib {
-    // Initialization code    
+    // Initialization code
+    
+    self.productTitleLabel.textColor = [g_commonConfig themeBlueColor];
 }
 
 -(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
