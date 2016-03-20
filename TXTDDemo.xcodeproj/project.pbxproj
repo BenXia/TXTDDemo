@@ -44,8 +44,6 @@
 		33C92C4B1C9D5CE70079F3A3 /* wdxx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C92C3D1C9D5CE70079F3A3 /* wdxx@3x.png */; };
 		33CCDA581C9E475F0026FF7B /* SmartPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA561C9E475F0026FF7B /* SmartPublishVC.m */; };
 		33CCDA591C9E475F0026FF7B /* SmartPublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA571C9E475F0026FF7B /* SmartPublishVC.xib */; };
-		33CCDA5E1C9E47A70026FF7B /* InputPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA5C1C9E47A70026FF7B /* InputPublishVC.m */; };
-		33CCDA5F1C9E47A70026FF7B /* InputPublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA5D1C9E47A70026FF7B /* InputPublishVC.xib */; };
 		33CCDA6D1C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA621C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m */; };
 		33CCDA6E1C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA631C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib */; };
 		33CCDA6F1C9E47BC0026FF7B /* ForgetPasswordStepOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA651C9E47BC0026FF7B /* ForgetPasswordStepOneVC.m */; };
@@ -58,6 +56,10 @@
 		33CCDA7C1C9E47D40026FF7B /* RegistStepOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA771C9E47D40026FF7B /* RegistStepOneVC.xib */; };
 		33CCDA7D1C9E47D40026FF7B /* RegistStepTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA791C9E47D40026FF7B /* RegistStepTwoVC.m */; };
 		33CCDA7E1C9E47D40026FF7B /* RegistStepTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA7A1C9E47D40026FF7B /* RegistStepTwoVC.xib */; };
+		33CCDA851C9E679A0026FF7B /* SmartPublish2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA831C9E679A0026FF7B /* SmartPublish2VC.m */; };
+		33CCDA861C9E679A0026FF7B /* SmartPublish2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA841C9E679A0026FF7B /* SmartPublish2VC.xib */; };
+		33CCDA8A1C9E77580026FF7B /* InputPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCDA881C9E77580026FF7B /* InputPublishVC.m */; };
+		33CCDA8B1C9E77580026FF7B /* InputPublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CCDA891C9E77580026FF7B /* InputPublishVC.xib */; };
 		33D0102F1C62483700499EE9 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D0102E1C62483700499EE9 /* AlipaySDK.framework */; };
 		33D010301C62492E00499EE9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F071D41C42D9BE00DAC58F /* libsqlite3.0.tbd */; };
 		33D010331C6249E200499EE9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D010321C6249E200499EE9 /* CoreTelephony.framework */; };
@@ -342,9 +344,6 @@
 		33CCDA551C9E475F0026FF7B /* SmartPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartPublishVC.h; sourceTree = "<group>"; };
 		33CCDA561C9E475F0026FF7B /* SmartPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartPublishVC.m; sourceTree = "<group>"; };
 		33CCDA571C9E475F0026FF7B /* SmartPublishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartPublishVC.xib; sourceTree = "<group>"; };
-		33CCDA5B1C9E47A70026FF7B /* InputPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPublishVC.h; sourceTree = "<group>"; };
-		33CCDA5C1C9E47A70026FF7B /* InputPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPublishVC.m; sourceTree = "<group>"; };
-		33CCDA5D1C9E47A70026FF7B /* InputPublishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPublishVC.xib; sourceTree = "<group>"; };
 		33CCDA611C9E47BC0026FF7B /* ForgetPasswordStepFourVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordStepFourVC.h; sourceTree = "<group>"; };
 		33CCDA621C9E47BC0026FF7B /* ForgetPasswordStepFourVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordStepFourVC.m; sourceTree = "<group>"; };
 		33CCDA631C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPasswordStepFourVC.xib; sourceTree = "<group>"; };
@@ -363,6 +362,12 @@
 		33CCDA781C9E47D40026FF7B /* RegistStepTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistStepTwoVC.h; sourceTree = "<group>"; };
 		33CCDA791C9E47D40026FF7B /* RegistStepTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistStepTwoVC.m; sourceTree = "<group>"; };
 		33CCDA7A1C9E47D40026FF7B /* RegistStepTwoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistStepTwoVC.xib; sourceTree = "<group>"; };
+		33CCDA821C9E679A0026FF7B /* SmartPublish2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartPublish2VC.h; sourceTree = "<group>"; };
+		33CCDA831C9E679A0026FF7B /* SmartPublish2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartPublish2VC.m; sourceTree = "<group>"; };
+		33CCDA841C9E679A0026FF7B /* SmartPublish2VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartPublish2VC.xib; sourceTree = "<group>"; };
+		33CCDA871C9E77580026FF7B /* InputPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPublishVC.h; sourceTree = "<group>"; };
+		33CCDA881C9E77580026FF7B /* InputPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPublishVC.m; sourceTree = "<group>"; };
+		33CCDA891C9E77580026FF7B /* InputPublishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPublishVC.xib; sourceTree = "<group>"; };
 		33D0102E1C62483700499EE9 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = StudioCommon/StudioCommon/Vendors/SDK/alipay/AlipaySDK.framework; sourceTree = "<group>"; };
 		33D010321C6249E200499EE9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		33DC45641C9D13F600849762 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -803,9 +808,9 @@
 		33CCDA4E1C9E47130026FF7B /* 精准输入 */ = {
 			isa = PBXGroup;
 			children = (
-				33CCDA5B1C9E47A70026FF7B /* InputPublishVC.h */,
-				33CCDA5C1C9E47A70026FF7B /* InputPublishVC.m */,
-				33CCDA5D1C9E47A70026FF7B /* InputPublishVC.xib */,
+				33CCDA871C9E77580026FF7B /* InputPublishVC.h */,
+				33CCDA881C9E77580026FF7B /* InputPublishVC.m */,
+				33CCDA891C9E77580026FF7B /* InputPublishVC.xib */,
 			);
 			path = "精准输入";
 			sourceTree = "<group>";
@@ -816,6 +821,9 @@
 				33CCDA551C9E475F0026FF7B /* SmartPublishVC.h */,
 				33CCDA561C9E475F0026FF7B /* SmartPublishVC.m */,
 				33CCDA571C9E475F0026FF7B /* SmartPublishVC.xib */,
+				33CCDA821C9E679A0026FF7B /* SmartPublish2VC.h */,
+				33CCDA831C9E679A0026FF7B /* SmartPublish2VC.m */,
+				33CCDA841C9E679A0026FF7B /* SmartPublish2VC.xib */,
 			);
 			path = "智能提取";
 			sourceTree = "<group>";
@@ -1706,7 +1714,6 @@
 				33CCDA6E1C9E47BC0026FF7B /* ForgetPasswordStepFourVC.xib in Resources */,
 				8848048E1C9D26F800984EF7 /* zhidaojia@3x.png in Resources */,
 				884804BA1C9D861100984EF7 /* tianjia@2x.png in Resources */,
-				33CCDA5F1C9E47A70026FF7B /* InputPublishVC.xib in Resources */,
 				33C92C481C9D5CE70079F3A3 /* wdxiaoxi@2x.png in Resources */,
 				8848047B1C9D26F800984EF7 /* jiaruquanzi@2x.png in Resources */,
 				884804881C9D26F800984EF7 /* shengxu@3x.png in Resources */,
@@ -1736,11 +1743,13 @@
 				338971CF1C9D43A400ED2D67 /* tabbtn_fabu_selected@3x.png in Resources */,
 				33DC489B1C9D13F600849762 /* common_topnav_icon02@2x.png in Resources */,
 				33CCDA721C9E47BC0026FF7B /* ForgetPasswordStepThreeVC.xib in Resources */,
+				33CCDA861C9E679A0026FF7B /* SmartPublish2VC.xib in Resources */,
 				33DC49F91C9D13F700849762 /* OfferInfoCell.xib in Resources */,
 				884804751C9D26F800984EF7 /* chuxuchanpin@2x.png in Resources */,
 				884804801C9D26F800984EF7 /* mokuai@3x.png in Resources */,
 				33DC48A71C9D13F600849762 /* guide3_35_inch.png in Resources */,
 				33C92C441C9D5CE70079F3A3 /* wdgz@2x.png in Resources */,
+				33CCDA8B1C9E77580026FF7B /* InputPublishVC.xib in Resources */,
 				33DC49DB1C9D13F600849762 /* easyjs-inject.js in Resources */,
 				33C92C4B1C9D5CE70079F3A3 /* wdxx@3x.png in Resources */,
 				338971CE1C9D43A400ED2D67 /* tabbtn_fabu_selected@2x.png in Resources */,
@@ -1860,7 +1869,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33CCDA5E1C9E47A70026FF7B /* InputPublishVC.m in Sources */,
 				33DC49DF1C9D13F600849762 /* PPEasyWebViewController.m in Sources */,
 				33CCDA7D1C9E47D40026FF7B /* RegistStepTwoVC.m in Sources */,
 				33DC484A1C9D13F600849762 /* AppDelegate.m in Sources */,
@@ -1913,7 +1921,9 @@
 				338971B41C9D3FDF00ED2D67 /* IMHomeVC.m in Sources */,
 				33DC499B1C9D13F600849762 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				33DC49671C9D13F600849762 /* SendSmsDataController.m in Sources */,
+				33CCDA8A1C9E77580026FF7B /* InputPublishVC.m in Sources */,
 				33DC499A1C9D13F600849762 /* IQKeyboardManager.m in Sources */,
+				33CCDA851C9E679A0026FF7B /* SmartPublish2VC.m in Sources */,
 				935FC70E1C9D5B9C00B8B643 /* MyMessgaeVC.m in Sources */,
 				33DC499E1C9D13F600849762 /* IQBarButtonItem.m in Sources */,
 				935FC7541C9D810300B8B643 /* AttentionCell.m in Sources */,
