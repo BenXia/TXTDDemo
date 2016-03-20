@@ -52,7 +52,6 @@
     // Do any additional setup after loading the view from its nib.
     [self clearNavLeftItem];
     [self initUI];
-    [self initTableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,10 +72,6 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickOnHeadImageView:)];
     [self.headerView addGestureRecognizer:tap];
     self.tableView.tableFooterView = self.footView;
-}
-
-- (void)initTableView {
-    self.tableView.tableHeaderView = self.headerView;
 }
 
 #pragma mark - IBActions
