@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ForgetPasswordStepTwoVC : UIViewController
+@interface ForgetPasswordStepTwoVC : BaseViewController
 
 @end

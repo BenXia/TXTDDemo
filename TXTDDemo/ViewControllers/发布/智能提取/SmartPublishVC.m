@@ -45,6 +45,8 @@
     self.inputTextView.spaceForPlaceHodlerType = 20;
     self.inputTextView.placeholderType = PlaceholderType_Center;
     
+    self.extractButton.layer.cornerRadius = 5;
+    self.extractButton.layer.masksToBounds = YES;
     [self.extractButton setNormalBackgroundColor:[g_commonConfig themeBlueColor]
                           disableBackgroundColor:[g_commonConfig gray005Color]];
 }

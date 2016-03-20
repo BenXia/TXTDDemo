@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegistStepOneVC : UIViewController
+@interface RegistStepOneVC : BaseViewController
 
 @end
