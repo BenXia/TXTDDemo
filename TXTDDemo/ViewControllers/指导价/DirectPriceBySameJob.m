@@ -26,7 +26,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.menuButtonView.backgroundColor = [g_commonConfig gray003Color];
-        self.menuButtonView.layer.shadowOffset = CGSizeMake(2, 2);
+    self.menuButtonView.layer.shadowOffset = CGSizeMake(2, 2);
     self.menuButtonView.layer.shadowOpacity = 0.2;
     self.menuButtonView.layer.shadowRadius = 1;
     self.menuButtonView.layer.shadowColor = [UIColor grayColor].CGColor;
@@ -99,7 +99,7 @@
     } else {
         offerDetailVC.timeString = @"一个月";
     }
-
+    
     [self.navigationController pushViewController:offerDetailVC animated:YES];
 }
 
