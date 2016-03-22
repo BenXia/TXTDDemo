@@ -197,7 +197,13 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="bankLabel" destination="YlE-5h-Xe9" id="hrc-vK-2fY"/>
                 <outlet property="containerView" destination="Zji-89-azh" id="P0d-ga-0Sr"/>
+                <outlet property="dateLabel" destination="hud-z2-Tux" id="8A8-cY-i8a"/>
+                <outlet property="headImageView" destination="wBo-ax-9SC" id="xda-XG-9i9"/>
+                <outlet property="nameLabel" destination="Xam-xs-auR" id="UjY-UD-g5N"/>
+                <outlet property="priceLabel" destination="bFv-d7-zy2" id="dKa-iD-bgM"/>
+                <outlet property="rateLabel" destination="cVH-oK-DIK" id="ztA-kx-Y0c"/>
                 <outlet property="typeIcon" destination="FUc-NG-rO4" id="cJB-4q-gQi"/>
                 <outletCollection property="bottomButtonArray" destination="sBi-eA-kXL" id="W0A-OL-jjf"/>
                 <outletCollection property="bottomButtonArray" destination="OJc-xS-npw" id="0qX-Ab-zEX"/>
@@ -207,10 +213,10 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="jiaruguanzhu.png" width="22" height="19"/>
-        <image name="jiaruquanzi.png" width="19" height="19"/>
-        <image name="mokuai.png" width="209" height="63"/>
-        <image name="phone.png" width="17" height="19"/>
+        <image name="jiaruguanzhu.png" width="12" height="9"/>
+        <image name="jiaruquanzi.png" width="10" height="9"/>
+        <image name="mokuai.png" width="106" height="33"/>
+        <image name="phone.png" width="11" height="9"/>
         <image name="user_girl.jpg" width="175" height="175"/>
     </resources>
 </document>

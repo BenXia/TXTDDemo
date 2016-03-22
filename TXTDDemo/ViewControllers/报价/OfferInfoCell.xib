@@ -106,6 +106,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="zhixiang.png" width="21" height="46"/>
+        <image name="zhixiang.png" width="15" height="24"/>
     </resources>
 </document>

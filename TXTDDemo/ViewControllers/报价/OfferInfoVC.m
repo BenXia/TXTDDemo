@@ -111,22 +111,27 @@
     OfferInfoCell* cell = [tableView dequeueReusableCellWithIdentifier:[OfferInfoCell identifier] forIndexPath:indexPath];
     NSString* title = [self.dataSource objectAtIndex:indexPath.row];
     cell.productTitleLabel.text = title;
-    cell.productDetailLabel.text = @"融出：23  融入：24";
     if([title isEqualToString:@"资金产品"]){
         cell.headImageView.image = [UIImage imageNamed:@"zijinchanpin"];
+        cell.productDetailLabel.text = @"融出：23  融入：24";
     }else if([title isEqualToString:@"存款产品"]){
         cell.headImageView.image = [UIImage imageNamed:@"chuxuchanpin"];
+        cell.productDetailLabel.text = @"融出：11  融入：22";
     }else if([title isEqualToString:@"票据产品"]){
         cell.headImageView.image = [UIImage imageNamed:@"piaojuchanpin"];
+        cell.productDetailLabel.text = @"融出：34  融入：56";
     }else if([title isEqualToString:@"债券产品"]){
         cell.headImageView.image = [UIImage imageNamed:@"zhaiquanchanpin"];
-        cell.productDetailLabel.text = @"融出：23  融入：24  发行：23";
+        cell.productDetailLabel.text = @"融出：87  融入：90  发行：23";
     }else if([title isEqualToString:@"非标产品"]){
         cell.headImageView.image = [UIImage imageNamed:@"feibiaochanpin"];
+        cell.productDetailLabel.text = @"融出：43  融入：31";
     }else if([title isEqualToString:@"理财产品"]){
         cell.headImageView.image = [UIImage imageNamed:@"licaichanpin"];
+        cell.productDetailLabel.text = @"融出：67  融入：12";
     }else if([title isEqualToString:@"其他业务"]){
         cell.headImageView.image = [UIImage imageNamed:@"qitachanpin"];
+        cell.productDetailLabel.text = @"融出：78  融入：65";
     }
     return cell;
 }

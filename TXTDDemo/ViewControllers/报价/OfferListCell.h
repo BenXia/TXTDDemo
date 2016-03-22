@@ -14,4 +14,11 @@
 @property (weak, nonatomic) IBOutlet FramedView *containerView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *bottomButtonArray;
 
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bankLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rateLabel;
+
 @end
