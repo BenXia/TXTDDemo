@@ -28,15 +28,6 @@
     
     self.title = @"报价列表";
     
-    self.dataSource = @[@"资金产品",
-                        @"存款产品",
-                        @"票据产品",
-                        @"债券产品",
-                        @"非标产品",
-                        @"理财产品",
-                        @"其他业务",
-                        ];
-    
     self.view.backgroundColor = [g_commonConfig bgGray002Color];
     self.tableView.backgroundColor = [g_commonConfig bgGray002Color];
     
@@ -76,11 +67,53 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataSource.count;
+    return 5;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     OfferListCell* cell = [tableView dequeueReusableCellWithIdentifier:[OfferListCell identifier] forIndexPath:indexPath];
+    if (indexPath.row%2==0) {
+        cell.headImageView.image = [UIImage imageNamed:@"user_boy"];
+        cell.nameLabel.text = @"李新林";
+    }else{
+        cell.headImageView.image = [UIImage imageNamed:@"user_girl"];
+        cell.nameLabel.text = @"王大鹏";
+    }
+    
+    switch (indexPath.row) {
+        case 0:{
+            cell.priceLabel.text = @"20000";
+            cell.dateLabel.text = @"90";
+            cell.rateLabel.text = @"1.3";
+        }
+            break;
+        case 1:{
+            cell.priceLabel.text = @"10000";
+            cell.dateLabel.text = @"50";
+            cell.rateLabel.text = @"1.1";
+        }
+            break;
+        case 2:{
+            cell.priceLabel.text = @"30000";
+            cell.dateLabel.text = @"100";
+            cell.rateLabel.text = @"1.5";
+        }
+            break;
+        case 3:{
+            cell.priceLabel.text = @"3200";
+            cell.dateLabel.text = @"10";
+            cell.rateLabel.text = @"1.7";
+        }
+            break;
+        case 4:{
+            cell.priceLabel.text = @"11000";
+            cell.dateLabel.text = @"20";
+            cell.rateLabel.text = @"1.8";
+        }
+            break;
+        default:
+            break;
+    }
 
     return cell;
 }

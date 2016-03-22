@@ -28,6 +28,13 @@
     self.title = @"更多筛选";
     self.scrollView.backgroundColor = [g_commonConfig bgGray002Color];
     
+    UIButton* button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 65, 22)];
+    [button setTitle:@"确认筛选" forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    [button colorlumpThematized:[g_commonConfig themeGreenColor]];
+    [button addTarget:self action:@selector(didClickConfirmButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:button] animated:NO];
+    
     NSMutableArray* buttonArray = [NSMutableArray new];
     [buttonArray addObjectsFromArray:self.filterButtonArray];
     [buttonArray addObjectsFromArray:self.filterButtonArray2];
@@ -59,34 +66,41 @@
     self.scrollView.contentSize = CGSizeMake(kScreenWidth, self.filterView.height);
 }
 
--(IBAction)didClickFilterButtons1:(id)sender{
-    for (UIButton* button in self.filterButtonArray) {
-        if (button == sender) {
-            button.selected = YES;
-        }else{
-            button.selected = NO;
-        }
-    }
+-(IBAction)didClickFilterButtons1:(UIButton*)sender{
+//    for (UIButton* button in self.filterButtonArray) {
+//        if (button == sender) {
+//            button.selected = YES;
+//        }else{
+//            button.selected = NO;
+//        }
+//    }
+    sender.selected = !sender.selected;
 }
 
--(IBAction)didClickFilterButtons2:(id)sender{
-    for (UIButton* button in self.filterButtonArray2) {
-        if (button == sender) {
-            button.selected = YES;
-        }else{
-            button.selected = NO;
-        }
-    }
+-(IBAction)didClickFilterButtons2:(UIButton*)sender{
+//    for (UIButton* button in self.filterButtonArray2) {
+//        if (button == sender) {
+//            button.selected = YES;
+//        }else{
+//            button.selected = NO;
+//        }
+//    }
+    sender.selected = !sender.selected;
 }
 
--(IBAction)didClickFilterButtons3:(id)sender{
-    for (UIButton* button in self.filterButtonArray3) {
-        if (button == sender) {
-            button.selected = YES;
-        }else{
-            button.selected = NO;
-        }
-    }
+-(IBAction)didClickFilterButtons3:(UIButton*)sender{
+//    for (UIButton* button in self.filterButtonArray3) {
+//        if (button == sender) {
+//            button.selected = YES;
+//        }else{
+//            button.selected = NO;
+//        }
+//    }
+    sender.selected = !sender.selected;
+}
+
+-(void)didClickConfirmButton{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
