@@ -41,7 +41,7 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 20;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -50,6 +50,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:[MessageCell identifier] forIndexPath:indexPath];
+    if (indexPath.section == 1) {
+        cell.titleLabel.text = @"中国农业银行";
+        cell.detailLabel.text = @"中国农业银行的系统消息中国农业银行的系统消息中国农业银行的系统消息中国农业银行的系统消息";
+    } else if (indexPath.section == 2) {
+        cell.titleLabel.text = @"中国招商银行";
+        cell.detailLabel.text = @"中国招商银行的系统消息中国招商银行的系统消息中国农业银行的系统消息中国农业银行的系统消息";
+    } else if (indexPath.section == 3) {
+        cell.titleLabel.text = @"花旗银行";
+        cell.detailLabel.text = @"花旗银行的系统消息花旗银行的系统消息中国农业银行的系统消息中国农业银行的系统消息";
+    }
     return cell;
 }
 

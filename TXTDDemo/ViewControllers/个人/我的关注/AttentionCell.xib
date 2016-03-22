@@ -147,17 +147,19 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="backLabel" destination="FGa-A9-bZN" id="XR8-JU-vyW"/>
                 <outlet property="moneyLabel" destination="PnD-wf-8hP" id="VZV-Da-asn"/>
                 <outlet property="mouthLabel" destination="E7K-Mb-nWT" id="mKk-RE-0T5"/>
+                <outlet property="nickLabel" destination="vFc-qI-cxv" id="M8S-SA-Acb"/>
             </connections>
             <point key="canvasLocation" x="305" y="416"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="jiaruguanzhu.png" width="22" height="19"/>
-        <image name="jiaruquanzi.png" width="19" height="19"/>
-        <image name="mokuai.png" width="209" height="63"/>
-        <image name="phone.png" width="17" height="19"/>
+        <image name="jiaruguanzhu.png" width="12" height="9"/>
+        <image name="jiaruquanzi.png" width="10" height="9"/>
+        <image name="mokuai.png" width="106" height="33"/>
+        <image name="phone.png" width="11" height="9"/>
         <image name="user_girl.jpg" width="175" height="175"/>
     </resources>
 </document>

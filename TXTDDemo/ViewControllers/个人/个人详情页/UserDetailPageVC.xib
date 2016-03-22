@@ -96,7 +96,9 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="W4c-JR-Dhm"/>
                     </constraints>
-                    <state key="normal" title="打个招呼"/>
+                    <state key="normal" title="打个招呼">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf2-D6-RDA">
                     <rect key="frame" x="0.0" y="10" width="365" height="44"/>

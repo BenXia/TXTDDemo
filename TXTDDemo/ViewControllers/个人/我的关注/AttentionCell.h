@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AttentionCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nickLabel;
+@property (weak, nonatomic) IBOutlet UILabel *backLabel;
 
 @end

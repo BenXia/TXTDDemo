@@ -62,6 +62,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AttentionCell *cell = [tableView dequeueReusableCellWithIdentifier:[AttentionCell identifier] forIndexPath:indexPath];
+    if (indexPath.section == 1) {
+        cell.nickLabel.text = @"范冰冰";
+        cell.backLabel.text = @"锦州银行";
+    } else if (indexPath.section == 2){
+        cell.nickLabel.text = @"陈鸿宇";
+        cell.backLabel.text = @"国家开发银行";
+    }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
