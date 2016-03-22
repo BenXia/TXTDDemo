@@ -67,6 +67,13 @@
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhanghao.png" translatesAutoresizingMaskIntoConstraints="NO" id="BLT-C6-2An">
+                            <rect key="frame" x="37" y="16" width="9" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="9" id="5VD-u8-y5c"/>
+                                <constraint firstAttribute="height" constant="13" id="hXV-9s-nTi"/>
+                            </constraints>
+                        </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的帐号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odO-w3-0Rt">
                             <rect key="frame" x="50" y="0.0" width="250" height="45"/>
                             <constraints>
@@ -81,8 +88,10 @@
                     <constraints>
                         <constraint firstItem="odO-w3-0Rt" firstAttribute="centerY" secondItem="zkP-gN-NV9" secondAttribute="centerY" id="Icg-mP-sze"/>
                         <constraint firstAttribute="height" constant="45" id="OEn-uv-57H"/>
+                        <constraint firstItem="BLT-C6-2An" firstAttribute="centerY" secondItem="zkP-gN-NV9" secondAttribute="centerY" id="WzI-DI-CqS"/>
                         <constraint firstAttribute="trailing" secondItem="odO-w3-0Rt" secondAttribute="trailing" constant="15" id="aHs-ko-7ug"/>
                         <constraint firstItem="odO-w3-0Rt" firstAttribute="leading" secondItem="zkP-gN-NV9" secondAttribute="leading" constant="50" id="e8s-hc-Qj0"/>
+                        <constraint firstItem="BLT-C6-2An" firstAttribute="leading" secondItem="zkP-gN-NV9" secondAttribute="leading" constant="37" id="ii6-fS-8pU"/>
                         <constraint firstItem="fRy-iu-59I" firstAttribute="leading" secondItem="zkP-gN-NV9" secondAttribute="leading" constant="5" id="oUs-90-77Y"/>
                         <constraint firstItem="fRy-iu-59I" firstAttribute="centerY" secondItem="zkP-gN-NV9" secondAttribute="centerY" id="ru2-Ym-CfT"/>
                     </constraints>
@@ -100,6 +109,13 @@
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mima.png" translatesAutoresizingMaskIntoConstraints="NO" id="lkz-hg-QL1">
+                            <rect key="frame" x="37" y="16" width="9" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="9" id="QQl-Ch-GZg"/>
+                                <constraint firstAttribute="height" constant="13" id="yKY-6d-pV0"/>
+                            </constraints>
+                        </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的登录密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-hM-15g">
                             <rect key="frame" x="50" y="0.0" width="250" height="45"/>
                             <constraints>
@@ -114,7 +130,9 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Xt8-hM-15g" secondAttribute="trailing" constant="15" id="9gF-7L-Ouq"/>
                         <constraint firstItem="Xt8-hM-15g" firstAttribute="centerY" secondItem="TsQ-GF-53j" secondAttribute="centerY" id="BTO-Ip-det"/>
+                        <constraint firstItem="lkz-hg-QL1" firstAttribute="leading" secondItem="TsQ-GF-53j" secondAttribute="leading" constant="37" id="MVT-RA-ymS"/>
                         <constraint firstAttribute="height" constant="45" id="NB6-Ij-Kqt"/>
+                        <constraint firstItem="lkz-hg-QL1" firstAttribute="centerY" secondItem="TsQ-GF-53j" secondAttribute="centerY" id="O0c-3D-Dg6"/>
                         <constraint firstItem="ner-el-F2g" firstAttribute="centerY" secondItem="TsQ-GF-53j" secondAttribute="centerY" id="PDu-Cb-jiN"/>
                         <constraint firstItem="Xt8-hM-15g" firstAttribute="leading" secondItem="TsQ-GF-53j" secondAttribute="leading" constant="50" id="TiV-dn-fGm"/>
                         <constraint firstItem="ner-el-F2g" firstAttribute="leading" secondItem="TsQ-GF-53j" secondAttribute="leading" constant="5" id="fnz-Rj-gDR"/>
@@ -187,4 +205,8 @@
             <point key="canvasLocation" x="220.5" y="343.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="mima.png" width="9" height="13"/>
+        <image name="zhanghao.png" width="9" height="13"/>
+    </resources>
 </document>
