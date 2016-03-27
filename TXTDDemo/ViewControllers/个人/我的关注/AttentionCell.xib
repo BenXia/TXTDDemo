@@ -148,8 +148,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="backLabel" destination="FGa-A9-bZN" id="XR8-JU-vyW"/>
-                <outlet property="moneyLabel" destination="PnD-wf-8hP" id="VZV-Da-asn"/>
-                <outlet property="mouthLabel" destination="E7K-Mb-nWT" id="mKk-RE-0T5"/>
+                <outlet property="headImageView" destination="ke9-8n-lkD" id="SIF-10-71R"/>
+                <outlet property="moneyLabel" destination="PnD-wf-8hP" id="0bb-oj-KFr"/>
+                <outlet property="mouthLabel" destination="E7K-Mb-nWT" id="4C0-qy-CoY"/>
                 <outlet property="nickLabel" destination="vFc-qI-cxv" id="M8S-SA-Acb"/>
             </connections>
             <point key="canvasLocation" x="305" y="416"/>

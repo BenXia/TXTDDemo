@@ -9,8 +9,7 @@
 #import "AttentionCell.h"
 
 @interface AttentionCell ()
-@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mouthLabel;
+
 @end
 
 @implementation AttentionCell

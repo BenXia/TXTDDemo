@@ -73,7 +73,7 @@ UINavigationControllerDelegate>
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             cell.textLabel.text = @"用户名";
-            cell.detailTextLabel.text = @"王大锤";
+            cell.detailTextLabel.text = @"李信陵";
         } else if (indexPath.row == 1) {
             cell.textLabel.text = @"真实姓名";
             cell.detailTextLabel.text = @"李晨";
@@ -212,6 +212,7 @@ UINavigationControllerDelegate>
 
 - (IBAction)scanUserInfoDetail:(id)sender {
     UserDetailPageVC *userDetailPageVC = [[UserDetailPageVC alloc] initWithNibName:@"UserDetailPageVC" bundle:nil];
+    userDetailPageVC.isFromProfile = YES;
     [self.navigationController pushViewController:userDetailPageVC animated:YES];
 }
 

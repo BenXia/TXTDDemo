@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UserDetailPageVC : BaseViewController
-
+@property (assign, nonatomic) BOOL isFromProfile;
 @end

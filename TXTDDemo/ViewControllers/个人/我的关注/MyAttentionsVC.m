@@ -65,9 +65,11 @@
     if (indexPath.section == 1) {
         cell.nickLabel.text = @"范冰冰";
         cell.backLabel.text = @"锦州银行";
+        cell.headImageView.image = [UIImage imageNamed:@"headImage_3.jpg"];
     } else if (indexPath.section == 2){
         cell.nickLabel.text = @"陈鸿宇";
         cell.backLabel.text = @"国家开发银行";
+        cell.headImageView.image = [UIImage imageNamed:@"headImage_2.jpg"];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

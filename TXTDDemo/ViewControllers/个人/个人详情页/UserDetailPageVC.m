@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailDecLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *helloBtn;
+@property (weak, nonatomic) IBOutlet UIButton *addFriendBtn;
 @end
 
 @implementation UserDetailPageVC
@@ -58,6 +60,10 @@
     self.headImageView.layer.masksToBounds = YES;
     self.headImageView.userInteractionEnabled = YES;
     [self setNavRightItemWithImage:@"geranxinxi" target:self action:@selector(didClickOnUserInfo)];
+    if (self.isFromProfile) {
+        self.helloBtn.hidden = YES;
+        self.addFriendBtn.hidden = YES;
+    }
 }
 
 - (void)initTableView {
@@ -112,7 +118,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.row == 0) {
         cell.textLabel.text = @"用户名";
-        cell.detailTextLabel.text = @"王大锤";
+        cell.detailTextLabel.text = @"李信陵";
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"真实姓名";
         cell.detailTextLabel.text = @"李晨";

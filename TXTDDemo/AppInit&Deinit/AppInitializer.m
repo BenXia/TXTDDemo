@@ -60,16 +60,17 @@ static AppInitializer* sInstance = nil;
 
 - (void)initiateWithServerData {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSString *lastShownGuideAppVersion = [[NSUserDefaults standardUserDefaults] stringForKey:kLastShownGuidanceVCAppVersion];
-        
-        lastShownGuideAppVersion = nil;
-        if (!lastShownGuideAppVersion || ![lastShownGuideAppVersion isEqualToString:[AppSystem appVersion]]) {
-            [[MainViewManager sharedInstance] loadGuidanceVCWithCompleteBlock:^{
-                [self login];
-            }];
-        } else {
-            [self login];
-        }
+//        NSString *lastShownGuideAppVersion = [[NSUserDefaults standardUserDefaults] stringForKey:kLastShownGuidanceVCAppVersion];
+//        
+//        lastShownGuideAppVersion = nil;
+//        if (!lastShownGuideAppVersion || ![lastShownGuideAppVersion isEqualToString:[AppSystem appVersion]]) {
+//            [[MainViewManager sharedInstance] loadGuidanceVCWithCompleteBlock:^{
+//                [self login];
+//            }];
+//        } else {
+//            [self login];
+//        }
+        [[MainViewManager sharedInstance] loadLoginVC];
     });
 }
 
