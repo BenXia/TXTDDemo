@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="3" width="320" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-j9-H0G">
-                            <rect key="frame" x="0.0" y="0.0" width="79" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="79.5" height="44"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="精准报价" image="shengxu.png">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,9 +33,12 @@
                             <state key="selected" image="pic_place02.png">
                                 <color key="titleColor" red="0.3294117647" green="0.68235294120000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="didClickOnExactBtn:" destination="-1" eventType="touchUpInside" id="4Tg-3k-RYu"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0M-ya-VX8">
-                            <rect key="frame" x="80" y="0.0" width="80" height="44"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0M-ya-VX8">
+                            <rect key="frame" x="80.5" y="0.0" width="79" height="44"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="期限升序" image="shengxu.png">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,9 +46,12 @@
                             <state key="selected" image="pic_place02.png">
                                 <color key="titleColor" red="0.3294117647" green="0.68235294120000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="didClickOnQixianBtn:" destination="-1" eventType="touchUpInside" id="fK8-HZ-8W0"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIp-Zy-3O8">
-                            <rect key="frame" x="161" y="0.0" width="79" height="44"/>
+                            <rect key="frame" x="160.5" y="0.0" width="79.5" height="44"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="利率升序" image="shengxu.png">
                                 <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,6 +59,9 @@
                             <state key="selected" image="pic_place02.png">
                                 <color key="titleColor" red="0.3294117647" green="0.68235294120000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="didClickOnLilvBtn:" destination="-1" eventType="touchUpInside" id="3Y9-mh-jR9"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTj-Uy-ykB" userLabel="line1">
                             <rect key="frame" x="79" y="12" width="1" height="20"/>
@@ -62,7 +71,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8Y-Bp-Wg2" userLabel="line2">
-                            <rect key="frame" x="160" y="12" width="1" height="20"/>
+                            <rect key="frame" x="159" y="12" width="1" height="20"/>
                             <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="tdN-NQ-Alb"/>
@@ -139,13 +148,13 @@
                     </variation>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="筛选结果：5个" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udp-0g-ocp">
-                    <rect key="frame" x="19" y="55" width="80" height="15"/>
+                    <rect key="frame" x="19" y="55" width="79.5" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Glp-39-13V">
-                    <rect key="frame" x="12" y="82" width="296" height="486"/>
+                    <rect key="frame" x="12" y="81" width="296" height="486.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Jsj-kJ-IqR"/>
