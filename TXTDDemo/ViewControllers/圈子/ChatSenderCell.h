@@ -10,4 +10,9 @@
 
 @interface ChatSenderCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *headImagView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+
 @end

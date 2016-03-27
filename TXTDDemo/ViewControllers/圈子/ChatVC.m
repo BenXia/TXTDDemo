@@ -10,12 +10,27 @@
 #import "ChatSenderCell.h"
 #import "ChatReceiverCell.h"
 #import "UserDetailPageVC.h"
+#import "MessageModel.h"
+
+@implementation ChatModel
+
++(ChatModel*)modelWithName:(NSString*)name Message1:(NSString*)message1 Message2:(NSString*)message2{
+    ChatModel* model = [ChatModel new];
+    model.userName = name;
+    model.message1 = message1;
+    model.message2 = message2;
+    return model;
+}
+
+@end
 
 
 @interface ChatVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *sendTextField;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak,nonatomic) IBOutlet UITableView* tableView;
+
+@property (strong,nonatomic) NSMutableArray* messageArray;
 
 @end
 
@@ -24,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"李新林";
+    self.title = self.chatModel.userName;
     self.view.backgroundColor = [g_commonConfig bgGray002Color];
     
     [self setNavRightItemWithImage:@"geranxinxi" target:self action:@selector(didClickGerenxinxi)];
@@ -38,6 +53,15 @@
     [self.tableView registerNib:senderNib forCellReuseIdentifier:[ChatSenderCell identifier]];
     [self.tableView registerNib:receiverNib forCellReuseIdentifier:[ChatReceiverCell identifier]];
     
+    MessageModel* model1 = [MessageModel new];
+    model1.type = Chatter_Other;
+    model1.message = self.chatModel.message1;
+    
+    MessageModel* model2 = [MessageModel new];
+    model2.type = Chatter_Me;
+    model2.message = self.chatModel.message2;
+    
+    self.messageArray = [NSMutableArray arrayWithObjects:model1,model2, nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,16 +76,20 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.messageArray.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row%2 == 0) {
+    MessageModel* model = [self.messageArray objectAtIndex:indexPath.row];
+    if (model.type == Chatter_Other) {
         ChatReceiverCell* cell = [tableView dequeueReusableCellWithIdentifier:[ChatReceiverCell identifier] forIndexPath:indexPath];
-        
+        cell.headImageView.image = [UIImage imageNamed:self.chatModel.userHeadName];
+        cell.messageLabel.text = model.message;
         return cell;
     }else{
         ChatSenderCell* cell = [tableView dequeueReusableCellWithIdentifier:[ChatSenderCell identifier] forIndexPath:indexPath];
+        cell.headImagView.image = [UIImage imageNamed:@"headImage_me.jpg"];
+        cell.messageLabel.text = model.message;
         return cell;
     }
 }
@@ -75,5 +103,16 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)didClickSend:(id)sender {
+    if (self.sendTextField.text.length > 0) {
+        MessageModel* model = [MessageModel new];
+        model.type = Chatter_Me;
+        model.message = self.sendTextField.text;
+        [self.messageArray addObject:model];
+        self.sendTextField.text = @"";
+    
+        [self.tableView reloadData];
+    }
+}
 
 @end

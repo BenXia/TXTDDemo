@@ -10,31 +10,6 @@
 #import "ConversationListCell.h"
 #import "ChatVC.h"
 
-#define MAKE_MODEL(message1,message2) [ChatModel modelWithMessage1:message1 Message2:message2]
-
-@interface ChatModel : NSObject
-
-@property (strong,nonatomic) NSString* userHeadName;
-@property (strong,nonatomic) NSString* userName;
-@property (strong,nonatomic) NSString* message1;
-@property (strong,nonatomic) NSString* message2;
-
-
-+(ChatModel*)modelWithMessage1:(NSString*)message1 Message2:(NSString*)message2;
-
-@end
-
-@implementation ChatModel
-
-+(ChatModel*)modelWithMessage1:(NSString*)message1 Message2:(NSString*)message2{
-    ChatModel* model = [ChatModel new];
-    model.message1 = message1;
-    model.message2 = message2;
-    return model;
-}
-
-@end
-
 @interface IMHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak,nonatomic) IBOutlet UITableView* tableView;
@@ -62,16 +37,22 @@
         
         
         self.chatArray = [NSMutableArray arrayWithArray:@[
-                                                          MAKE_MODEL(@"你们行的理财产品发行规模是？", @"本期１００亿。"),
-                                                          MAKE_MODEL(@"看到你准备收５个亿的资金，可以具体介绍下吗？", @"可以的，电话沟通吧？"),
-                                                          MAKE_MODEL(@"债券不行啊", @"为什么不行，你们不收债券？"),
-                                                          MAKE_MODEL(@"我们对信托的要求高", @"本期信托的资产不错的？"),
-                                                          MAKE_MODEL(@"我们有不良资产１０个亿，２个亿出售", @"暂时没有资金，不收"),
-                                                          MAKE_MODEL(@"最近业务开展如何", @"业务指标太大，压力杠杠的"),
-                                                          MAKE_MODEL(@"上次的资金到账没啊", @"到账了"),
-                                                          MAKE_MODEL(@"在吗？上次的业务没ｏｋ啊？", @"是的，领导不批"),
-                                                          MAKE_MODEL(@"窘，大额系统关闭了", @"好啊，只能明天了"),
+                                                          MAKE_MODEL(@"张大川",@"你有多少资产啊？", @"你猜猜看看啊"),
+                                                          MAKE_MODEL(@"李晓龙",@"你们行的理财产品发行规模是？", @"本期１００亿。"),
+                                                          MAKE_MODEL(@"王涛",@"看到你准备收５个亿的资金，可以具体介绍下吗？", @"可以的，电话沟通吧？"),
+                                                          MAKE_MODEL(@"夏许强",@"债券不行啊", @"为什么不行，你们不收债券？"),
+                                                          MAKE_MODEL(@"郭晓倩",@"我们对信托的要求高", @"本期信托的资产不错的？"),
+                                                          MAKE_MODEL(@"陶澄",@"我们有不良资产１０个亿，２个亿出售", @"暂时没有资金，不收"),
+                                                          MAKE_MODEL(@"李杰",@"最近业务开展如何", @"业务指标太大，压力杠杠的"),
+                                                          MAKE_MODEL(@"安博",@"上次的资金到账没啊", @"到账了"),
+                                                          MAKE_MODEL(@"谢晓峰",@"在吗？上次的业务没ｏｋ啊？", @"是的，领导不批"),
+                                                          MAKE_MODEL(@"郭鹏鹏",@"窘，大额系统关闭了", @"好啊，只能明天了"),
                                                           ]];
+    }
+    
+    for (int i=0; i<self.chatArray.count; ++i) {
+        ChatModel* model = [self.chatArray objectAtIndex:i];
+        model.userHeadName = [NSString stringWithFormat:@"user_%d.jpg",i];
     }
     return self;
 }
@@ -135,12 +116,15 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.cellCount;
+    return self.chatArray.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ConversationListCell* cell = [tableView dequeueReusableCellWithIdentifier:[ConversationListCell identifier] forIndexPath:indexPath];
-    
+    ChatModel* model = [self.chatArray objectAtIndex:indexPath.row];
+    cell.headImageView.image = [UIImage imageNamed:model.userHeadName];
+    cell.nameLabel.text = model.userName;
+    cell.messageLabel.text = model.message2;
     return cell;
 }
 
@@ -151,6 +135,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ChatVC* vc = [ChatVC new];
+    vc.chatModel = [self.chatArray objectAtIndex:indexPath.row];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -160,7 +145,7 @@
 }
 
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.cellCount --;
+     [self.chatArray removeObjectAtIndex:indexPath.row];
     [tableView reloadData];
 }
 

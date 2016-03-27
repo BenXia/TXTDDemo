@@ -10,7 +10,6 @@
 
 @interface ChatSenderCell ()
 
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end
 
