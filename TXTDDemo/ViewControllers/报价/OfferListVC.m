@@ -11,12 +11,23 @@
 #import "OfferProductDetailVC.h"
 #import "OfferFilterVC.h"
 
+@interface OfferFilterVC ()
+
+@end
+
+@implementation OffeListModel
+
+
+
+@end
+
+
 @interface OfferListVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *menuButtonView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *menuButtonArray;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong,nonatomic) NSArray* dataSource;
+@property (strong,nonatomic) NSMutableArray* dataSource;
 
 @end
 
@@ -46,11 +57,59 @@
     
     UINib* cellNib = [UINib nibWithNibName:[OfferListCell identifier] bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:[OfferListCell identifier]];
+    [self initDataSource];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initDataSource {
+    for (int i = 0; i<5; i++) {
+        OffeListModel *model = [[OffeListModel alloc] init];
+        if (i==0) {
+            model.headImageName = @"headImage_2.jpg";
+            model.nick = @"张三";
+            model.backName = @"中国农业银行";
+            model.price = @"20000";
+            model.date = @"90";
+            model.rate = @"1.3";
+        } else if (i == 1) {
+            model.headImageName = @"headImage_3.jpg";
+            model.nick = @"李四";
+            model.backName = @"中国建设银行";
+            
+            model.price = @"10000";
+            model.date = @"50";
+            model.rate = @"1.1";
+        } else if (i == 2) {
+            model.headImageName = @"headImage_4.jpg";
+            model.nick = @"王二";
+            model.backName = @"中国农业银行";
+            
+            model.price = @"30000";
+            model.date = @"100";
+            model.rate = @"1.5";
+        } else if (i == 3) {
+            model.headImageName = @"headImage_5.jpg";
+            model.nick = @"郭靖";
+            model.backName = @"中国开发银行";
+            
+            model.price = @"3200";
+            model.date = @"10";
+            model.rate = @"1.7";
+        } else if (i == 4) {
+            model.headImageName = @"headImage_6.jpg";
+            model.nick = @"黄瑞";
+            model.backName = @"华夏银行";
+            
+            model.price = @"5000";
+            model.date = @"90";
+            model.rate = @"1.3";
+        }
+        [self.dataSource addObject:model];
+    }
 }
 
 #pragma mark - Action
@@ -60,6 +119,28 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)didClickOnExactBtn:(UIButton *)sender {
+    [self sortedArray];
+    [self.tableView reloadData];
+    
+}
+- (IBAction)didClickOnQixianBtn:(UIButton *)sender {
+    [self sortedArray];
+    [self.tableView reloadData];
+}
+- (IBAction)didClickOnLilvBtn:(UIButton *)sender {
+    [self sortedArray];
+    [self.tableView reloadData];
+}
+
+#pragma mark - Private Method
+
+- (void)sortedArray {
+    OffeListModel *model = [self.dataSource firstObject];
+    [self.dataSource removeObjectAtIndex:0];
+    [self.dataSource addObject:model];
+}
+
 #pragma mark - Table
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -67,54 +148,18 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataSource.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    OffeListModel *model = self.dataSource[indexPath.row];
     OfferListCell* cell = [tableView dequeueReusableCellWithIdentifier:[OfferListCell identifier] forIndexPath:indexPath];
-    if (indexPath.row%2==0) {
-        cell.headImageView.image = [UIImage imageNamed:@"user_boy"];
-        cell.nameLabel.text = @"李新林";
-    }else{
-        cell.headImageView.image = [UIImage imageNamed:@"user_girl"];
-        cell.nameLabel.text = @"王大鹏";
-    }
-    
-    switch (indexPath.row) {
-        case 0:{
-            cell.priceLabel.text = @"20000";
-            cell.dateLabel.text = @"90";
-            cell.rateLabel.text = @"1.3";
-        }
-            break;
-        case 1:{
-            cell.priceLabel.text = @"10000";
-            cell.dateLabel.text = @"50";
-            cell.rateLabel.text = @"1.1";
-        }
-            break;
-        case 2:{
-            cell.priceLabel.text = @"30000";
-            cell.dateLabel.text = @"100";
-            cell.rateLabel.text = @"1.5";
-        }
-            break;
-        case 3:{
-            cell.priceLabel.text = @"3200";
-            cell.dateLabel.text = @"10";
-            cell.rateLabel.text = @"1.7";
-        }
-            break;
-        case 4:{
-            cell.priceLabel.text = @"11000";
-            cell.dateLabel.text = @"20";
-            cell.rateLabel.text = @"1.8";
-        }
-            break;
-        default:
-            break;
-    }
-
+    cell.headImageView.image = [UIImage imageNamed:model.headImageName];
+    cell.nameLabel.text = model.nick;
+    cell.bankLabel.text = model.backName;
+    cell.priceLabel.text = model.price;
+    cell.dateLabel.text = model.date;
+    cell.rateLabel.text = model.rate;
     return cell;
 }
 
@@ -125,6 +170,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     OfferProductDetailVC* vc = [OfferProductDetailVC new];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (NSMutableArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
 }
 
 

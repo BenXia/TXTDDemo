@@ -96,7 +96,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -105,18 +105,12 @@
     cell.middleLabel.textColor = [g_commonConfig gray006Color];
     cell.rightLabel.textColor = [g_commonConfig gray006Color];
     if (indexPath.row == 0) {
-        cell.leftLabel.text = @"隔夜";
-        cell.middleLabel.text = @"----";
-        cell.rightLabel.text = @"+1.07";
-        cell.rightLabel.textColor = [g_commonConfig themeRedColor];
-        cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 1) {
         cell.leftLabel.text = @"7天";
         cell.middleLabel.text = @"2.29500";
         cell.rightLabel.text = @"-0.25";
         cell.rightLabel.textColor = [g_commonConfig themeGreenColor];
         cell.backgroundColor = [UIColor whiteColor];
-    } else if (indexPath.row == 2) {
+    } else if (indexPath.row == 1) {
         cell.leftLabel.text = @"14天";
         cell.middleLabel.text = @"2.49000";
         cell.rightLabel.text = @"+3.07";
