@@ -11,6 +11,7 @@
 #import "ChatReceiverCell.h"
 #import "UserDetailPageVC.h"
 #import "MessageModel.h"
+#import "IQKeyboardManager.H"
 
 @implementation ChatModel
 
@@ -67,6 +68,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    [IQKeyboardManager sharedManager].enable = NO;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    [IQKeyboardManager sharedManager].enable = YES;
 }
 
 #pragma mark - Table
