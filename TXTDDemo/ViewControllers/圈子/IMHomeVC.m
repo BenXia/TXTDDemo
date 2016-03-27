@@ -10,12 +10,40 @@
 #import "ConversationListCell.h"
 #import "ChatVC.h"
 
+#define MAKE_MODEL(message1,message2) [ChatModel modelWithMessage1:message1 Message2:message2]
+
+@interface ChatModel : NSObject
+
+@property (strong,nonatomic) NSString* userHeadName;
+@property (strong,nonatomic) NSString* userName;
+@property (strong,nonatomic) NSString* message1;
+@property (strong,nonatomic) NSString* message2;
+
+
++(ChatModel*)modelWithMessage1:(NSString*)message1 Message2:(NSString*)message2;
+
+@end
+
+@implementation ChatModel
+
++(ChatModel*)modelWithMessage1:(NSString*)message1 Message2:(NSString*)message2{
+    ChatModel* model = [ChatModel new];
+    model.message1 = message1;
+    model.message2 = message2;
+    return model;
+}
+
+@end
+
 @interface IMHomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak,nonatomic) IBOutlet UITableView* tableView;
 @property (strong, nonatomic) IBOutlet UIView *menuView;
 
 @property (assign,nonatomic) int cellCount;
+
+@property (strong,nonatomic) NSMutableArray* chatArray;
+
 
 @end
 
@@ -30,6 +58,20 @@
         self.tabBarItem.image = [[UIImage imageNamed:@"tabbtn_quanzi"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbtn_quanzi_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         self.cellCount = 10;
+        
+        
+        
+        self.chatArray = [NSMutableArray arrayWithArray:@[
+                                                          MAKE_MODEL(@"你们行的理财产品发行规模是？", @"本期１００亿。"),
+                                                          MAKE_MODEL(@"看到你准备收５个亿的资金，可以具体介绍下吗？", @"可以的，电话沟通吧？"),
+                                                          MAKE_MODEL(@"债券不行啊", @"为什么不行，你们不收债券？"),
+                                                          MAKE_MODEL(@"我们对信托的要求高", @"本期信托的资产不错的？"),
+                                                          MAKE_MODEL(@"我们有不良资产１０个亿，２个亿出售", @"暂时没有资金，不收"),
+                                                          MAKE_MODEL(@"最近业务开展如何", @"业务指标太大，压力杠杠的"),
+                                                          MAKE_MODEL(@"上次的资金到账没啊", @"到账了"),
+                                                          MAKE_MODEL(@"在吗？上次的业务没ｏｋ啊？", @"是的，领导不批"),
+                                                          MAKE_MODEL(@"窘，大额系统关闭了", @"好啊，只能明天了"),
+                                                          ]];
     }
     return self;
 }
@@ -68,7 +110,7 @@
 }
 
 -(void)didClickContactItem{
-
+    
 }
 - (IBAction)didClickAddFriend:(id)sender {
     [UIView animateWithDuration:0.3 animations:^{
@@ -98,7 +140,7 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ConversationListCell* cell = [tableView dequeueReusableCellWithIdentifier:[ConversationListCell identifier] forIndexPath:indexPath];
-   
+    
     return cell;
 }
 

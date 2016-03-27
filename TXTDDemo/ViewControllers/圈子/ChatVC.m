@@ -11,6 +11,7 @@
 #import "ChatReceiverCell.h"
 #import "UserDetailPageVC.h"
 
+
 @interface ChatVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *sendTextField;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
@@ -36,6 +37,7 @@
     UINib* receiverNib = [UINib nibWithNibName:[ChatReceiverCell identifier] bundle:nil];
     [self.tableView registerNib:senderNib forCellReuseIdentifier:[ChatSenderCell identifier]];
     [self.tableView registerNib:receiverNib forCellReuseIdentifier:[ChatReceiverCell identifier]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
